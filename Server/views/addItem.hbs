@@ -1,0 +1,99 @@
+<p>选择语言类型</p>
+<select id="type">
+    {{#each type}}
+        <option value="{{name}}">{{name}}</option>
+    {{/each}}
+</select>
+<p>选择等级</p>
+<select id="level">
+    {{#each level}}
+        <option value="{{name}}">{{name}}</option>
+    {{/each}}
+</select>
+<p>选择子弹类型</p>
+<select id="power">
+    {{#each power}}
+        <option value="{{name}}">{{name}}</option>
+    {{/each}}
+</select>
+<p>添加题目内容（以(?)分割）</p>
+<textarea id="question" style="width: 300px;height: 200px" ></textarea>
+<p>添加答案（以json形式传入）</p>
+<textarea id="answer" style="width: 300px;height: 200px" ></textarea><br/><br/>
+<button id="submit" style="width: 50px;height: 30px">提交</button>
+<script>
+    var xhr;
+    var btn=document.getElementById("submit");
+    var type=document.getElementById("type");
+    var level=document.getElementById("level");
+    var power=document.getElementById("power");
+    var question=document.getElementById("question");
+    var answer=document.getElementById("answer");
+    btn.onclick=function()
+    {
+
+        if(question.value=="")
+        {
+            alert("请添加内容");
+            return;
+        }
+        else if(answer.value=="")
+        {
+            alert("请添加答案");
+            return;
+        }
+        var content={};
+        content.type=type.value;
+        content.level=level.value;
+        content.power=power.value;
+        var count=getStrCount(question.value,"(?)");
+        var ansJson=JSON.parse(answer.value);
+        if(count!=ansJson.length)
+        {
+            alert("题目选项个数与答案个数不一致");
+            return;
+        }
+        for(var arr in ansJson)
+        {
+            if(ansJson[arr].length<4)
+            {
+                alert("选项数必须大于等于4");
+                return;
+            }
+        }
+        content.question=question.value;
+        content.answer=ansJson;
+        xhr=new XMLHttpRequest();
+        xhr.onreadystatechange=state_Change;
+        xhr.open("POST","addItem",true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify(content));
+
+    }
+    function state_Change()
+    {
+        if (xhr.readyState==4)
+        {
+            if (xhr.status==200)
+            {
+                alert("添加成功");
+                question.value="";
+                answer.value="";
+            }
+            else
+            {
+                alert("添加失败");
+            }
+        }
+    }
+    function getStrCount(scrstr,armstr)
+    { //scrstr 源字符串 armstr 特殊字符
+        var count=0;
+        while(scrstr.indexOf(armstr) >=0 )
+        {
+            scrstr = scrstr.replace(armstr,"")
+            count++;
+        }
+        return count;
+    }
+</script>
