@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var user=require("../model/userModel");
 var multiparty=require("multiparty");
+var fs=require("fs");
+var con=require("../define/define");
 //检查用户名
 router.get('/check', function(req, res) {
     user.find({username:req.query.username},function(err,result)
@@ -80,7 +82,7 @@ router.post('/register', function(req, res) {
 
 //获取用户信息
 router.get('/info', function(req, res) {
-    delete req.userInfo.history;
+    delete req.userInfo._doc.history;
     res.json({
        code:0,
         data:req.userInfo
@@ -89,7 +91,7 @@ router.get('/info', function(req, res) {
 
 //上传头像
 router.post('/photo', function(req, res) {
-    var form = new multiparty.Form({uploadDir: __dirname + "/../public/images",});
+    var form = new multiparty.Form({uploadDir: con.imgpath+"/img"});
     form.parse(req, function (err, fields, files) {
         if (err) {
             res.json({
@@ -100,8 +102,7 @@ router.post('/photo', function(req, res) {
         } else {
             var inputFile = files.file[0];
             var uploadedPath = inputFile.path;
-            var dirname=__dirname.replace("/routes","");
-            uploadedPath=uploadedPath.replace(dirname,"");
+            uploadedPath=uploadedPath.replace(con.imgpath,"");
             var username=fields.username[0];
             var pwd=fields.pwd[0];
             user.find({
@@ -124,6 +125,10 @@ router.post('/photo', function(req, res) {
                         msg:"用户名或者密码错误"
                     });
                     return;
+                }
+                if(result[0].photo!=undefined && result[0].photo!="")
+                {
+                    fs.unlink(con.imgpath+result[0].photo);
                 }
                 user.update({
                     username:username

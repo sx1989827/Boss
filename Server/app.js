@@ -10,6 +10,7 @@ var addLevel=require("./routes/addLevel");
 var addPeople=require("./routes/addPeople");
 var user=require("./routes/user");
 var checkPwd=require("./routes/checkPwd");
+var con=require("./define/define")
 var app = express();
 
 app.set('views', path.join(__dirname, 'views'));
@@ -26,6 +27,7 @@ app.use("/addlevel",addLevel);
 app.use("/addpeople",addPeople);
 app.use("/user",checkPwd,user);
 app.use("/public",express.static(path.join(__dirname, 'public')));
+app.use("/img",express.static(con.imgpath+"/img"));
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;

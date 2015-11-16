@@ -100,7 +100,7 @@ router.use(function(req,res,next)
             });
             return;
         }
-        req.userInfo=result;
+        req.userInfo=result[0];
         next();
     });
 });
