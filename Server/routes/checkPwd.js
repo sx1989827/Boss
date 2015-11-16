@@ -14,6 +14,14 @@ var arrExcept=[
         method:"GET",
         url:"/user/check"
     },
+    {
+        method:"GET",
+        url:"/user/question"
+    },
+    {
+        method:"PUT",
+        url:"/user/reset"
+    }
 ]
 
 router.use(function(req,res,next)
@@ -63,7 +71,7 @@ router.use(function(req,res,next)
             });
             return;
         }
-        else if (param[key]=="number" && isNaN(clientParam[key])) {
+        else if (param[key]==Number && isNaN(clientParam[key])) {
             res.json({
                 code: 1,
                 msg: "参数" + key + "必须为number"

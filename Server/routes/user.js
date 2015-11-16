@@ -156,4 +156,120 @@ router.post('/photo', function(req, res) {
 
     });
 });
+
+//修改昵称
+router.put("/editname",function(req,res)
+{
+    user.update({
+        username:req.query.username
+    },{
+        name:req.query.name
+    },{
+        multi:false
+    },function(err, numberAffected, raw){
+        if(err)
+        {
+            res.json({
+                code:1,
+                msg:err.message
+            });
+            return;
+        }
+        res.json({
+            code:0,
+            msg:"修改成功"
+        })
+    });
+});
+//修改密码
+router.put("/pwd",function(req,res)
+{
+    user.update({
+        username:req.query.username
+    },{
+        pwd:req.query.newpwd
+    },{
+        multi:false
+    },function(err, numberAffected, raw){
+        if(err)
+        {
+            res.json({
+                code:1,
+                msg:err.message
+            });
+            return;
+        }
+        res.json({
+            code:0,
+            msg:"修改成功"
+        })
+    });
+});
+//获取提示问题
+router.get("/question",function(req,res)
+{
+    user.find({
+        username:req.query.username
+    },function(err, result){
+        if(err)
+        {
+            res.json({
+                code:1,
+                msg:err.message
+            });
+            return;
+        }
+        res.json({
+            code:0,
+            msg:result[0].question
+        })
+    });
+});
+//重置密码
+router.put("/reset",function(req,res)
+{
+    user.find({
+        username:req.query.username,
+        answer:req.query.answer
+    },function(err,result)
+    {
+        if(err)
+        {
+            res.json({
+                code:1,
+                msg:err.message
+            });
+            return;
+        }
+        else if(result.length==0)
+        {
+            res.json({
+                code:1,
+                msg:"答案错误"
+            });
+            return;
+        }
+        user.update({
+            username:req.query.username
+        },{
+            pwd:req.query.pwd
+        },{
+            multi:false
+        },function(err, numberAffected, raw){
+            if(err)
+            {
+                res.json({
+                    code:1,
+                    msg:err.message
+                });
+                return;
+            }
+            res.json({
+                code:0,
+                msg:"重置成功"
+            })
+        });
+    });
+
+});
 module.exports = router;

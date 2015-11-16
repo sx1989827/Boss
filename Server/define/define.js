@@ -8,45 +8,45 @@ exports.service=[
         method:"GET",
         path:"/user/check",
         param: {
-              username:"string",
+              username:String,
         },
-        data:"number"
+        data:Number
     },
     {
         method:"POST",
         path:"/user/register",
         param: {
-            username:"string",
-            pwd:"string",
-            name:"string",
-            age:"number",
-            sex:"string",
-            question:"string",
-            answer:"string"
+            username:String,
+            pwd:String,
+            name:String,
+            age:Number,
+            sex:String,
+            question:String,
+            answer:String
         },
-        data:"string"
+        data:String
     },
     {
         method:"GET",
         path:"/user/info",
         param: {
-            username:"string",
-            pwd:"string"
+            username:String,
+            pwd:String
         },
         data:{
-            _id:"string",
-            username:"string",
-            pwd:"string",
-            name:"string",
-            age:"number",
-            sex:"string",
-            question:"string",
-            answer:"string",
-            photo:"string",
+            _id:String,
+            username:String,
+            pwd:String,
+            name:String,
+            age:Number,
+            sex:String,
+            question:String,
+            answer:String,
+            photo:String,
             level:[
                 {
-                    name:"string",
-                    level:"string"
+                    name:String,
+                    level:String
                 }
             ]
         }
@@ -55,10 +55,48 @@ exports.service=[
         method:"POST",
         path:"/user/photo",
         param: {
-            username:"string",
-            pwd:"string",
+            username:String,
+            pwd:String,
             //file:File
         },
-        data:"string"
+        data:String
+    },
+    {
+        method:"PUT",
+        path:"/user/editname",
+        param: {
+            username:String,
+            pwd:String,
+            name:String
+        },
+        data:String
+    },
+    {
+        method:"PUT",
+        path:"/user/pwd",
+        param: {
+            username:String,
+            pwd:String,
+            newpwd:String
+        },
+        data:String
+    },
+    {
+        method:"GET",
+        path:"/user/question",
+        param: {
+            username:String
+        },
+        data:String
+    },
+    {
+        method:"PUT",
+        path:"/user/reset",
+        param: {
+            username:String,
+            answer:String,
+            pwd:String
+        },
+        data:String
     }
 ];
