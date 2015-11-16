@@ -9,5 +9,5 @@ var model=new mongoose.Schema({
     money:Number,
     speed:Number
 });
-var dbManage=db.model("People",model);
+var dbManage=db.model("Person",model);
 module.exports=dbManage;

@@ -2,3 +2,62 @@
  * Created by sunxin on 15/11/13.
  */
 exports.dbpath="mongodb://localhost:27017/Boss";
+exports.service=[
+    {
+        method:"GET",
+        path:"/user/check",
+        param: {
+              username:"string",
+        },
+        data:"number"
+    },
+    {
+        method:"POST",
+        path:"/user/register",
+        param: {
+            username:"string",
+            pwd:"string",
+            name:"string",
+            age:"number",
+            sex:"string",
+            question:"string",
+            answer:"string"
+        },
+        data:"string"
+    },
+    {
+        method:"GET",
+        path:"/user/info",
+        param: {
+            username:"string",
+            pwd:"string"
+        },
+        data:{
+            _id:"string",
+            username:"string",
+            pwd:"string",
+            name:"string",
+            age:"number",
+            sex:"string",
+            question:"string",
+            answer:"string",
+            photo:"string",
+            level:[
+                {
+                    name:"string",
+                    level:"string"
+                }
+            ]
+        }
+    },
+    {
+        method:"POST",
+        path:"/user/photo",
+        param: {
+            username:"string",
+            pwd:"string",
+            //file:File
+        },
+        data:"string"
+    }
+];

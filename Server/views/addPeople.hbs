@@ -1,0 +1,84 @@
+<table  border="1">
+    <tr align="center">
+        <th>名称</th>
+        <th>说话</th>
+        <th>工资</th>
+        <th>速度</th>
+    </tr>
+    {{#each people}}
+        <tr align="center">
+            <td>{{name}}</td>
+            <td>{{talk}}</td>
+            <td>{{money}}</td>
+            <td>{{speed}}</td>
+        </tr>
+    {{/each}}
+</table>
+<br/>
+<p>名称：</p>
+<input type="text" style="width: 150px;height: 20px" id="name"/>
+<p>说话：</p>
+<input type="text" style="width: 150px;height: 20px" id="talk"/>
+<p>工资：</p>
+<input type="text" style="width: 150px;height: 20px" id="money"/>
+<p>速度：</p>
+<input type="text" style="width: 150px;height: 20px" id="speed"/><br/><br/>
+<button id="submit" style="width: 50px;height: 30px">提交</button>
+<script>
+    var xhr;
+    var btn=document.getElementById("submit");
+    var name1=document.getElementById("name");
+    var talk=document.getElementById("talk");
+    var money=document.getElementById("money");
+    var speed=document.getElementById("speed");
+    btn.onclick=function()
+    {
+
+        if(talk.value=="")
+        {
+            alert("请添加说话内容");
+            return;
+        }
+        else if(name1.value=="")
+        {
+            alert("请添加名称");
+            return;
+        }
+        else if(money.value=="")
+        {
+            alert("请添加工资");
+            return;
+        }
+        else if(speed.value=="")
+        {
+            alert("请添加速度");
+            return;
+        }
+        var content={};
+        content.talk=talk.value;
+        content.name=name1.value;
+        content.money=money.value;
+        content.speed=speed.value;
+        xhr=new XMLHttpRequest();
+        xhr.onreadystatechange=state_Change;
+        xhr.open("POST","addPeople",true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify(content));
+
+    }
+    function state_Change()
+    {
+        if (xhr.readyState==4)
+        {
+            if (xhr.status==200)
+            {
+                alert("添加成功");
+                location.reload(true);
+            }
+            else
+            {
+                alert("添加失败");
+            }
+        }
+    }
+</script>

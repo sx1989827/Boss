@@ -1,0 +1,126 @@
+<table  border="1">
+    <tr align="center">
+        <th>等级</th>
+        <th>名称</th>
+        <th>语言类型</th>
+        <th>时间</th>
+        <th>步数</th>
+        <th>属下</th>
+    </tr>
+    {{#each level}}
+        <tr align="center">
+            <td>{{degree}}</td>
+            <td>{{name}}</td>
+            <td>{{type}}</td>
+            <td>{{time}}</td>
+            <td>{{step}}</td>
+            <td>
+                {{#each enemy}}
+                    {{name}} X{{count}}<br/>
+                {{/each}}
+            </td>
+        </tr>
+    {{/each}}
+</table>
+<br/>
+<p>等级：</p>
+<input type="text" style="width: 150px;height: 20px" id="degree"/>
+<p>名称：</p>
+<input type="text" style="width: 150px;height: 20px" id="name1"/>
+<p>选择语言类型</p>
+<select id="type">
+    {{#each type}}
+        <option value="{{name}}">{{name}}</option>
+    {{/each}}
+</select>
+<p>时间：</p>
+<input type="text" style="width: 150px;height: 20px" id="time"/>
+<p>步数：</p>
+<input type="text" style="width: 150px;height: 20px" id="step"/>
+<p>属下：(以换行分割)</p>
+<textarea id="enemy" style="width: 300px;height: 200px" ></textarea><br/><br/>
+<button id="submit" style="width: 50px;height: 30px">提交</button>
+<script>
+    var xhr;
+    var btn=document.getElementById("submit");
+    var type=document.getElementById("type");
+    var degree=document.getElementById("degree");
+    var name1=document.getElementById("name1");
+    var time=document.getElementById("time");
+    var step=document.getElementById("step");
+    var enemy=document.getElementById("enemy");
+    btn.onclick=function()
+    {
+
+        if(degree.value=="")
+        {
+            alert("请添加等级");
+            return;
+        }
+        else if(name1.value=="")
+        {
+            alert("请添加名称");
+            return;
+        }
+        else if(time.value=="")
+        {
+            alert("请添加时间");
+            return;
+        }
+        else if(step.value=="")
+        {
+            alert("请添加步数");
+            return;
+        }
+        else if(enemy.value=="")
+        {
+            alert("请添加属下");
+            return;
+        }
+        var arrEnemy=[];
+        var arrTemp=enemy.value.split("\n");
+        if(arrTemp.length==0)
+        {
+            alert("步数添加不正确");
+            return;
+        }
+        for(var index in arrTemp)
+        {
+            var arrTemp1=arrTemp[index].split(" ");
+            if(arrTemp1.length!=2)
+            {
+                alert("步数添加不正确");
+                return;
+            }
+            arrEnemy.push({"name":arrTemp1[0],count:arrTemp1[1]});
+        }
+        var content={};
+        content.type=type.value;
+        content.name=name1.value;
+        content.degree=degree.value;
+        content.time=time.value;
+        content.step=step.value;
+        content.enemy=arrEnemy;
+        xhr=new XMLHttpRequest();
+        xhr.onreadystatechange=state_Change;
+        xhr.open("POST","addlevel",true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify(content));
+
+    }
+    function state_Change()
+    {
+        if (xhr.readyState==4)
+        {
+            if (xhr.status==200)
+            {
+                alert("添加成功");
+                location.reload(true);
+            }
+            else
+            {
+                alert("添加失败");
+            }
+        }
+    }
+</script>

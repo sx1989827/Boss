@@ -1,0 +1,53 @@
+{{#each type}}
+    <p>{{.}}</p>
+{{/each}}
+<br/>
+<p>名称：</p>
+<input type="text" style="width: 150px;height: 20px" id="type"/>
+<p>描述：</p>
+<textarea id="des" style="width: 300px;height: 200px" ></textarea><br/><br/>
+<button id="submit" style="width: 50px;height: 30px">提交</button>
+<script>
+    var xhr;
+    var btn=document.getElementById("submit");
+    var type=document.getElementById("type");
+    var des=document.getElementById("des");
+    btn.onclick=function()
+    {
+
+        if(type.value=="")
+        {
+            alert("请添加类型");
+            return;
+        }
+        else if(des.value=="")
+        {
+            alert("请添加描述");
+            return;
+        }
+        var content={};
+        content.type=type.value;
+        content.des=des.value;
+        xhr=new XMLHttpRequest();
+        xhr.onreadystatechange=state_Change;
+        xhr.open("POST","addtype",true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify(content));
+
+    }
+    function state_Change()
+    {
+        if (xhr.readyState==4)
+        {
+            if (xhr.status==200)
+            {
+                alert("添加成功");
+                location.reload(true);
+            }
+            else
+            {
+                alert("添加失败");
+            }
+        }
+    }
+</script>

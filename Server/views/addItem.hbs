@@ -65,7 +65,7 @@
         content.answer=ansJson;
         xhr=new XMLHttpRequest();
         xhr.onreadystatechange=state_Change;
-        xhr.open("POST","addItem",true);
+        xhr.open("POST","additem",true);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.send(JSON.stringify(content));
 
