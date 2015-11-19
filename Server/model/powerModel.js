@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var db=require("../db/db.js");
 var model=new mongoose.Schema({
     name:String,
-    value:String
+    value:Number
 });
 var dbManage=db.model("Power",model);
 module.exports=dbManage;

@@ -43,6 +43,7 @@ exports.service=[
             question:String,
             answer:String,
             photo:String,
+            score:Number,
             level:[
                 {
                     name:String,
@@ -98,5 +99,169 @@ exports.service=[
             pwd:String
         },
         data:String
+    },
+    {
+        method:"GET",
+        path:"/user/history",
+        param:{
+            username:String,
+            pwd:String,
+            type:String,
+            page:Number
+        },
+        data:[
+            {
+                type:String,
+                date:String,
+                use:Number,
+                percent:Number,
+                item:[String]
+            }
+        ]
+    },
+    {
+        method:"GET",
+        path:"/rank/top",
+        param: {
+            username:String,
+            pwd:String,
+            page:Number
+        },
+        data:[
+            {
+                name:String,
+                photo:String,
+                score:Number
+            }
+        ]
+    },
+    {
+        method:"GET",
+        path:"/level/info",
+        param: {
+            username:String,
+            pwd:String,
+            type:String
+        },
+        data:{
+            level:String,
+            score:Number,
+            totleLevel:[String]
+        }
+    },
+    {
+        method:"GET",
+        path:"/level/type",
+        param: {
+            username:String,
+            pwd:String,
+        },
+        data:{
+            name:String,
+            des:String
+        }
+    },
+    {
+        method:"GET",
+        path:"/level/enter",
+        param: {
+            username:String,
+            pwd:String,
+            type:String,
+            level:String
+        },
+        data:{
+            name:String,
+            time:String,
+            step:Number,
+            enemy:[
+                {
+                    name:String,
+                    count:Number
+                }
+            ]
+        }
+    },
+    {
+        method:"GET",
+        path:"/level/start",
+        param: {
+            username:String,
+            pwd:String,
+            type:String,
+            level:String,
+            power:String
+        },
+        data:[
+            {
+                name:String,
+                data:[
+                    {
+                        _id:String,
+                        power:String,
+                        content:String,
+                        answer:{
+                            ok:String,
+                            wrong:[String]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        method:"GET",
+        path:"/level/enter",
+        param: {
+            username:String,
+            pwd:String,
+            type:String,
+            level:String
+        },
+        data:{
+            name:String,
+            time:String,
+            step:Number,
+            enemy:[
+                {
+                    name:String,
+                    count:Number
+                }
+            ]
+        }
+    },
+    {
+        method:"POST",
+        path:"/level/leave",
+        param: {
+            username:String,
+            pwd:String,
+            type:String,
+            level:String,
+            success:Number,
+            createtime:String,
+            usetime:String,
+            percent:Number,
+            score:Number,
+            //item:String
+        },
+        data:{
+            score:Number,
+            level:String
+        }
+    },
+    {
+        method:"GET",
+        path:"/power/info",
+        param: {
+            username:String,
+            pwd:String
+        },
+        data:[
+            {
+            name:String,
+            value:Number
+            }
+        ]
     }
 ];

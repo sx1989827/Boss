@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
 {
     var type=req.body.type;
     var name=req.body.name;
-    var degree=req.body.degree;
+    var degree=parseInt(req.body.degree);
     var time=req.body.time;
     var step=req.body.step;
     var enemy=req.body.enemy;

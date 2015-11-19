@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var user=require("../model/userModel");
+var record=require("../model/recordModel");
+var level=require("../model/levelModel");
 var multiparty=require("multiparty");
 var fs=require("fs");
 var con=require("../define/define");
@@ -61,7 +63,7 @@ router.post('/register', function(req, res) {
             answer:req.body.answer,
             photo:"",
             level:[],
-            history:[]
+            score:0
         },function(err,result)
         {
             if(err)
@@ -82,7 +84,6 @@ router.post('/register', function(req, res) {
 
 //获取用户信息
 router.get('/info', function(req, res) {
-    delete req.userInfo._doc.history;
     res.json({
        code:0,
         data:req.userInfo
@@ -272,4 +273,34 @@ router.put("/reset",function(req,res)
     });
 
 });
+//获取闯关记录
+router.get("/history",function(req,res)
+{
+    var index=parseInt(req.query.page);
+    if(index<0)
+    {
+        res.json({
+            code:1,
+            msg:"页数不正确"
+        })
+        return;
+    }
+    record.find({username:req.query.username,type:req.query.type},{_id:0}).sort({createtime:-1}).skip(index*10).limit(10).exec(function(err,result)
+    {
+        if(err)
+        {
+            res.json({
+                code:1,
+                msg:err.message
+            })
+            return;
+        }
+        res.json({
+            code:0,
+            data:result
+        })
+    });
+
+});
+
 module.exports = router;

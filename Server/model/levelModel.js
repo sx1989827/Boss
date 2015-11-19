@@ -4,7 +4,7 @@
 var mongoose = require('mongoose');
 var db=require("../db/db.js");
 var model=new mongoose.Schema({
-    degree:String,
+    degree:Number,
     name:String,
     type:String,
     time:Number,
