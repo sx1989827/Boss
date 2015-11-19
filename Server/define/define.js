@@ -263,5 +263,21 @@ exports.service=[
             value:Number
             }
         ]
+    },
+    {
+        method:"GET",
+        path:"/people/info",
+        param: {
+            username:String,
+            pwd:String
+        },
+        data:[
+            {
+                name:String,
+                talk:String,
+                money:Number,
+                speed:Number
+            }
+        ]
     }
 ];
