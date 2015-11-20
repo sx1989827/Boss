@@ -21,113 +21,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="define.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/define/define.js">
+      <file leaf-file-name="addItem.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/addItem.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="274" column="13" selection-start-line="274" selection-start-column="13" selection-end-line="274" selection-end-column="13" />
+            <state vertical-scroll-proportion="-9.225806">
+              <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rank.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/rank.js">
+      <file leaf-file-name="addItem.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/addItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="level.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/level.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="9" selection-start-line="23" selection-start-column="8" selection-end-line="29" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="power.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/power.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="22" selection-start-line="3" selection-start-column="0" selection-end-line="24" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37606838">
-              <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="304" column="0" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="peopleModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/peopleModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="itemModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/itemModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="powerModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/powerModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#41#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="people.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/people.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.6764706">
+              <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
@@ -2533,14 +2441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/addItem.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/addPeople.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.548387">
@@ -2554,16 +2454,6 @@
         <state vertical-scroll-proportion="-2.8387096">
           <caret line="92" column="20" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/addItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2715,7 +2605,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.7124183">
           <caret line="304" column="0" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
           <folding />
         </state>
@@ -2743,7 +2633,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/powerModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.2875817">
           <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
@@ -2763,7 +2653,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/peopleModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.32352942">
           <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
@@ -2781,7 +2671,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/people.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.2875817">
           <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
@@ -2791,9 +2681,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37606838">
-          <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
+        <state vertical-scroll-proportion="-6.5185184">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/addItem.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.225806">
+          <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/addItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6764706">
+          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
