@@ -16,8 +16,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    _window =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    Class cls=NSClassFromString(@"LoginVC");
+    UIViewController *vc=[[cls alloc] init];
+    _window.rootViewController=vc;
+    [self.window makeKeyAndVisible];
     return YES;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
