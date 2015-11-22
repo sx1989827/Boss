@@ -23,6 +23,8 @@
 		B58212291BFEFD7F00168A57 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B58212271BFEFD7F00168A57 /* LoginVC.m */; };
 		B582122A1BFEFD7F00168A57 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B58212281BFEFD7F00168A57 /* LoginVC.xib */; };
 		B582122E1BFF094B00168A57 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = B582122D1BFF094B00168A57 /* Util.m */; };
+		B58212311BFF1B7100168A57 /* BaseReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B58212301BFF1B7100168A57 /* BaseReq.m */; };
+		B58212351BFF255500168A57 /* CheckUserNameReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B58212341BFF255500168A57 /* CheckUserNameReq.m */; };
 		EA1CEEFF16BD0DE8FA5C634F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C3C977378AD53916E63570 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,10 @@
 		B582122B1BFF094B00168A57 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		B582122C1BFF094B00168A57 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		B582122D1BFF094B00168A57 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		B582122F1BFF1B7100168A57 /* BaseReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseReq.h; sourceTree = "<group>"; };
+		B58212301BFF1B7100168A57 /* BaseReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseReq.m; sourceTree = "<group>"; };
+		B58212331BFF255500168A57 /* CheckUserNameReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckUserNameReq.h; sourceTree = "<group>"; };
+		B58212341BFF255500168A57 /* CheckUserNameReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckUserNameReq.m; sourceTree = "<group>"; };
 		B9C3C977378AD53916E63570 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +139,9 @@
 		B58212081BFEFAEB00168A57 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				B58212321BFF251C00168A57 /* User */,
+				B582122F1BFF1B7100168A57 /* BaseReq.h */,
+				B58212301BFF1B7100168A57 /* BaseReq.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -225,6 +234,15 @@
 				B582121E1BFEFD5300168A57 /* HUDLoading7.png */,
 			);
 			path = img;
+			sourceTree = "<group>";
+		};
+		B58212321BFF251C00168A57 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				B58212331BFF255500168A57 /* CheckUserNameReq.h */,
+				B58212341BFF255500168A57 /* CheckUserNameReq.m */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		C18418A4B25164E36AEEFEDF /* Frameworks */ = {
@@ -365,7 +383,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B582122E1BFF094B00168A57 /* Util.m in Sources */,
+				B58212311BFF1B7100168A57 /* BaseReq.m in Sources */,
 				B58211F51BFEEE6500168A57 /* AppDelegate.m in Sources */,
+				B58212351BFF255500168A57 /* CheckUserNameReq.m in Sources */,
 				B58212161BFEFBD000168A57 /* BaseViewController.m in Sources */,
 				B58212291BFEFD7F00168A57 /* LoginVC.m in Sources */,
 				B58211F21BFEEE6500168A57 /* main.m in Sources */,

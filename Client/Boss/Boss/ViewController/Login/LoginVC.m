@@ -7,7 +7,7 @@
 //
 
 #import "LoginVC.h"
-
+#import "CheckUserNameReq.h"
 @interface LoginVC ()
 
 @end
@@ -16,7 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [CheckUserNameReq do:^(id req) {
+        CheckUserNameReq *obj=req;
+        obj.username=@"sx1989827";
+    } Res:^(id res) {
+        CheckUserNameRes *obj=res;
+        if(obj.code==0)
+        {
+            NSLog(@"%ld",obj.data);
+        }
+    } Err:nil ShowHud:NO];
 }
 
 - (void)didReceiveMemoryWarning {
