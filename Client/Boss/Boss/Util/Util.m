@@ -12,7 +12,8 @@
 #include <sys/types.h>
 #include <sys/sysctl.h>
 #import <CommonCrypto/CommonDigest.h>
-NSString *serverUrl=@"http://123.57.77.6:3000";
+//NSString *serverUrl=@"http://123.57.77.6:3000";
+NSString *serverUrl=@"http://localhost:3000";
 @implementation Util
 /// 获得设备号
 + (NSString *)getIdentifierForVendor

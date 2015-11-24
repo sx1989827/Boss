@@ -54,9 +54,14 @@
     return dic;
 }
 
-+(void)do:(void (^)(id req))reqBlock Res:(void (^)(id res))resBlock  Err:(void (^)(NSError*))errBlock ShowHud:(BOOL)bHud
++(void)do:(void (^)(id req))reqBlock Res:(void (^)(id res))resBlock ShowHud:(BOOL)bHud
 {
-    id ret=[[[self class] alloc] init];
+    BaseReq* ret=[[[self class] alloc] init];
+    if([[UserDefaults sharedInstance] isAvailable])
+    {
+        ret.username=[UserDefaults sharedInstance].resModel.data.username;
+        ret.pwd=[UserDefaults sharedInstance].resModel.data.pwd;
+    }
     reqBlock(ret);
     NSString *strCls=NSStringFromClass([ret class]);
     strCls=[strCls stringByReplacingOccurrencesOfString:@"Req" withString:@"Res"];
@@ -67,19 +72,21 @@
             Class cls=NSClassFromString(strCls);
             if(cls==nil)
             {
-                return;
+                cls=[BaseRes class];
             }
             NSError *err;
             id data=[[cls alloc] initWithDictionary:dic error:&err];
+            if(data==nil)
+            {
+                E(@"网络数据发生异常");
+                return;
+            }
             if(resBlock)
             {
                 resBlock(data);
             }
         } FailBlock:^(NSError *error) {
-            if(errBlock)
-            {
-                errBlock(error);
-            }
+            E(@"网络连接发生错误");
         } ShowHud:bHud];
     }
     else if([ret conformsToProtocol:@protocol(POST)])
@@ -98,19 +105,21 @@
                 Class cls=NSClassFromString(strCls);
                 if(cls==nil)
                 {
-                    return;
+                    cls=[BaseRes class];
                 }
                 NSError *err;
                 id data=[[cls alloc] initWithDictionary:dic error:&err];
+                if(data==nil)
+                {
+                    E(@"网络数据发生异常");
+                    return;
+                }
                 if(resBlock)
                 {
                     resBlock(data);
                 }
             } FailBlock:^(NSError *error) {
-                if(errBlock)
-                {
-                    errBlock(error);
-                }
+                E(@"网络连接发生错误");
             } ShowHud:bHud];
         }
         else
@@ -119,19 +128,21 @@
                 Class cls=NSClassFromString(strCls);
                 if(cls==nil)
                 {
-                    return;
+                    cls=[BaseRes class];
                 }
                 NSError *err;
                 id data=[[cls alloc] initWithDictionary:dic error:&err];
+                if(data==nil)
+                {
+                    E(@"网络数据发生异常");
+                    return;
+                }
                 if(resBlock)
                 {
                     resBlock(data);
                 }
             } FailBlock:^(NSError *error) {
-                if(errBlock)
-                {
-                    errBlock(error);
-                }
+                E(@"网络连接发生错误");
             } ShowHud:bHud];
         }
         
@@ -143,19 +154,21 @@
             Class cls=NSClassFromString(strCls);
             if(cls==nil)
             {
-                return;
+                cls=[BaseRes class];
             }
             NSError *err;
             id data=[[cls alloc] initWithDictionary:dic error:&err];
+            if(data==nil)
+            {
+                E(@"网络数据发生异常");
+                return;
+            }
             if(resBlock)
             {
                 resBlock(data);
             }
         } FailBlock:^(NSError *error) {
-            if(errBlock)
-            {
-                errBlock(error);
-            }
+            E(@"网络连接发生错误");
         } ShowHud:bHud];
     }
     else if([ret conformsToProtocol:@protocol(DELETE)])
@@ -164,19 +177,21 @@
             Class cls=NSClassFromString(strCls);
             if(cls==nil)
             {
-                return;
+                cls=[BaseRes class];
             }
             NSError *err;
             id data=[[cls alloc] initWithDictionary:dic error:&err];
+            if(data==nil)
+            {
+                E(@"网络数据发生异常");
+                return;
+            }
             if(resBlock)
             {
                 resBlock(data);
             }
         } FailBlock:^(NSError *error) {
-            if(errBlock)
-            {
-                errBlock(error);
-            }
+            E(@"网络连接发生错误");
         } ShowHud:bHud];
     }
 }

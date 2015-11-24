@@ -13,5 +13,5 @@
 @end
 
 @interface CheckUserNameRes : BaseRes
-@property (assign,nonatomic) NSInteger data;
+@property (strong,nonatomic) NSNumber<Optional>* data;
 @end

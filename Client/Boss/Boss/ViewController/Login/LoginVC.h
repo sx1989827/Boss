@@ -9,5 +9,10 @@
 #import "BaseViewController.h"
 
 @interface LoginVC : BaseViewController
+@property (strong, nonatomic) IBOutlet UITextField *texUsername;
+@property (strong, nonatomic) IBOutlet UITextField *texPwd;
+- (IBAction)onLogin:(id)sender;
+- (IBAction)onRegister:(id)sender;
+- (IBAction)onForgot:(id)sender;
 
 @end

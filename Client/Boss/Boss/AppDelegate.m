@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Header.h"
 @interface AppDelegate ()
 
 @end
@@ -17,12 +17,38 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     _window =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    Class cls=NSClassFromString(@"LoginVC");
-    UIViewController *vc=[[cls alloc] init];
-    _window.rootViewController=vc;
-    [self.window makeKeyAndVisible];
+    [self initApp];
+    if([[UserDefaults sharedInstance] isAvailable])
+    {
+        [[UserDefaults sharedInstance] update:nil Pwd:nil SucBlock:^(UserInfoModel *model) {
+            
+        } FailBlock:^(NSString *msg) {
+            NSLog(@"%@",msg);
+            [self showLoginVC];
+        }  Hud:NO];
+    }
+    else
+    {
+        [self showLoginVC];
+    }
     return YES;
 
+}
+
+-(void)initApp
+{
+    [[UINavigationBar appearance] setBarTintColor:COL(34, 51, 61, 1)];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+}
+
+-(void)showLoginVC
+{
+    Class cls=NSClassFromString(@"LoginVC");
+    UIViewController *vc=[[cls alloc] init];
+    UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:vc];
+    _window.rootViewController=nav;
+    [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

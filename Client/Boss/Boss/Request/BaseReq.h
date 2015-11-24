@@ -19,7 +19,7 @@
 @property (strong,nonatomic) NSString *username;
 @property (strong,nonatomic) NSString *pwd;
 @property (strong,nonatomic) NSString *url;
-+(void)do:(void (^)(id req))reqBlock Res:(void (^)(id res))resBlock  Err:(void (^)(NSError*))errBlock ShowHud:(BOOL)bHud;
++(void)do:(void (^)(id req))reqBlock Res:(void (^)(id res))resBlock ShowHud:(BOOL)bHud;
 @end
 
 @interface BaseRes : JSONModel
