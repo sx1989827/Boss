@@ -16,11 +16,13 @@ router.get('/', function(req, res, next) {
     var name=req.body.name;
     var money=req.body.money;
     var speed=req.body.speed;
+    var des =req.body.des;
     people.create({
         name:name,
         talk:talk,
         money:money,
-        speed:speed
+        speed:speed,
+        des:des
     },function(err,result)
     {
         if(err)
@@ -28,6 +30,21 @@ router.get('/', function(req, res, next) {
             console.log(err.message);
         }
         res.send("ok");
+    });
+}).delete("/",function(req,res) {
+    people.remove({_id:req.body.id},function(err){
+        if(!err)
+        {
+            res.send("ok");
+        }
+    });
+});
+router.put("/",function(req,res){
+    people.update({_id:req.body.id},{$set:{"name":req.body.name,"money":req.body.money,"talk":req.body.talk,"speed":req.body.speed,"des":req.body.des}},function(err){
+        if(!err)
+        {
+            res.send("ok");
+        }
     });
 });
 module.exports = router;

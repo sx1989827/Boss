@@ -162,9 +162,9 @@ router.post('/photo', function(req, res) {
 router.put("/editname",function(req,res)
 {
     user.update({
-        username:req.query.username
+        username:req.body.username
     },{
-        name:req.query.name
+        name:req.body.name
     },{
         multi:false
     },function(err, numberAffected, raw){
@@ -186,9 +186,9 @@ router.put("/editname",function(req,res)
 router.put("/pwd",function(req,res)
 {
     user.update({
-        username:req.query.username
+        username:req.body.username
     },{
-        pwd:req.query.newpwd
+        pwd:req.body.newpwd
     },{
         multi:false
     },function(err, numberAffected, raw){
@@ -220,9 +220,17 @@ router.get("/question",function(req,res)
             });
             return;
         }
+        else if(result.length==0)
+        {
+            res.json({
+                code:1,
+                msg:"该用户名不存在"
+            });
+            return;
+        }
         res.json({
             code:0,
-            msg:result[0].question
+            data:result[0].question
         })
     });
 });
@@ -230,8 +238,8 @@ router.get("/question",function(req,res)
 router.put("/reset",function(req,res)
 {
     user.find({
-        username:req.query.username,
-        answer:req.query.answer
+        username:req.body.username,
+        answer:req.body.answer
     },function(err,result)
     {
         if(err)
@@ -251,9 +259,9 @@ router.put("/reset",function(req,res)
             return;
         }
         user.update({
-            username:req.query.username
+            username:req.body.username
         },{
-            pwd:req.query.pwd
+            pwd:req.body.pwd
         },{
             multi:false
         },function(err, numberAffected, raw){

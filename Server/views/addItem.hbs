@@ -1,3 +1,81 @@
+
+<center>
+    <div  id="model" style="background: gray;width: 100%;height: 800px;padding-top: 30px;display: none;position: absolute;z-index: 100">
+        <div id="editDiv"  style="width: 80%;height: 80%; opacity:1.0">
+            <table  border="1" cellspacing="0" cellpadding="0" width="600" >
+                <tr>
+                    <th>
+                        <select  name="selTypeEdit">
+                            <option></option>
+                            {{#each type}}
+                                <option value="{{name}}">{{name}}</option>
+                            {{/each}}
+                        </select>
+                    </th>
+                    <th>
+                        <select  name="selLevelEdit">
+                            <option></option>
+                            {{#each level}}
+                                <option value="{{name}}">{{name}}</option>
+                            {{/each}}
+                        </select>
+                    </th>
+                    <th>
+                        <select  name="selPowerEdit">
+                            <option></option>
+                            {{#each power}}
+                                <option value="{{name}}">{{name}}</option>
+                            {{/each}}
+                        </select>
+                    </th>
+                </tr>
+                    <tr >
+                        <td colspan="3" width="93%"><p>题目:</p><textarea style="width: 300px;height: 200px"  name="editItemInput"></textarea><p>答案:</p><textarea name="editAnswerInput" style="width: 300px;height: 200px"></textarea></td>
+                    </tr>
+            </table>
+            <button id="save" style="width: 80px;height: 40px;">保存</button><button id="cancel" style="width: 80px;height: 40px;">取消</button>
+        </div>
+    </div>
+</center>
+<p align="center">所有类型的题目</p>
+    <table  border="1" cellspacing="0" cellpadding="0" width="600" id="table">
+        <tr>
+            <th>
+                <select onchange="change(this)" id="selType">
+                    <option></option>
+                    {{#each type}}
+                        <option value="{{name}}">{{name}}</option>
+                    {{/each}}
+                </select>
+            </th>
+            <th>
+                <select onchange="change(this)" id="selLevel">
+                    <option></option>
+                    {{#each level}}
+                        <option value="{{name}}">{{name}}</option>
+                    {{/each}}
+                </select>
+            </th>
+            <th>
+                <select onchange="change(this)" id="selPower">
+                    <option></option>
+                    {{#each power}}
+                        <option value="{{name}}">{{name}}</option>
+                    {{/each}}
+                </select>
+            </th>
+            <th>操作</th>
+        </tr>
+            {{#each item}}
+                <tr hidden="hidden" name="item" id="{{type}}:{{level}}:{{power}}" title="{{answer}} ">
+                <td colspan="3" width="93%">{{content}}</td>
+                <td>
+                <button title="{{_id}}" name="del"  style="width:20px height: 30px">删除</button>
+                <button title="{{_id}}" name="edit" style="width:20px height: 30px">修改</button>
+                </td>
+                </tr>
+            {{/each}}
+    </table>
 <p>选择语言类型</p>
 <select id="type">
     {{#each type}}
@@ -29,9 +107,182 @@
     var power=document.getElementById("power");
     var question=document.getElementById("question");
     var answer=document.getElementById("answer");
+    var arrDel =document.getElementsByName("del");
+    var arrEdit =document.getElementsByName("edit");
+    var selType=document.getElementById("selType");
+    var  selLevel = document.getElementById("selLevel");
+    var  selPower = document.getElementById("selPower");
+    var  div = document.getElementById("model");
+    var  editItemInputArr = document.getElementsByName("editItemInput");
+    var  editAnswerInputArr =document.getElementsByName("editAnswerInput");
+    var  saveBtn = document.getElementById("save");
+    var  cancelBtn = document.getElementById("cancel");
+
+    var selTypeEditArr=document.getElementsByName("selTypeEdit");
+    var  selLevelEditArr = document.getElementsByName("selLevelEdit");
+    var  selPowerEditArr = document.getElementsByName("selPowerEdit");
+    var itemID;
+    saveBtn.onclick =function()
+    {
+        var idContent={};
+        idContent.id =itemID;
+        idContent.content = editItemInputArr[0].value;
+        idContent.answer = editAnswerInputArr[0].value;
+        idContent.level = selLevelEditArr[0].value;
+        idContent.type =selTypeEditArr[0].value;
+        idContent.power =selPowerEditArr[0].value;
+        xhr=new XMLHttpRequest();
+        xhr.onreadystatechange=state_Update;
+        xhr.open("PUT","additem",true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify(idContent));
+        div.style.display ="none";
+    }
+   cancelBtn.onclick = function()
+   {
+       div.style.display ="none";
+   }
+    for(var i=0;i<arrEdit.length;i++) {
+        arrEdit[i].onclick = (function (index) {
+            return function () {
+                var arrItem = document.getElementsByName("item");
+                var arrData=arrItem[index].id.split(":");
+                selTypeEditArr[0].value=arrData[0];
+                selLevelEditArr[0].value =arrData[1];
+                selPowerEditArr[0].value =arrData[2];
+                div.style.display ="block";
+                editItemInputArr[0].value = arrItem[index].getElementsByTagName("td")[0].innerText;
+                var answer=arrItem[index].title;
+                editAnswerInputArr[0].value = answer;
+                itemID=arrDel[index].title;
+            }
+        })(i);
+    }
+    function change (){
+        var type=selType.value;
+        var level=selLevel.value;
+        var power=selPower.value;
+        var arrItem=document.getElementsByName("item");
+        for(var i=0;i<arrItem.length;i++)
+        {
+            var ele=arrItem[i];
+            var arrData=ele.id.split(":");
+            var condition1 = type=="";
+            var condition2 = level=="";
+            var condition3 = power=="";
+            var condition4 = arrData[0]==type && arrData[1]==level && arrData[2]==power;
+            if(type!=""&&power!=""&&level!="")
+            {
+
+                if(arrData[0]==type && arrData[1]==level && arrData[2]==power)
+                {
+                    ele.removeAttribute("hidden");
+                }
+                else
+                {
+                    ele.setAttribute("hidden", "hidden");
+                }
+            }
+
+            if(condition1&&!condition2&&!condition3)
+            {
+                if( arrData[1]==level && arrData[2]==power)
+                {
+                    ele.removeAttribute("hidden");
+                }
+                else
+                {
+                    ele.setAttribute("hidden", "hidden");
+                }
+            }
+           if(!condition1&&condition2&&!condition3)
+           {
+               if( arrData[0]==type && arrData[2]==power)
+               {
+                   ele.removeAttribute("hidden");
+               }
+               else
+               {
+                   ele.setAttribute("hidden", "hidden");
+               }
+           }
+            if(!condition1&&!condition2&&condition3)
+            {
+                if( arrData[0]==type && arrData[1]==level)
+                {
+                    ele.removeAttribute("hidden");
+                }
+                else
+                {
+                    ele.setAttribute("hidden", "hidden");
+                }
+            }
+            if(!condition1&&condition2&&condition3)
+            {
+                if( arrData[0]==type)
+                {
+                    ele.removeAttribute("hidden");
+                }
+                else
+                {
+                    ele.setAttribute("hidden", "hidden");
+                }
+            }
+            if(!condition1&&!condition2&&condition3)
+            {
+                if( arrData[0]==type&&arrData[1]==level)
+                {
+                    ele.removeAttribute("hidden");
+                }
+                else
+                {
+                    ele.setAttribute("hidden", "hidden");
+                }
+            }
+            if(condition1&&!condition2&&!condition3)
+            {
+                if( arrData[1]==level&&arrData[2]==power)
+                {
+                    ele.removeAttribute("hidden");
+                }
+                else
+                {
+                    ele.setAttribute("hidden", "hidden");
+                }
+            }
+            if(condition1&&condition2&&condition3)
+            {
+                ele.setAttribute("hidden","hidden");
+            }
+        }
+    }
+for(var i=0;i<arrDel.length;i++)
+{
+    arrDel[i].onclick=(function(index)
+    {
+        return function()
+        {
+            if(confirm('确定删除这道题目?'))
+            {
+
+            }
+            else
+            {
+                return;
+            }
+            var idContent={};
+            idContent.id =arrDel[index].title;
+            xhr=new XMLHttpRequest();
+            xhr.onreadystatechange=state_Delete;
+            xhr.open("DELETE","additem",true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.send(JSON.stringify(idContent));
+        }
+    })(i);
+}
+
     btn.onclick=function()
     {
-
         if(question.value=="")
         {
             alert("请添加内容");
@@ -68,6 +319,22 @@
         xhr.open("POST","additem",true);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.send(JSON.stringify(content));
+    }
+    function state_Update()
+    {
+        if (xhr.readyState==4)
+        {
+            if (xhr.status==200)
+            {
+                alert("保存成功");
+                location.reload();
+            }
+            else
+            {
+                alert(xhr.status);
+            }
+        }
+
 
     }
     function state_Change()
@@ -79,10 +346,26 @@
                 alert("添加成功");
                 question.value="";
                 answer.value="";
+                location.reload();
             }
             else
             {
                 alert("添加失败");
+            }
+        }
+    }
+    function state_Delete()
+    {
+        if (xhr.readyState==4)
+        {
+            if (xhr.status==200)
+            {
+                alert("删除成功");
+                location.reload();
+            }
+            else
+            {
+                alert("删除失败");
             }
         }
     }

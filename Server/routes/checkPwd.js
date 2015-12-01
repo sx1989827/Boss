@@ -44,7 +44,7 @@ router.use(function(req,res,next)
     }
     var clientParam;
     var username,pwd;
-    if(req.method=="POST")
+    if(req.method=="POST" || req.method=="PUT" || req.method=="DELETE")
     {
         if(/^multipart\/form-data/i.test(req.headers["content-type"]))
         {

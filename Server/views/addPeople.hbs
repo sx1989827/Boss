@@ -1,16 +1,44 @@
+<div style="background: gray; width: 100%;height: 400px;padding-top: 30px;display: none;position: absolute;z-index: 100"id="editDiv">
+    <div  style="width: 80%;height: 80%; opacity:1.0">
+        <table  border="1">
+            <tr align="center">
+                <th>名称</th>
+                <th>说话</th>
+                <th>工资</th>
+                <th>速度</th>
+                <th>描述</th>
+                <th>操作</th>
+            </tr>
+                <tr align="center">
+                    <td><input name="name"/></td>
+                    <td><input name="talk"/></td>
+                    <td><input name="money"/></td>
+                    <td><input name="speed"/></td>
+                    <td><input name="des"/></td>
+                    <td><button name="save">保存</button></td>
+                    <td><button name="cancel">取消</button></td>
+                </tr>
+        </table>
+    </div>
+</div>
 <table  border="1">
     <tr align="center">
         <th>名称</th>
         <th>说话</th>
         <th>工资</th>
         <th>速度</th>
+        <th>描述</th>
+        <th>操作</th>
     </tr>
     {{#each people}}
-        <tr align="center">
+        <tr align="center" name="people"  id="{{name}}:{{talk}}:{{money}}:{{speed}}:{{des}}" >
             <td>{{name}}</td>
             <td>{{talk}}</td>
             <td>{{money}}</td>
             <td>{{speed}}</td>
+            <td>{{des}}</td>
+            <td><button name="delete" title="{{_id}}">删除</button></td>
+            <td><button name="edit" title="{{_id}}">编辑</button></td>
         </tr>
     {{/each}}
 </table>
@@ -31,9 +59,77 @@
     var talk=document.getElementById("talk");
     var money=document.getElementById("money");
     var speed=document.getElementById("speed");
+    var editDiv =document.getElementById("editDiv");
+    var deleteBntArr =document.getElementsByName("delete");
+    var editBtnArr =document.getElementsByName("edit");
+    var saveBtnArr = document.getElementsByName("save");
+    var cancelBtnArr = document.getElementsByName("cancel");
+    var inputNameArr =document.getElementsByName("name");
+    var inputTalkArr =document.getElementsByName("talk");
+    var inputMoneyArr =document.getElementsByName("money");
+    var inputSpeedArr =document.getElementsByName("speed");
+    var  peopleArr =document.getElementsByName("people");
+    var  desArr =document.getElementsByName("des");
+    var itemID;
+    for(var i=0;i<deleteBntArr.length;i++)
+    {
+        deleteBntArr[i].onclick=(function(index){
+
+            return function()
+            {
+                if(confirm('确定删除?'))
+                {
+
+                }
+                else
+                {
+                    return;
+                }
+                var idContent={};
+                idContent.id =deleteBntArr[index].title;
+                xhr=new XMLHttpRequest();
+                xhr.onreadystatechange=state_Delete;
+                xhr.open("DELETE","addPeople",true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.send(JSON.stringify(idContent));
+            }
+        })(i);
+    }
+    for(var i=0;i<editBtnArr.length;i++)
+    {
+        editBtnArr[i].onclick=(function(index){
+             return function(){
+                 var array = peopleArr[index].id.split(":");
+                 inputNameArr[0].value =array[0];
+                 inputTalkArr[0].value =array[1];
+                 inputMoneyArr[0].value =array[2];
+                 inputSpeedArr[0].value =array[3];
+                 desArr[0].value =array[4];
+                 itemID =editBtnArr[index].title;
+                 editDiv.style.display="block";
+             }
+        })(i);
+    }
+    saveBtnArr[0].onclick=function(){
+        var content ={};
+        content.id = itemID;
+        content.name =inputNameArr[0].value;
+        content.money =inputMoneyArr[0].value;
+        content.speed =inputSpeedArr[0].value;
+        content.talk =inputTalkArr[0].value;
+        content.des =desArr[0].value;
+        xhr =new  XMLHttpRequest();
+        xhr.onreadystatechange=state_Change;
+        xhr.open("PUT","addPeople",true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify(content));
+        editDiv.style.display ="none";
+    }
+    cancelBtnArr[0].onclick =function(){
+        editDiv.style.display ="none";
+    }
     btn.onclick=function()
     {
-
         if(talk.value=="")
         {
             alert("请添加说话内容");
@@ -78,6 +174,21 @@
             else
             {
                 alert("添加失败");
+            }
+        }
+    }
+    function state_Delete()
+    {
+        if (xhr.readyState==4)
+        {
+            if (xhr.status==200)
+            {
+                alert("删除成功");
+                location.reload(true);
+            }
+            else
+            {
+                alert("删除失败");
             }
         }
     }
