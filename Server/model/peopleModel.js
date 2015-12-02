@@ -7,7 +7,8 @@ var model=new mongoose.Schema({
     name:String,
     talk:String,
     money:Number,
-    speed:Number
+    speed:Number,
+    des:String
 });
 var dbManage=db.model("Person",model);
 module.exports=dbManage;

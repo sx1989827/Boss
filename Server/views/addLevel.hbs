@@ -1,3 +1,39 @@
+<center>
+    <div style="background: gray; width: 100%;height: 800px;padding-top: 30px;display: none;position: absolute;z-index: 100"id="editDiv">
+        <div id="editLevelDiv"  style="width: 80%;height: 80%; opacity:1.0">
+            <table  border="1">
+                <tr align="center">
+                    <th>等级</th>
+                    <th>名称</th>
+                    <th>语言类型</th>
+                    <th>时间</th>
+                    <th>步数</th>
+                    <th>属下</th>
+                    <th>操作</th>
+                </tr>
+                    <tr align="center">
+                        <td><input name="degree" style="width: 60px" value="{{degree}}"/></td>
+                        <td><input name="name" style="width: 60px" value="{{name}}"/></td>
+                        <td><input name="type" style="width: 60px" value="{{type}}"/></td>
+                        <td><input name="time" style="width: 60px" value="{{time}}"/></td>
+                        <td><input name="step" style="width: 60px" value="{{step}}"/></td>
+                        <td id="numtd">
+                                <select name="selectName">
+                                        {{#each people}}
+                                            <option value="{{name}}">{{name}}</option>
+                                        {{/each}}
+                                </select>X<input  style="width: 30px;"/>
+                        </td>
+                        <td>
+                            <button   style="width: 50px;height: 30px;" name="save">保存</button><br/>
+                            <button   style="width: 50px;height: 30px;" name="cancel">取消</button>
+                        </td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+</center>
+<br>
 <table  border="1">
     <tr align="center">
         <th>等级</th>
@@ -6,18 +42,20 @@
         <th>时间</th>
         <th>步数</th>
         <th>属下</th>
+        <th>操作</th>
     </tr>
     {{#each level}}
-        <tr align="center">
+        <tr align="center" name="level" title="{{_id}}" id="{{degree}}:{{name}}:{{type}}:{{time}}:{{step}}:{{enemy}}">
             <td>{{degree}}</td>
             <td>{{name}}</td>
             <td>{{type}}</td>
             <td>{{time}}</td>
             <td>{{step}}</td>
+            <td name="td">
+            </td>
             <td>
-                {{#each enemy}}
-                    {{name}} X{{count}}<br/>
-                {{/each}}
+                <button title="{{_id}}" style="width: 50px;height: 30px;" name="delete">删除</button><br>
+                <button title="{{_id}}" style="width: 50px;height: 30px;" name="edit">编辑</button>
             </td>
         </tr>
     {{/each}}
@@ -49,9 +87,176 @@
     var time=document.getElementById("time");
     var step=document.getElementById("step");
     var enemy=document.getElementById("enemy");
+    var deletebtnArr =document.getElementsByName("delete");
+    var editbtnArr =document.getElementsByName("edit");
+    var editLevelDiv = document.getElementById("editDiv");
+    var cancelBtnArr =document.getElementsByName("cancel");
+    var saveBtnArr =document.getElementsByName("save");
+    var editDegreeArr =document.getElementsByName("degree");
+    var editNameArr =document.getElementsByName("name");
+    var editTypeArr =document.getElementsByName("type");
+    var editTimeArr =document.getElementsByName("time");
+    var editStepArr =document.getElementsByName("step");
+    var levelArr =document.getElementsByName("level");
+    var itemID;
+    var  str="";
+    var degreeArr= new Array;
+
+    function bubbleSort(arr) {
+        var i = arr.length, j;
+        var tempExchangVal;
+        while (i > 0) {
+            for (j = 0; j < i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    tempExchangVal = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tempExchangVal;
+                }
+            }
+            i--;
+        }
+        return arr;
+    }
+
+    var arr= function()
+    {
+        for(var j=0;j<levelArr.length;j++)
+        {
+            var array = levelArr[j].id.split(":");
+            var degree =array[0];
+             degreeArr.push(degree);
+
+        }
+
+
+
+    }
+
+
+
+    for(var j=0;j<levelArr.length;j++)
+    {
+        var array = levelArr[j].id.split(":");
+        var degree =array[0];
+
+        degreeArr.push(degree);
+        if(j==levelArr.length-1)
+        {
+
+
+
+
+        }
+
+        var array1 = JSON.parse(array[5]);
+        if(array1.length==1)
+        {
+            str="";
+            str+= "<ul>"+array1[0][0]+"</ul><br/>X<br/><ul>"+array1[0][1]+"</ul>";
+            document.getElementsByName('td')[j].innerHTML = str;
+            str="";
+        }else
+        {
+            for(var  i=0;i<array1.length;i++)
+            {
+                str+= "<ul>"+array1[i][0]+"</ul><br/>X<br/><ul>"+array1[i][1]+"</ul>";
+                document.getElementsByName('td')[j].innerHTML = str;
+            }
+        }
+    }
+    saveBtnArr[0].onclick =function()
+    {
+        var inputNameArr =document.getElementsByName("selectName");
+        var inputCountArr =document.getElementsByName("inputCount");
+        var inputArr =new  Array;
+        for(var i=0;i<inputNameArr.length;i++)
+        {
+            var index = inputNameArr[i].selectedIndex;
+            inputArr.push(inputNameArr[i][index].value);
+            inputArr.push(inputCountArr[i]);
+        }
+        var  content={};
+        content.id = itemID;
+        content.degree =editDegreeArr[0].value;
+        content.name =editNameArr[0].value;
+        content.type =editTypeArr[0].value;
+        content.time =editTimeArr[0].value;
+        content.step =editStepArr[0].value;
+        var arrEnemy =new  Array;
+        for(var j=0;j<inputArr.length-1;j++)
+        {
+            arrEnemy.push({"name":inputArr[j],count:inputArr[j+1].value});
+        }
+        for(var index in inputArr)
+        {
+            if(index.value=="")
+            {
+                alert("不能有空的选项");
+                return;
+            }
+        }
+        content.enemy =arrEnemy;
+        xhr=new XMLHttpRequest();
+        xhr.onreadystatechange=state_Edit;
+        xhr.open("PUT","addLevel",true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify(content));
+    }
+    cancelBtnArr[0].onclick=function()
+    {
+        editLevelDiv.style.display="none";
+
+    }
+    for(var i=0;i<editbtnArr.length;i++)
+    {
+        editbtnArr[i].onclick=(function(index)
+        {
+            return function()
+            {
+                var array = levelArr[index].id.split(":");
+                editDegreeArr[0].value =array[0];
+                editNameArr[0].value =array[1];
+                editTypeArr[0].value =array[2];
+                editTimeArr[0].value = array[3];
+                editStepArr[0].value =array[4];
+                var enemtArr = JSON.parse(array[5]);
+                var str1 = '';
+               for(var j=0;j<enemtArr.length;j++)
+               {
+                   str1+= "<select name='selectName'>{{#each people}} <option value='"+enemtArr[j][0]+"'>{{name}}</option>{{/each}} </select>X<input name='inputCount' style='width: 30px;'value='"+enemtArr[j][1]+"'/>";
+               }
+                document.getElementById('numtd').innerHTML = str1;
+                itemID =levelArr[index].title;
+                editLevelDiv.style.display="block";
+            }
+        })(i);
+    }
+    for(var i=0;i<deletebtnArr.length;i++)
+    {
+        deletebtnArr[i].onclick=(function(index)
+        {
+            return function()
+            {
+                if(confirm('确定删除?'))
+                {
+
+                }
+                else
+                {
+                    return;
+                }
+                var idContent={};
+                idContent.id =deletebtnArr[index].title;
+                xhr=new XMLHttpRequest();
+                xhr.onreadystatechange=state_Delete;
+                xhr.open("DELETE","addLevel",true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.send(JSON.stringify(idContent));
+            }
+        })(i);
+    }
     btn.onclick=function()
     {
-
         if(degree.value=="")
         {
             alert("请添加等级");
@@ -87,7 +292,7 @@
         for(var index in arrTemp)
         {
             var arrTemp1=arrTemp[index].split(" ");
-            if(arrTemp1.length!=2)
+            if(arrTemp1.length<2)
             {
                 alert("步数添加不正确");
                 return;
@@ -106,7 +311,6 @@
         xhr.open("POST","addlevel",true);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.send(JSON.stringify(content));
-
     }
     function state_Change()
     {
@@ -120,6 +324,36 @@
             else
             {
                 alert("添加失败");
+            }
+        }
+    }
+    function state_Edit()
+    {
+        if (xhr.readyState==4)
+        {
+            if (xhr.status==200)
+            {
+                alert("修改成功");
+                location.reload(true);
+            }
+            else
+            {
+                alert("修改失败");
+            }
+        }
+    }
+    function state_Delete()
+    {
+        if (xhr.readyState==4)
+        {
+            if (xhr.status==200)
+            {
+                alert("删除成功");
+                location.reload(true);
+            }
+            else
+            {
+                alert("删除失败");
             }
         }
     }

@@ -1,5 +1,18 @@
+
+<div style="background: gray; width: 100%;height: 600px;padding-top: 30px;display: none;position: absolute;z-index: 100"id="editDiv">
+    <div  style="width: 80%;height: 80%; opacity:1.0">
+        p>名称：</p>
+        <input type="text" style="width: 150px;height: 20px" name="typeName"/>
+        <p>描述：</p>
+        <textarea name="des1" style="width: 300px;height: 200px" ></textarea><br/><br/>
+        <button name="save">保存</button>
+        <button name="cancel">取消</button>
+    </div>
+</div>
 {{#each type}}
-    <p>{{.}}</p>
+    <p name="typeItem" id="{{_id}}:{{name}}:{{des}}">{{name}}</p>
+    <button name="delete" title="{{_id}}">删除类型</button>
+    <button name="edit" title="{{_id}}">编辑类型</button>
 {{/each}}
 <br/>
 <p>名称：</p>
@@ -12,6 +25,71 @@
     var btn=document.getElementById("submit");
     var type=document.getElementById("type");
     var des=document.getElementById("des");
+    var editDiv =document.getElementById("editDiv");
+    var typeItemArr =document.getElementsByName("typeItem");
+    var deleteBtnArr =document.getElementsByName("delete");
+    var editBtnArr =document.getElementsByName("edit");
+    var saveBtnArr =document.getElementsByName("save");
+    var cancelBtnArr =document.getElementsByName("cancel");
+    var inputNameArr =document.getElementsByName("typeName");
+    var inputDesArr =document.getElementsByName("des1");
+    var itemID;
+    for(var i=0;i<editBtnArr.length;i++)
+    {
+        editBtnArr[i].onclick=(function(index){
+
+            return function(){
+                var array = typeItemArr[index].id.split(":");
+                inputNameArr[0].value= array[1];
+                inputDesArr[0].value =array[2];
+                itemID =editBtnArr[index].title;
+            editDiv.style.display="block";
+            }
+        })(i);
+    }
+    saveBtnArr[0].onclick =function()
+    {
+        var  content={};
+        content.id =itemID;
+        content.name =inputNameArr[0].value;
+        content.des =inputDesArr[0].value;
+        xhr =new XMLHttpRequest();
+        xhr.onreadystatechange=state_Save;
+        xhr.open("PUT","addType",true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(JSON.stringify(content));
+        editDiv.style.display="none";
+    }
+    cancelBtnArr[0].onclick =function()
+    {
+
+        editDiv.style.display="none";
+
+    }
+    for(var i=0;i<deleteBtnArr.length;i++)
+    {
+        deleteBtnArr[i].onclick=(function(index)
+        {
+            return function(){
+
+                if(confirm('确定删除?'))
+                {
+
+                }
+                else
+                {
+                    return;
+                }
+                var idContent={};
+                idContent.id =deleteBtnArr[index].title;
+                xhr=new XMLHttpRequest();
+                xhr.onreadystatechange=state_Delete;
+                xhr.open("DELETE","addType",true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.send(JSON.stringify(idContent));
+            }
+        })(i);
+    }
     btn.onclick=function()
     {
 
@@ -47,6 +125,36 @@
             else
             {
                 alert("添加失败");
+            }
+        }
+    }
+    function state_Delete()
+    {
+        if (xhr.readyState==4)
+        {
+            if (xhr.status==200)
+            {
+                alert("删除成功");
+                location.reload(true);
+            }
+            else
+            {
+                alert("删除失败");
+            }
+        }
+    }
+    function state_Save()
+    {
+        if (xhr.readyState==4)
+        {
+            if (xhr.status==200)
+            {
+                alert("保存成功");
+                location.reload(true);
+            }
+            else
+            {
+                alert("保存失败");
             }
         }
     }
