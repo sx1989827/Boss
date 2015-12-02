@@ -13,6 +13,10 @@
 #import "AppDelegate.h"
 #import <SVProgressHUD.h>
 #import <POP.h>
+#import "InputView.h"
+#import "TipView.h"
 #define E(msg) [SVProgressHUD showErrorWithStatus:msg maskType:SVProgressHUDMaskTypeGradient]
 #define S(msg) [SVProgressHUD showSuccessWithStatus:msg maskType:SVProgressHUDMaskTypeGradient]
 #define COL(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define USERNAME [UserDefaults sharedInstance].resModel.data.username
+#define PWD [UserDefaults sharedInstance].resModel.data.pwd

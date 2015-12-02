@@ -22,7 +22,20 @@
         NSString * key = [[NSString alloc]initWithCString:property_getName(property)  encoding:NSUTF8StringEncoding];
         if([obj valueForKey:key]!=nil)
         {
-            [dic setObject:[obj valueForKey:key] forKey:key];
+            if(![[obj valueForKey:key] isKindOfClass:[NSData class]])
+            {
+                [dic setObject:[obj valueForKey:key] forKey:key];
+            }
+            else
+            {
+                NSMutableArray *arr=[dic objectForKey:@"#FileAppendName"];
+                if(arr==nil)
+                {
+                    arr=[[NSMutableArray alloc] initWithCapacity:30];
+                    [dic setObject:arr forKey:@"#FileAppendName"];
+                }
+                [arr addObject:key];
+            }
         }
     }
     properties = class_copyPropertyList([[obj class] superclass], &outCount);
@@ -33,20 +46,7 @@
         {
             if(![key isEqualToString:@"url"])
             {
-                if(![[obj valueForKey:key] isKindOfClass:[NSData class]])
-                {
-                    [dic setObject:[obj valueForKey:key] forKey:key];
-                }
-                else
-                {
-                    NSMutableArray *arr=[dic objectForKey:@"#FileAppendName"];
-                    if(arr==nil)
-                    {
-                        arr=[[NSMutableArray alloc] initWithCapacity:30];
-                        [dic setObject:arr forKey:@"#FileAppendName"];
-                    }
-                    [arr addObject:key];
-                }
+                [dic setObject:[obj valueForKey:key] forKey:key];
             }
         }
     }
@@ -99,7 +99,7 @@
                 for(NSString *key in arr)
                 {
                     NSData *data=[ret valueForKey:key];
-                    [formData appendPartWithFormData:data name:key];
+                    [formData appendPartWithFileData:data name:key fileName:key mimeType:@"image/png"];
                 }
             } SuccessBlock:^(NSDictionary *dic) {
                 Class cls=NSClassFromString(strCls);

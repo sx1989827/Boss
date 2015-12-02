@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MemberVC">
+            <connections>
+                <outlet property="btnName" destination="Jvm-iq-GTt" id="p64-yb-1IR"/>
+                <outlet property="btnPhoto" destination="Spm-zK-fhY" id="rDn-Da-noj"/>
+                <outlet property="tableMain" destination="OX0-B0-AqT" id="Oex-RO-lPk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bL-ce-4To">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="zvG-ar-cM3">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                            <animations/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spm-zK-fhY">
+                            <rect key="frame" x="125" y="65" width="70" height="70"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="BM7-cc-M65"/>
+                                <constraint firstAttribute="width" constant="70" id="xMP-0D-29q"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="35"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onPhoto:" destination="-1" eventType="touchUpInside" id="Dmg-IJ-HAn"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvm-iq-GTt">
+                            <rect key="frame" x="66" y="143" width="189" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="etL-vX-9pC"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal">
+                                <color key="titleColor" red="0.1450980392" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="onName:" destination="-1" eventType="touchUpInside" id="7ob-VN-qOE"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Jvm-iq-GTt" secondAttribute="trailing" constant="65" id="EOj-7k-AMv"/>
+                        <constraint firstItem="zvG-ar-cM3" firstAttribute="leading" secondItem="1bL-ce-4To" secondAttribute="leading" id="FWS-o4-8IR"/>
+                        <constraint firstItem="Jvm-iq-GTt" firstAttribute="top" secondItem="Spm-zK-fhY" secondAttribute="bottom" constant="8" id="Fdd-4t-Umh"/>
+                        <constraint firstAttribute="bottom" secondItem="zvG-ar-cM3" secondAttribute="bottom" id="ImA-lG-DE3"/>
+                        <constraint firstAttribute="height" constant="200" id="L1M-Xu-1lH"/>
+                        <constraint firstItem="Spm-zK-fhY" firstAttribute="centerX" secondItem="1bL-ce-4To" secondAttribute="centerX" id="TL8-2O-PXo"/>
+                        <constraint firstItem="zvG-ar-cM3" firstAttribute="top" secondItem="1bL-ce-4To" secondAttribute="top" id="XlL-IQ-gkx"/>
+                        <constraint firstItem="Spm-zK-fhY" firstAttribute="centerY" secondItem="1bL-ce-4To" secondAttribute="centerY" id="f5Y-gP-4uR"/>
+                        <constraint firstItem="Jvm-iq-GTt" firstAttribute="leading" secondItem="1bL-ce-4To" secondAttribute="leading" constant="66" id="tx5-GV-uy2"/>
+                        <constraint firstAttribute="trailing" secondItem="zvG-ar-cM3" secondAttribute="trailing" id="zL2-UB-e4f"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OX0-B0-AqT" customClass="LazyTableView">
+                    <rect key="frame" x="0.0" y="200" width="320" height="231"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1bL-ce-4To" secondAttribute="trailing" id="3wL-1T-ubU"/>
+                <constraint firstItem="1bL-ce-4To" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4c9-el-HwD"/>
+                <constraint firstItem="1bL-ce-4To" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Eka-kg-jpg"/>
+                <constraint firstAttribute="bottom" secondItem="OX0-B0-AqT" secondAttribute="bottom" constant="49" id="N1N-mr-IHe"/>
+                <constraint firstItem="OX0-B0-AqT" firstAttribute="top" secondItem="1bL-ce-4To" secondAttribute="bottom" id="U5U-hZ-uD2"/>
+                <constraint firstAttribute="trailing" secondItem="OX0-B0-AqT" secondAttribute="trailing" id="k3W-Ly-0qw"/>
+                <constraint firstItem="OX0-B0-AqT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mDx-zT-pUX"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="header" width="398" height="295"/>
+    </resources>
+</document>

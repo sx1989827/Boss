@@ -7,3 +7,4 @@ pod "IQKeyboardManager"
 pod "AFNetworking”
 pod "LazyTableView"
 pod "LazyPageScrollView"
+pod "RunTrace"
