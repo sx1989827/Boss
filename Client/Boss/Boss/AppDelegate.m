@@ -17,11 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     _window =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _window.backgroundColor=[UIColor whiteColor];
     [self initApp];
     if([[UserDefaults sharedInstance] isAvailable])
     {
         [[UserDefaults sharedInstance] update:nil Pwd:nil SucBlock:^(UserInfoModel *model) {
-            
+            [self showMainTab];
         } FailBlock:^(NSString *msg) {
             NSLog(@"%@",msg);
             [self showLoginVC];
@@ -40,6 +41,14 @@
     [[UINavigationBar appearance] setBarTintColor:COL(34, 51, 61, 1)];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+}
+
+-(void)showMainTab
+{
+    Class cls=NSClassFromString(@"MainTabVC");
+    UITabBarController *vc=[[cls alloc] init];
+    _window.rootViewController=vc;
+    [self.window makeKeyAndVisible];
 }
 
 -(void)showLoginVC

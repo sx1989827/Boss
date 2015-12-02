@@ -9,6 +9,7 @@
 #import "LoginVC.h"
 #import "Header.h"
 #import "LoginInputView.h"
+#import "AppDelegate.h"
 @interface LoginVC ()
 
 @end
@@ -84,6 +85,10 @@
     }
     [[UserDefaults sharedInstance] update:_texUsername.text Pwd:_texPwd.text SucBlock:^(UserInfoModel *model) {
         S(@"登陆成功");
+        Class cls=NSClassFromString(@"MainTabVC");
+        UITabBarController *vc=[[cls alloc] init];
+        AppDelegate *app=(AppDelegate*)[UIApplication sharedApplication].delegate;
+        app.window.rootViewController=vc;
     } FailBlock:^(NSString *msg) {
         E(msg);
     } Hud:YES];

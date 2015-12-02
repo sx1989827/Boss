@@ -8,9 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "UserInfoReq.h"
+#import "PeopleInfoReq.h"
+#import "PowerInfoReq.h"
 @interface UserDefaults : NSObject
 @property (strong,nonatomic) UserInfoRes *resModel;
+@property (strong,nonatomic)    NSMutableDictionary *dicPower;
 +(instancetype)sharedInstance;
 -(BOOL)isAvailable;
 -(void)update:(NSString*)username Pwd:(NSString*)pwd SucBlock:(void (^)(UserInfoModel* model))sucBlock FailBlock:(void (^)(NSString* msg))failBlock  Hud:(BOOL)bHud;
+-(void)updatePeopleInfo:(void (^)(NSDictionary* dic))block Hud:(BOOL)bHud;
+-(PeopleInfoModel *)peopleName:(NSString*)name;
+-(void)updatePowerInfo:(void (^)(NSDictionary* dic))block Hud:(BOOL)bHud;
+-(NSInteger)powerName:(NSString*)name;
 @end

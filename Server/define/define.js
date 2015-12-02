@@ -156,10 +156,10 @@ exports.service=[
             username:String,
             pwd:String,
         },
-        data:{
+        data:[{
             name:String,
             des:String
-        }
+        }]
     },
     {
         method:"GET",
@@ -172,7 +172,7 @@ exports.service=[
         },
         data:{
             name:String,
-            time:String,
+            time:Number,
             step:Number,
             enemy:[
                 {
@@ -276,7 +276,8 @@ exports.service=[
                 name:String,
                 talk:String,
                 money:Number,
-                speed:Number
+                speed:Number,
+                des:String
             }
         ]
     }

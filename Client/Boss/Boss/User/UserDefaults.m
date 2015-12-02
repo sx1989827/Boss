@@ -7,8 +7,9 @@
 //
 
 #import "UserDefaults.h"
+#import "Header.h"
 @interface UserDefaults()
-
+@property (strong,nonatomic)    NSMutableDictionary *dicPeople;
 @end
 @implementation UserDefaults
 
@@ -68,6 +69,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         obj=[[[self class] alloc] init];
+        obj.dicPeople=[[NSMutableDictionary alloc] initWithCapacity:30];
+        obj.dicPower=[[NSMutableDictionary alloc] initWithCapacity:30];
         NSUserDefaults *user=[NSUserDefaults standardUserDefaults];
         NSData *data=[user objectForKey:@"userModel"];
         if(data)
@@ -77,6 +80,66 @@
         }
     });
     return obj;
+}
+
+-(void)updatePeopleInfo:(void (^)(NSDictionary *))block Hud:(BOOL)bHud
+{
+	[PeopleInfoReq do:^(id req) {
+        
+    } Res:^(id res) {
+        PeopleInfoRes *obj=res;
+        if(obj.code==0)
+        {
+            NSArray* arr= obj.data;
+            for(PeopleInfoModel *model in arr)
+            {
+                [_dicPeople setObject:model forKey:model.name];
+            }
+            if(block)
+            {
+                block(_dicPeople);
+            }
+        }
+        else
+        {
+            E(obj.msg);
+        }
+    } ShowHud:bHud];
+}
+
+-(PeopleInfoModel *)peopleName:(NSString*)name
+{
+    return _dicPeople[name];
+}
+
+-(void)updatePowerInfo:(void (^)(NSDictionary* dic))block Hud:(BOOL)bHud
+{
+    [PowerInfoReq do:^(id req) {
+        
+    } Res:^(id res) {
+        PowerInfoRes *obj=res;
+        if(obj.code==0)
+        {
+            NSArray* arr= obj.data;
+            for(PowerInfoModel *model in arr)
+            {
+                [_dicPower setObject:@(model.value) forKey:model.name];
+            }
+            if(block)
+            {
+                block(_dicPower);
+            }
+        }
+        else
+        {
+            E(obj.msg);
+        }
+    } ShowHud:bHud];
+}
+
+-(NSInteger)powerName:(NSString*)name
+{
+    return [_dicPower[name] integerValue];
 }
 @end
 

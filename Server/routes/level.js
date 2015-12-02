@@ -35,6 +35,11 @@ router.get("/info", function (req, res)
             })
             return;
         }
+        var arr=[];
+        for(var i=0;i<result.length;i++)
+        {
+            arr.push(result[i].name);
+        }
         if(value==undefined)
         {
             res.json({
@@ -42,7 +47,7 @@ router.get("/info", function (req, res)
                 data: {
                     level: result[0].name,
                     score: req.userInfo.score,
-                    totleLevel:result
+                    totleLevel:arr
                 }
             });
         }
@@ -53,7 +58,7 @@ router.get("/info", function (req, res)
                 data: {
                     level: value,
                     score: req.userInfo.score,
-                    totleLevel:result
+                    totleLevel:arr
                 }
             });
         }
@@ -74,7 +79,7 @@ router.get("/type", function (req, res)
         }
         res.json({
             code: 0,
-            msg: result
+            data: result
         });
     });
 
@@ -100,7 +105,7 @@ router.get("/enter", function (req, res)
         }
         res.json({
             code:0,
-            data:result
+            data:result[0]
         })
     });
 

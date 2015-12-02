@@ -148,7 +148,7 @@ router.post('/photo', function(req, res) {
                     }
                     res.json({
                         code:0,
-                        msg:uploadedPath
+                        data:uploadedPath
                     })
                 });
             });
