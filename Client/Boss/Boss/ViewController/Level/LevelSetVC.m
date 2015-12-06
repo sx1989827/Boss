@@ -11,11 +11,13 @@
 #import "LevelEnterReq.h"
 #import "EnemyItem.h"
 #import "ChooseItemCountView.h"
+#import "LevelStartReq.h"
 @interface LevelSetVC ()<ChooseItemCountDelegate>
 {
     NSMutableArray *arrChooseView;
     NSInteger step;
     NSInteger time;
+    NSArray<LevelEnterEnemy*> *arrEnemy;
 }
 @end
 
@@ -33,8 +35,10 @@
         LevelEnterRes *obj=res;
         if(obj.code==0)
         {
+            arrEnemy=obj.data.enemy;
             [self handleData:obj.data];
             [self removeHud];
+            self.bHud=NO;
         }
         else
         {
@@ -118,6 +122,10 @@
         lb.backgroundColor=[UIColor groupTableViewBackgroundColor];
         [_viewItem addSubview:lb];
     }
+    for(ChooseItemCountView *view in arrChooseView)
+    {
+        view.lbCount.text=@"5";
+    }
 }
 
 -(BOOL)ChooseItemCountAdd
@@ -139,7 +147,71 @@
 
 - (IBAction)onSubmit:(id)sender
 {
-    
+    NSInteger count=0;
+    NSMutableArray *arr=[[NSMutableArray alloc] initWithCapacity:30];
+    for(ChooseItemCountView *view in arrChooseView)
+    {
+        count+=[view.lbCount.text integerValue];
+        [arr addObject:@{
+                        @"name":view.lbTitle.text,
+                        @"count":@([view.lbCount.text integerValue])
+                         }];
+    }
+    if(count!=step)
+    {
+        E(@"请正确分配步数");
+        return;
+    }
+    [TipView showWithTitle:@"确认开始！" Tip:@"是否确认开始，即将开始初始化" YesBlock:^{
+        [LevelStartReq do:^(id req) {
+            LevelStartReq *obj=req;
+            obj.type=_type;
+            obj.level=_level;
+            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:arr
+                                                               options:NSJSONWritingPrettyPrinted
+                                                                 error:nil];
+            NSString *jsonString = [[NSString alloc] initWithData:jsonData
+                                                         encoding:NSUTF8StringEncoding];
+            obj.power=jsonString;
+        } Res:^(id res) {
+            LevelStartRes *obj=res;
+            if(obj.code==0)
+            {
+                NSInteger count=0;
+                for(LevelStartModel *model in obj.data)
+                {
+                    model.index=@0;
+                    count+=model.data.count;
+                }
+                NSMutableDictionary *dic=[[NSMutableDictionary alloc] initWithCapacity:30];
+                [dic setObject: @{
+                                 @"money":@([[UserDefaults sharedInstance] peopleName:_level].money),
+                                 @"count":@(1),
+                                 @"speed":@([[UserDefaults sharedInstance] peopleName:_level].speed)
+                                 }forKey:_level];
+                for(LevelEnterEnemy* enemy in arrEnemy)
+                {
+                    [dic setObject:@{
+                                  @"money":@([[UserDefaults sharedInstance] peopleName:enemy.name].money),
+                                  @"count":@(enemy.count),
+                                  @"speed":@([[UserDefaults sharedInstance] peopleName:enemy.name].speed)
+                                     }forKey:enemy.name];
+                }
+                [self pushViewController:@"LevelGameVC" Param:@{
+                                                                @"type":_type,
+                                                                @"level":_level,
+                                                                @"dicEnemy":dic,
+                                                                @"powerCount":@(count),
+                                                                @"time":@(time),
+                                                                @"arrItem":obj.data
+                                                                }];
+            }
+            else
+            {
+                E(obj.msg);
+            }
+        } ShowHud:YES];
+    } NoBlock:nil];
 }
 @end
 

@@ -13,6 +13,8 @@
 @interface UserDefaults : NSObject
 @property (strong,nonatomic) UserInfoRes *resModel;
 @property (strong,nonatomic)    NSMutableDictionary *dicPower;
+-(NSString*)level:(NSString*)type;
+-(NSInteger)money:(NSString*)levelName;
 +(instancetype)sharedInstance;
 -(BOOL)isAvailable;
 -(void)update:(NSString*)username Pwd:(NSString*)pwd SucBlock:(void (^)(UserInfoModel* model))sucBlock FailBlock:(void (^)(NSString* msg))failBlock  Hud:(BOOL)bHud;
@@ -20,4 +22,11 @@
 -(PeopleInfoModel *)peopleName:(NSString*)name;
 -(void)updatePowerInfo:(void (^)(NSDictionary* dic))block Hud:(BOOL)bHud;
 -(NSInteger)powerName:(NSString*)name;
+-(void)updateScore:(NSInteger)score;
+-(void)updateLevel:(NSString*)type Level:(NSString*)level;
 @end
+
+
+
+
+

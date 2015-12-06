@@ -26,6 +26,31 @@
 		B53660C01C06EB4200D09686 /* LevelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B53660BE1C06EB4200D09686 /* LevelVC.m */; };
 		B53660C11C06EB4200D09686 /* LevelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53660BF1C06EB4200D09686 /* LevelVC.xib */; };
 		B53660C51C06ECC900D09686 /* LevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53660C41C06ECC900D09686 /* LevelView.m */; };
+		B570C5871C11C69B008A2C3F /* LevelGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5851C11C69B008A2C3F /* LevelGameVC.m */; };
+		B570C5881C11C69B008A2C3F /* LevelGameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B570C5861C11C69B008A2C3F /* LevelGameVC.xib */; };
+		B570C58C1C11C784008A2C3F /* TextDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C58B1C11C784008A2C3F /* TextDrawView.m */; };
+		B570C5B11C11C7AF008A2C3F /* bomb.sks in Resources */ = {isa = PBXBuildFile; fileRef = B570C58E1C11C7AF008A2C3F /* bomb.sks */; };
+		B570C5B21C11C7AF008A2C3F /* bullet.sks in Resources */ = {isa = PBXBuildFile; fileRef = B570C58F1C11C7AF008A2C3F /* bullet.sks */; };
+		B570C5B31C11C7AF008A2C3F /* GameDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5911C11C7AF008A2C3F /* GameDefine.m */; };
+		B570C5B41C11C7AF008A2C3F /* GameEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5931C11C7AF008A2C3F /* GameEnemy.m */; };
+		B570C5B51C11C7AF008A2C3F /* GameUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5951C11C7AF008A2C3F /* GameUser.m */; };
+		B570C5B61C11C7AF008A2C3F /* laser.sks in Resources */ = {isa = PBXBuildFile; fileRef = B570C5961C11C7AF008A2C3F /* laser.sks */; };
+		B570C5B71C11C7AF008A2C3F /* BarrierPower.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5991C11C7AF008A2C3F /* BarrierPower.m */; };
+		B570C5B81C11C7AF008A2C3F /* BombPower.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C59B1C11C7AF008A2C3F /* BombPower.m */; };
+		B570C5B91C11C7AF008A2C3F /* BulletPower.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C59D1C11C7AF008A2C3F /* BulletPower.m */; };
+		B570C5BA1C11C7AF008A2C3F /* EnemyPower.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C59F1C11C7AF008A2C3F /* EnemyPower.m */; };
+		B570C5BB1C11C7AF008A2C3F /* LaserPower.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5A11C11C7AF008A2C3F /* LaserPower.m */; };
+		B570C5BC1C11C7AF008A2C3F /* MoneyPower.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5A31C11C7AF008A2C3F /* MoneyPower.m */; };
+		B570C5BD1C11C7AF008A2C3F /* MyPower.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5A51C11C7AF008A2C3F /* MyPower.m */; };
+		B570C5BE1C11C7AF008A2C3F /* TimePower.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5A71C11C7AF008A2C3F /* TimePower.m */; };
+		B570C5BF1C11C7AF008A2C3F /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = B570C5A81C11C7AF008A2C3F /* spark.png */; };
+		B570C5C01C11C7AF008A2C3F /* ViewGame.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5AA1C11C7AF008A2C3F /* ViewGame.m */; };
+		B570C5C11C11C7AF008A2C3F /* ViewGame.xib in Resources */ = {isa = PBXBuildFile; fileRef = B570C5AB1C11C7AF008A2C3F /* ViewGame.xib */; };
+		B570C5C21C11C7AF008A2C3F /* ViewSence.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5AE1C11C7AF008A2C3F /* ViewSence.m */; };
+		B570C5C31C11C7AF008A2C3F /* ViewTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5B01C11C7AF008A2C3F /* ViewTexture.m */; };
+		B570C5C61C11CBE0008A2C3F /* LevelStartReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5C51C11CBE0008A2C3F /* LevelStartReq.m */; };
+		B570C5CA1C131694008A2C3F /* ItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5C91C131694008A2C3F /* ItemView.m */; };
+		B570C5CE1C13D387008A2C3F /* ChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5CD1C13D387008A2C3F /* ChooseView.m */; };
 		B57722811C046F6300EE189E /* TypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B57722801C046F6300EE189E /* TypeCell.m */; };
 		B57722831C046F7300EE189E /* TypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57722821C046F7300EE189E /* TypeCell.xib */; };
 		B57722861C04712D00EE189E /* TypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B57722851C04712D00EE189E /* TypeItem.m */; };
@@ -72,6 +97,7 @@
 		B5977FA11C0406D400175174 /* ForgotVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5977F9F1C0406D400175174 /* ForgotVC.xib */; };
 		B5977FA51C040A0500175174 /* ForgotFinishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5977FA31C040A0500175174 /* ForgotFinishVC.m */; };
 		B5977FA61C040A0500175174 /* ForgotFinishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5977FA41C040A0500175174 /* ForgotFinishVC.xib */; };
+		B5C3DE4C1C13DE8D00CA1C51 /* PreStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DE4B1C13DE8D00CA1C51 /* PreStartView.m */; };
 		B5CD9DCF1C0750DA00DABCAA /* LevelInfoReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD9DCE1C0750DA00DABCAA /* LevelInfoReq.m */; };
 		B5CD9DD31C07FA1800DABCAA /* LevelSetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD9DD11C07FA1800DABCAA /* LevelSetVC.m */; };
 		B5CD9DD41C07FA1800DABCAA /* LevelSetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CD9DD21C07FA1800DABCAA /* LevelSetVC.xib */; };
@@ -119,6 +145,51 @@
 		B53660BF1C06EB4200D09686 /* LevelVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelVC.xib; sourceTree = "<group>"; };
 		B53660C31C06ECC900D09686 /* LevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelView.h; sourceTree = "<group>"; };
 		B53660C41C06ECC900D09686 /* LevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelView.m; sourceTree = "<group>"; };
+		B570C5841C11C69B008A2C3F /* LevelGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelGameVC.h; sourceTree = "<group>"; };
+		B570C5851C11C69B008A2C3F /* LevelGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelGameVC.m; sourceTree = "<group>"; };
+		B570C5861C11C69B008A2C3F /* LevelGameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelGameVC.xib; sourceTree = "<group>"; };
+		B570C58A1C11C784008A2C3F /* TextDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextDrawView.h; sourceTree = "<group>"; };
+		B570C58B1C11C784008A2C3F /* TextDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextDrawView.m; sourceTree = "<group>"; };
+		B570C58E1C11C7AF008A2C3F /* bomb.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bomb.sks; sourceTree = "<group>"; };
+		B570C58F1C11C7AF008A2C3F /* bullet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bullet.sks; sourceTree = "<group>"; };
+		B570C5901C11C7AF008A2C3F /* GameDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDefine.h; sourceTree = "<group>"; };
+		B570C5911C11C7AF008A2C3F /* GameDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDefine.m; sourceTree = "<group>"; };
+		B570C5921C11C7AF008A2C3F /* GameEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEnemy.h; sourceTree = "<group>"; };
+		B570C5931C11C7AF008A2C3F /* GameEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEnemy.m; sourceTree = "<group>"; };
+		B570C5941C11C7AF008A2C3F /* GameUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUser.h; sourceTree = "<group>"; };
+		B570C5951C11C7AF008A2C3F /* GameUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameUser.m; sourceTree = "<group>"; };
+		B570C5961C11C7AF008A2C3F /* laser.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = laser.sks; sourceTree = "<group>"; };
+		B570C5981C11C7AF008A2C3F /* BarrierPower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrierPower.h; sourceTree = "<group>"; };
+		B570C5991C11C7AF008A2C3F /* BarrierPower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrierPower.m; sourceTree = "<group>"; };
+		B570C59A1C11C7AF008A2C3F /* BombPower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BombPower.h; sourceTree = "<group>"; };
+		B570C59B1C11C7AF008A2C3F /* BombPower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BombPower.m; sourceTree = "<group>"; };
+		B570C59C1C11C7AF008A2C3F /* BulletPower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletPower.h; sourceTree = "<group>"; };
+		B570C59D1C11C7AF008A2C3F /* BulletPower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletPower.m; sourceTree = "<group>"; };
+		B570C59E1C11C7AF008A2C3F /* EnemyPower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyPower.h; sourceTree = "<group>"; };
+		B570C59F1C11C7AF008A2C3F /* EnemyPower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyPower.m; sourceTree = "<group>"; };
+		B570C5A01C11C7AF008A2C3F /* LaserPower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaserPower.h; sourceTree = "<group>"; };
+		B570C5A11C11C7AF008A2C3F /* LaserPower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaserPower.m; sourceTree = "<group>"; };
+		B570C5A21C11C7AF008A2C3F /* MoneyPower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoneyPower.h; sourceTree = "<group>"; };
+		B570C5A31C11C7AF008A2C3F /* MoneyPower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoneyPower.m; sourceTree = "<group>"; };
+		B570C5A41C11C7AF008A2C3F /* MyPower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPower.h; sourceTree = "<group>"; };
+		B570C5A51C11C7AF008A2C3F /* MyPower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPower.m; sourceTree = "<group>"; };
+		B570C5A61C11C7AF008A2C3F /* TimePower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimePower.h; sourceTree = "<group>"; };
+		B570C5A71C11C7AF008A2C3F /* TimePower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimePower.m; sourceTree = "<group>"; };
+		B570C5A81C11C7AF008A2C3F /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		B570C5A91C11C7AF008A2C3F /* ViewGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewGame.h; sourceTree = "<group>"; };
+		B570C5AA1C11C7AF008A2C3F /* ViewGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewGame.m; sourceTree = "<group>"; };
+		B570C5AB1C11C7AF008A2C3F /* ViewGame.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewGame.xib; sourceTree = "<group>"; };
+		B570C5AC1C11C7AF008A2C3F /* ViewGameProtovol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewGameProtovol.h; sourceTree = "<group>"; };
+		B570C5AD1C11C7AF008A2C3F /* ViewSence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewSence.h; sourceTree = "<group>"; };
+		B570C5AE1C11C7AF008A2C3F /* ViewSence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewSence.m; sourceTree = "<group>"; };
+		B570C5AF1C11C7AF008A2C3F /* ViewTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTexture.h; sourceTree = "<group>"; };
+		B570C5B01C11C7AF008A2C3F /* ViewTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTexture.m; sourceTree = "<group>"; };
+		B570C5C41C11CBE0008A2C3F /* LevelStartReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelStartReq.h; sourceTree = "<group>"; };
+		B570C5C51C11CBE0008A2C3F /* LevelStartReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelStartReq.m; sourceTree = "<group>"; };
+		B570C5C81C131694008A2C3F /* ItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemView.h; sourceTree = "<group>"; };
+		B570C5C91C131694008A2C3F /* ItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemView.m; sourceTree = "<group>"; };
+		B570C5CC1C13D387008A2C3F /* ChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseView.h; sourceTree = "<group>"; };
+		B570C5CD1C13D387008A2C3F /* ChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseView.m; sourceTree = "<group>"; };
 		B577227F1C046F6300EE189E /* TypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeCell.h; sourceTree = "<group>"; };
 		B57722801C046F6300EE189E /* TypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeCell.m; sourceTree = "<group>"; };
 		B57722821C046F7300EE189E /* TypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeCell.xib; sourceTree = "<group>"; };
@@ -192,6 +263,8 @@
 		B5977FA21C040A0500175174 /* ForgotFinishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotFinishVC.h; sourceTree = "<group>"; };
 		B5977FA31C040A0500175174 /* ForgotFinishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotFinishVC.m; sourceTree = "<group>"; };
 		B5977FA41C040A0500175174 /* ForgotFinishVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotFinishVC.xib; sourceTree = "<group>"; };
+		B5C3DE4A1C13DE8D00CA1C51 /* PreStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreStartView.h; sourceTree = "<group>"; };
+		B5C3DE4B1C13DE8D00CA1C51 /* PreStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreStartView.m; sourceTree = "<group>"; };
 		B5CD9DCD1C0750DA00DABCAA /* LevelInfoReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelInfoReq.h; sourceTree = "<group>"; };
 		B5CD9DCE1C0750DA00DABCAA /* LevelInfoReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelInfoReq.m; sourceTree = "<group>"; };
 		B5CD9DD01C07FA1800DABCAA /* LevelSetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelSetVC.h; sourceTree = "<group>"; };
@@ -277,6 +350,82 @@
 			path = LevelView;
 			sourceTree = "<group>";
 		};
+		B570C5891C11C784008A2C3F /* TextDraw */ = {
+			isa = PBXGroup;
+			children = (
+				B570C58A1C11C784008A2C3F /* TextDrawView.h */,
+				B570C58B1C11C784008A2C3F /* TextDrawView.m */,
+			);
+			path = TextDraw;
+			sourceTree = "<group>";
+		};
+		B570C58D1C11C7AF008A2C3F /* ViewGame */ = {
+			isa = PBXGroup;
+			children = (
+				B570C58E1C11C7AF008A2C3F /* bomb.sks */,
+				B570C58F1C11C7AF008A2C3F /* bullet.sks */,
+				B570C5901C11C7AF008A2C3F /* GameDefine.h */,
+				B570C5911C11C7AF008A2C3F /* GameDefine.m */,
+				B570C5921C11C7AF008A2C3F /* GameEnemy.h */,
+				B570C5931C11C7AF008A2C3F /* GameEnemy.m */,
+				B570C5941C11C7AF008A2C3F /* GameUser.h */,
+				B570C5951C11C7AF008A2C3F /* GameUser.m */,
+				B570C5961C11C7AF008A2C3F /* laser.sks */,
+				B570C5971C11C7AF008A2C3F /* Power */,
+				B570C5A81C11C7AF008A2C3F /* spark.png */,
+				B570C5A91C11C7AF008A2C3F /* ViewGame.h */,
+				B570C5AA1C11C7AF008A2C3F /* ViewGame.m */,
+				B570C5AB1C11C7AF008A2C3F /* ViewGame.xib */,
+				B570C5AC1C11C7AF008A2C3F /* ViewGameProtovol.h */,
+				B570C5AD1C11C7AF008A2C3F /* ViewSence.h */,
+				B570C5AE1C11C7AF008A2C3F /* ViewSence.m */,
+				B570C5AF1C11C7AF008A2C3F /* ViewTexture.h */,
+				B570C5B01C11C7AF008A2C3F /* ViewTexture.m */,
+			);
+			path = ViewGame;
+			sourceTree = "<group>";
+		};
+		B570C5971C11C7AF008A2C3F /* Power */ = {
+			isa = PBXGroup;
+			children = (
+				B570C5981C11C7AF008A2C3F /* BarrierPower.h */,
+				B570C5991C11C7AF008A2C3F /* BarrierPower.m */,
+				B570C59A1C11C7AF008A2C3F /* BombPower.h */,
+				B570C59B1C11C7AF008A2C3F /* BombPower.m */,
+				B570C59C1C11C7AF008A2C3F /* BulletPower.h */,
+				B570C59D1C11C7AF008A2C3F /* BulletPower.m */,
+				B570C59E1C11C7AF008A2C3F /* EnemyPower.h */,
+				B570C59F1C11C7AF008A2C3F /* EnemyPower.m */,
+				B570C5A01C11C7AF008A2C3F /* LaserPower.h */,
+				B570C5A11C11C7AF008A2C3F /* LaserPower.m */,
+				B570C5A21C11C7AF008A2C3F /* MoneyPower.h */,
+				B570C5A31C11C7AF008A2C3F /* MoneyPower.m */,
+				B570C5A41C11C7AF008A2C3F /* MyPower.h */,
+				B570C5A51C11C7AF008A2C3F /* MyPower.m */,
+				B570C5A61C11C7AF008A2C3F /* TimePower.h */,
+				B570C5A71C11C7AF008A2C3F /* TimePower.m */,
+			);
+			path = Power;
+			sourceTree = "<group>";
+		};
+		B570C5C71C131665008A2C3F /* ItemView */ = {
+			isa = PBXGroup;
+			children = (
+				B570C5C81C131694008A2C3F /* ItemView.h */,
+				B570C5C91C131694008A2C3F /* ItemView.m */,
+			);
+			path = ItemView;
+			sourceTree = "<group>";
+		};
+		B570C5CB1C13D36F008A2C3F /* ChooseView */ = {
+			isa = PBXGroup;
+			children = (
+				B570C5CC1C13D387008A2C3F /* ChooseView.h */,
+				B570C5CD1C13D387008A2C3F /* ChooseView.m */,
+			);
+			path = ChooseView;
+			sourceTree = "<group>";
+		};
 		B57722871C04ADE800EE189E /* Rank */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +483,9 @@
 		B58212071BFEFAEB00168A57 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				B570C5CB1C13D36F008A2C3F /* ChooseView */,
+				B570C58D1C11C7AF008A2C3F /* ViewGame */,
+				B570C5891C11C784008A2C3F /* TextDraw */,
 				B53660B91C06ADAF00D09686 /* TipView */,
 				B53660AF1C05AC0300D09686 /* InputView */,
 				B5977F911C035B3A00175174 /* SliderView */,
@@ -410,6 +562,8 @@
 		B582120F1BFEFB6900168A57 /* Level */ = {
 			isa = PBXGroup;
 			children = (
+				B5C3DE491C13DE6F00CA1C51 /* PreStartView */,
+				B570C5C71C131665008A2C3F /* ItemView */,
 				B51A02B21C084B4F00610020 /* ChooseItemCountView */,
 				B53660C21C06ECB900D09686 /* LevelView */,
 				B53660BD1C06EB4200D09686 /* LevelVC.h */,
@@ -418,6 +572,9 @@
 				B5CD9DD01C07FA1800DABCAA /* LevelSetVC.h */,
 				B5CD9DD11C07FA1800DABCAA /* LevelSetVC.m */,
 				B5CD9DD21C07FA1800DABCAA /* LevelSetVC.xib */,
+				B570C5841C11C69B008A2C3F /* LevelGameVC.h */,
+				B570C5851C11C69B008A2C3F /* LevelGameVC.m */,
+				B570C5861C11C69B008A2C3F /* LevelGameVC.xib */,
 			);
 			path = Level;
 			sourceTree = "<group>";
@@ -579,6 +736,15 @@
 			path = img;
 			sourceTree = "<group>";
 		};
+		B5C3DE491C13DE6F00CA1C51 /* PreStartView */ = {
+			isa = PBXGroup;
+			children = (
+				B5C3DE4A1C13DE8D00CA1C51 /* PreStartView.h */,
+				B5C3DE4B1C13DE8D00CA1C51 /* PreStartView.m */,
+			);
+			path = PreStartView;
+			sourceTree = "<group>";
+		};
 		B5CD9DCC1C0750C600DABCAA /* Level */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +752,8 @@
 				B5CD9DCE1C0750DA00DABCAA /* LevelInfoReq.m */,
 				B5CD9DD81C080CBD00DABCAA /* LevelEnterReq.h */,
 				B5CD9DD91C080CBD00DABCAA /* LevelEnterReq.m */,
+				B570C5C41C11CBE0008A2C3F /* LevelStartReq.h */,
+				B570C5C51C11CBE0008A2C3F /* LevelStartReq.m */,
 			);
 			path = Level;
 			sourceTree = "<group>";
@@ -677,6 +845,7 @@
 				B5977FA61C040A0500175174 /* ForgotFinishVC.xib in Resources */,
 				B58212211BFEFD5300168A57 /* HUDLoading3.png in Resources */,
 				B51A02B71C084B8300610020 /* ChooseItemCountView.xib in Resources */,
+				B570C5881C11C69B008A2C3F /* LevelGameVC.xib in Resources */,
 				B53660C11C06EB4200D09686 /* LevelVC.xib in Resources */,
 				B5977F781C034B3200175174 /* back.png in Resources */,
 				B5108B3F1C045D0C005F6CC6 /* MemberVC.xib in Resources */,
@@ -684,18 +853,23 @@
 				B5977FA11C0406D400175174 /* ForgotVC.xib in Resources */,
 				B5977F981C035BD100175174 /* slidercenter.png in Resources */,
 				B58212221BFEFD5300168A57 /* HUDLoading4.png in Resources */,
+				B570C5B11C11C7AF008A2C3F /* bomb.sks in Resources */,
 				B58211FD1BFEEE6500168A57 /* Assets.xcassets in Resources */,
 				B5108B3A1C045CE7005F6CC6 /* RankVC.xib in Resources */,
 				B5977F991C035BD100175174 /* slidertag.png in Resources */,
 				B582121F1BFEFD5300168A57 /* HUDLoading1.png in Resources */,
+				B570C5C11C11C7AF008A2C3F /* ViewGame.xib in Resources */,
+				B570C5BF1C11C7AF008A2C3F /* spark.png in Resources */,
 				B577228F1C04AEA400EE189E /* RankCell.xib in Resources */,
 				B5977F761C03465900175174 /* RegisterVC.xib in Resources */,
 				B5977F8B1C035A3600175174 /* cellcheck.png in Resources */,
+				B570C5B21C11C7AF008A2C3F /* bullet.sks in Resources */,
 				B58212231BFEFD5300168A57 /* HUDLoading5.png in Resources */,
 				B5CD9DD41C07FA1800DABCAA /* LevelSetVC.xib in Resources */,
 				B5108B351C045C80005F6CC6 /* HomeVC.xib in Resources */,
 				B5977F7D1C03507600175174 /* RegisterFinishVC.xib in Resources */,
 				B582120E1BFEFB1B00168A57 /* Game.xcassets in Resources */,
+				B570C5B61C11C7AF008A2C3F /* laser.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,33 +935,53 @@
 				B582122E1BFF094B00168A57 /* Util.m in Sources */,
 				B5977F6E1C02FDBB00175174 /* UserDefaults.m in Sources */,
 				B5108B391C045CE7005F6CC6 /* RankVC.m in Sources */,
+				B570C5B81C11C7AF008A2C3F /* BombPower.m in Sources */,
 				B57722811C046F6300EE189E /* TypeCell.m in Sources */,
 				B51A02B51C084B6B00610020 /* ChooseItemCountView.m in Sources */,
+				B570C5C61C11CBE0008A2C3F /* LevelStartReq.m in Sources */,
+				B570C58C1C11C784008A2C3F /* TextDrawView.m in Sources */,
 				B5977F9C1C036BCE00175174 /* RegisterReq.m in Sources */,
 				B58212311BFF1B7100168A57 /* BaseReq.m in Sources */,
+				B570C5B31C11C7AF008A2C3F /* GameDefine.m in Sources */,
+				B570C5CA1C131694008A2C3F /* ItemView.m in Sources */,
+				B570C5871C11C69B008A2C3F /* LevelGameVC.m in Sources */,
 				B5108B2D1C045139005F6CC6 /* ResetPwdReq.m in Sources */,
 				B5CD9DE21C08307F00DABCAA /* EnemyItem.m in Sources */,
+				B570C5B51C11C7AF008A2C3F /* GameUser.m in Sources */,
 				B53660C01C06EB4200D09686 /* LevelVC.m in Sources */,
+				B570C5C31C11C7AF008A2C3F /* ViewTexture.m in Sources */,
 				B5CD9DD31C07FA1800DABCAA /* LevelSetVC.m in Sources */,
+				B570C5BC1C11C7AF008A2C3F /* MoneyPower.m in Sources */,
 				B53660B51C05BBA500D09686 /* EditNameReq.m in Sources */,
 				B5977F8D1C035A3600175174 /* SGAlertMenu.m in Sources */,
 				B53660BC1C06ADBA00D09686 /* TipView.m in Sources */,
 				B5977F751C03465900175174 /* RegisterVC.m in Sources */,
+				B570C5BB1C11C7AF008A2C3F /* LaserPower.m in Sources */,
 				B5977F8E1C035A3600175174 /* SGBaseMenu.m in Sources */,
+				B570C5C21C11C7AF008A2C3F /* ViewSence.m in Sources */,
 				B5108B341C045C80005F6CC6 /* HomeVC.m in Sources */,
 				B5977FA01C0406D400175174 /* ForgotVC.m in Sources */,
 				B58211F51BFEEE6500168A57 /* AppDelegate.m in Sources */,
+				B570C5BD1C11C7AF008A2C3F /* MyPower.m in Sources */,
+				B570C5CE1C13D387008A2C3F /* ChooseView.m in Sources */,
 				B58212351BFF255500168A57 /* CheckUserNameReq.m in Sources */,
+				B570C5B41C11C7AF008A2C3F /* GameEnemy.m in Sources */,
 				B58212161BFEFBD000168A57 /* BaseViewController.m in Sources */,
 				B58212291BFEFD7F00168A57 /* LoginVC.m in Sources */,
 				B5108B3E1C045D0C005F6CC6 /* MemberVC.m in Sources */,
+				B570C5BE1C11C7AF008A2C3F /* TimePower.m in Sources */,
+				B570C5B71C11C7AF008A2C3F /* BarrierPower.m in Sources */,
 				B5977F7C1C03507600175174 /* RegisterFinishVC.m in Sources */,
 				B5977FA51C040A0500175174 /* ForgotFinishVC.m in Sources */,
+				B570C5BA1C11C7AF008A2C3F /* EnemyPower.m in Sources */,
 				B53660B21C05AC1700D09686 /* InputView.m in Sources */,
+				B570C5C01C11C7AF008A2C3F /* ViewGame.m in Sources */,
 				B5977F901C035A3600175174 /* SGSheetMenu.m in Sources */,
 				B5108B2A1C044F34005F6CC6 /* UserQuestionReq.m in Sources */,
 				B58211F21BFEEE6500168A57 /* main.m in Sources */,
+				B570C5B91C11C7AF008A2C3F /* BulletPower.m in Sources */,
 				B5CD9DE61C0835E700DABCAA /* PeopleInfoReq.m in Sources */,
+				B5C3DE4C1C13DE8D00CA1C51 /* PreStartView.m in Sources */,
 				B577228D1C04AE9700EE189E /* RankCell.m in Sources */,
 				B5977F941C035B3A00175174 /* SliderView.m in Sources */,
 				B53660C51C06ECC900D09686 /* LevelView.m in Sources */,

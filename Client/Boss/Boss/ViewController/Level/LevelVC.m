@@ -30,6 +30,7 @@
         LevelInfoRes *obj=res;
         if(obj.code==0)
         {
+            [[UserDefaults sharedInstance] updateScore:obj.data.score];
             arrLevel=obj.data.totleLevel;
             indexLevel=[arrLevel indexOfObject:obj.data.level];
             viewLevel=[[LevelView alloc] initWithNodes:[arrLevel subarrayWithRange:NSMakeRange(0, indexLevel+2)] UserIndex:indexLevel MaxCount:arrLevel.count];

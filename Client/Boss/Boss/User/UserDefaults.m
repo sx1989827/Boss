@@ -141,6 +141,40 @@
 {
     return [_dicPower[name] integerValue];
 }
+
+-(NSString*)level:(NSString*)type
+{
+	for(UserInfoLevelModel *obj in _resModel.data.level)
+    {
+        if([obj.name isEqualToString:type])
+        {
+            return obj.level;
+        }
+    }
+    return nil;
+}
+
+-(void)updateScore:(NSInteger)score
+{
+	self.resModel.data.score=score;
+}
+
+-(void)updateLevel:(NSString*)type Level:(NSString*)level
+{
+	for(UserInfoLevelModel *obj in _resModel.data.level)
+    {
+        if([obj.name isEqualToString:type])
+        {
+            obj.level=level;
+        }
+    }
+}
+
+-(NSInteger)money:(NSString*)levelName
+{
+    return [self peopleName:levelName].money;
+}
+
 @end
 
 
