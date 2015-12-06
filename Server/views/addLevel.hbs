@@ -100,53 +100,33 @@
     var levelArr =document.getElementsByName("level");
     var itemID;
     var  str="";
-    var degreeArr= new Array;
-
-    function bubbleSort(arr) {
-        var i = arr.length, j;
-        var tempExchangVal;
-        while (i > 0) {
-            for (j = 0; j < i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    tempExchangVal = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = tempExchangVal;
-                }
-            }
-            i--;
-        }
-        return arr;
-    }
-
-    var arr= function()
-    {
-        for(var j=0;j<levelArr.length;j++)
-        {
-            var array = levelArr[j].id.split(":");
-            var degree =array[0];
-             degreeArr.push(degree);
-
-        }
-
-
-
-    }
-
-
-
+//    function bubbleSort(arr) {
+//        var  degreeArr =new  Array;
+//        for(var a=0;a<arr.length;a++)
+//        {
+//            var array = arr[a].id.split(":");
+//            degreeArr.push(array[0]);
+//
+//        }
+//        var i = degreeArr.length, j;
+//        var tempExchangVal;
+//        while (i > 0) {
+//            for (j = 0; j < i; j++) {
+//                if (degreeArr[j] > degreeArr[j + 1]) {
+//                    tempExchangVal = arr[j];
+//                    arr[j] = arr[j + 1];
+//                    arr[j + 1] = tempExchangVal;
+//                }
+//            }
+//            i--;
+//        }
+//        return arr;
+//    }
     for(var j=0;j<levelArr.length;j++)
     {
         var array = levelArr[j].id.split(":");
-        var degree =array[0];
 
-        degreeArr.push(degree);
-        if(j==levelArr.length-1)
-        {
-
-
-
-
-        }
+//        var  arr =bubbleSort(levelArr);
 
         var array1 = JSON.parse(array[5]);
         if(array1.length==1)
@@ -168,13 +148,6 @@
     {
         var inputNameArr =document.getElementsByName("selectName");
         var inputCountArr =document.getElementsByName("inputCount");
-        var inputArr =new  Array;
-        for(var i=0;i<inputNameArr.length;i++)
-        {
-            var index = inputNameArr[i].selectedIndex;
-            inputArr.push(inputNameArr[i][index].value);
-            inputArr.push(inputCountArr[i]);
-        }
         var  content={};
         content.id = itemID;
         content.degree =editDegreeArr[0].value;
@@ -183,11 +156,11 @@
         content.time =editTimeArr[0].value;
         content.step =editStepArr[0].value;
         var arrEnemy =new  Array;
-        for(var j=0;j<inputArr.length-1;j++)
+        for(var j=0;j<inputNameArr.length;j++)
         {
-            arrEnemy.push({"name":inputArr[j],count:inputArr[j+1].value});
+            arrEnemy.push({"name":inputNameArr[j].value,"count":inputCountArr[j].value});
         }
-        for(var index in inputArr)
+        for(var index in inputNameArr)
         {
             if(index.value=="")
             {
@@ -223,7 +196,7 @@
                 var str1 = '';
                for(var j=0;j<enemtArr.length;j++)
                {
-                   str1+= "<select name='selectName'>{{#each people}} <option value='"+enemtArr[j][0]+"'>{{name}}</option>{{/each}} </select>X<input name='inputCount' style='width: 30px;'value='"+enemtArr[j][1]+"'/>";
+                   str1+= "<input name='selectName' style='width: 30px;'value='"+enemtArr[j][0]+"'/>X<input name='inputCount' style='width: 30px;'value='"+enemtArr[j][1]+"'/>";
                }
                 document.getElementById('numtd').innerHTML = str1;
                 itemID =levelArr[index].title;
