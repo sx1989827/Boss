@@ -18,9 +18,9 @@
     NSMutableArray *arrNodes;
     NSMutableArray *arrPointX;
     NSInteger indexLast;
-    NSInteger y;
+    CGFloat y;
     CAShapeLayer *layer;
-    NSInteger radius;
+    CGFloat radius;
     UIButton *btnUser;
     NSInteger iMaxCount;
 }

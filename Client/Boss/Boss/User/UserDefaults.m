@@ -160,13 +160,21 @@
 
 -(void)updateLevel:(NSString*)type Level:(NSString*)level
 {
-	for(UserInfoLevelModel *obj in _resModel.data.level)
+    
+    for(UserInfoLevelModel *obj in _resModel.data.level)
     {
         if([obj.name isEqualToString:type])
         {
             obj.level=level;
+            return;
         }
     }
+    NSMutableArray<UserInfoLevelModel> *arr=[[NSMutableArray<UserInfoLevelModel> alloc] initWithArray:_resModel.data.level];
+    UserInfoLevelModel *obj=[[UserInfoLevelModel alloc] init];
+    obj.name=type;
+    obj.level=level;
+    [arr addObject:obj];
+    _resModel.data.level=arr;
 }
 
 -(NSInteger)money:(NSString*)levelName
