@@ -8,8 +8,7 @@
 
 #import "HomeVC.h"
 #import "Header.h"
-
-@interface HomeVC ()
+@interface HomeVC ()<UINavigationControllerDelegate>
 
 @end
 
@@ -43,6 +42,8 @@
 {
     [super viewDidAppear:animated];
 }
+
+
 @end
 
 

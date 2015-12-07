@@ -14,6 +14,7 @@ extern NSString *msgUpdateLevel;
 @interface UIViewController(PushView)
 -(UIViewController*)pushViewController:(NSString *)ToView Param:(NSDictionary*)param;
 -(UIViewController*)presentViewController:(NSString *)ToView Param:(NSDictionary*)param;
+-(void)dismiss;
 @end
 @interface NSString (Extensin)
 - (NSString *) md5;
@@ -54,6 +55,7 @@ extern NSString *msgUpdateLevel;
 
 @interface UIView (Additions)
 -(UIViewController *)viewController;
+-(UIImage*)image;
 @end
 
 @interface NSDictionary (WG)

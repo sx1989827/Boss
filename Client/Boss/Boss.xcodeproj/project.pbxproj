@@ -29,6 +29,8 @@
 		B54373901C15519E0002346A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58211FE1BFEEE6500168A57 /* LaunchScreen.storyboard */; };
 		B54373941C1554A20002346A /* StartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B54373921C1554A20002346A /* StartVC.m */; };
 		B54373951C1554A20002346A /* StartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54373931C1554A20002346A /* StartVC.xib */; };
+		B54373991C156A600002346A /* AnimateInOut.m in Sources */ = {isa = PBXBuildFile; fileRef = B54373981C156A600002346A /* AnimateInOut.m */; };
+		B543739C1C157C110002346A /* AnimateRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = B543739B1C157C110002346A /* AnimateRotate.m */; };
 		B570C5871C11C69B008A2C3F /* LevelGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5851C11C69B008A2C3F /* LevelGameVC.m */; };
 		B570C5881C11C69B008A2C3F /* LevelGameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B570C5861C11C69B008A2C3F /* LevelGameVC.xib */; };
 		B570C58C1C11C784008A2C3F /* TextDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C58B1C11C784008A2C3F /* TextDrawView.m */; };
@@ -151,6 +153,10 @@
 		B54373911C1554A20002346A /* StartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartVC.h; sourceTree = "<group>"; };
 		B54373921C1554A20002346A /* StartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartVC.m; sourceTree = "<group>"; };
 		B54373931C1554A20002346A /* StartVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartVC.xib; sourceTree = "<group>"; };
+		B54373971C156A600002346A /* AnimateInOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimateInOut.h; sourceTree = "<group>"; };
+		B54373981C156A600002346A /* AnimateInOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimateInOut.m; sourceTree = "<group>"; };
+		B543739A1C157C110002346A /* AnimateRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimateRotate.h; sourceTree = "<group>"; };
+		B543739B1C157C110002346A /* AnimateRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimateRotate.m; sourceTree = "<group>"; };
 		B570C5841C11C69B008A2C3F /* LevelGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelGameVC.h; sourceTree = "<group>"; };
 		B570C5851C11C69B008A2C3F /* LevelGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelGameVC.m; sourceTree = "<group>"; };
 		B570C5861C11C69B008A2C3F /* LevelGameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelGameVC.xib; sourceTree = "<group>"; };
@@ -358,6 +364,17 @@
 			path = LevelView;
 			sourceTree = "<group>";
 		};
+		B54373961C155F180002346A /* Animate */ = {
+			isa = PBXGroup;
+			children = (
+				B54373971C156A600002346A /* AnimateInOut.h */,
+				B54373981C156A600002346A /* AnimateInOut.m */,
+				B543739A1C157C110002346A /* AnimateRotate.h */,
+				B543739B1C157C110002346A /* AnimateRotate.m */,
+			);
+			path = Animate;
+			sourceTree = "<group>";
+		};
 		B570C5891C11C784008A2C3F /* TextDraw */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,6 +479,7 @@
 		B58211EF1BFEEE6500168A57 /* Boss */ = {
 			isa = PBXGroup;
 			children = (
+				B54373961C155F180002346A /* Animate */,
 				B5977F6B1C02FDA500175174 /* User */,
 				B58212071BFEFAEB00168A57 /* Component */,
 				B58212081BFEFAEB00168A57 /* Request */,
@@ -960,6 +978,7 @@
 				B570C5CA1C131694008A2C3F /* ItemView.m in Sources */,
 				B570C5871C11C69B008A2C3F /* LevelGameVC.m in Sources */,
 				B5108B2D1C045139005F6CC6 /* ResetPwdReq.m in Sources */,
+				B543739C1C157C110002346A /* AnimateRotate.m in Sources */,
 				B5CD9DE21C08307F00DABCAA /* EnemyItem.m in Sources */,
 				B570C5B51C11C7AF008A2C3F /* GameUser.m in Sources */,
 				B53660C01C06EB4200D09686 /* LevelVC.m in Sources */,
@@ -985,6 +1004,7 @@
 				B5108B3E1C045D0C005F6CC6 /* MemberVC.m in Sources */,
 				B54373941C1554A20002346A /* StartVC.m in Sources */,
 				B5C3DE4F1C146E8400CA1C51 /* LevelLeaveReq.m in Sources */,
+				B54373991C156A600002346A /* AnimateInOut.m in Sources */,
 				B570C5BE1C11C7AF008A2C3F /* TimePower.m in Sources */,
 				B570C5B71C11C7AF008A2C3F /* BarrierPower.m in Sources */,
 				B5977F7C1C03507600175174 /* RegisterFinishVC.m in Sources */,

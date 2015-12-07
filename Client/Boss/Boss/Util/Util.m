@@ -380,7 +380,19 @@ NSString *msgUpdateLevel=@"msgUpdateLevel";
     return viewController;
 }
 
-
+-(void)dismiss
+{
+    UIImage *img=[[UIApplication sharedApplication].keyWindow image];
+    UIImageView *view=[[UIImageView alloc] initWithImage:img];
+    view.frame=[UIScreen mainScreen].bounds;
+    view.layer.zPosition=FLT_MAX;
+    [[UIApplication sharedApplication].keyWindow addSubview:view];
+    [UIView transitionWithView:[UIApplication sharedApplication].keyWindow duration:1 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        view.alpha=0;
+    } completion:^(BOOL finished) {
+        [view removeFromSuperview];
+    }];
+}
 @end
 
 @implementation NSString (Extensin)
@@ -505,6 +517,15 @@ void addRoundRectToPath(CGContextRef context, CGRect rect, float ovalWidth,
     return vc;
 }
 
+-(UIImage*)image
+{
+        UIGraphicsBeginImageContext(self.bounds.size);
+        [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+        UIImage*img = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return img;
+}
+
 @end
 
 @implementation NSDictionary (WG)
@@ -557,7 +578,6 @@ void addRoundRectToPath(CGContextRef context, CGRect rect, float ovalWidth,
 }
 
 @end
-
 
 
 
