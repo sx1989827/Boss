@@ -19,6 +19,7 @@
     NSMutableArray *arrWrong;
     NSString *ok;
     NSString *createTime;
+    NSInteger questionCount;
 }
 @end
 
@@ -127,7 +128,11 @@
         if([text isEqualToString:ok])
         {
             [_viewItem setOK:YES Text:text];
-            [game postPower:itemData.power Value:[[UserDefaults sharedInstance] powerName:itemData.power]];
+            questionCount--;
+            if(questionCount==0)
+            {
+                [game postPower:itemData.power Value:[[UserDefaults sharedInstance] powerName:itemData.power]];
+            }
         }
         else
         {
@@ -152,6 +157,7 @@
             LevelStartData *data=model.data[[model.index integerValue]];
             model.index=@([model.index integerValue]+1);
             itemData=data;
+            questionCount=data.answer.count;
             return data.content;
         }
     }

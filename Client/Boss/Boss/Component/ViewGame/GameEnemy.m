@@ -98,6 +98,14 @@
     _node.physicsBody.collisionBitMask=0;
     _node.physicsBody.contactTestBitMask=0;
     _node.physicsBody.categoryBitMask=0;
+    if([self.name isEqualToString:@"美工"] || [self.name isEqualToString:@"hr"])
+    {
+        [self.node runAction:[SKAction playSoundFileNamed:@"女死亡.wav" waitForCompletion:NO]];
+    }
+    else
+    {
+        [self.node runAction:[SKAction playSoundFileNamed:@"男死亡.wav" waitForCompletion:NO]];
+    }
     NSMutableArray *arr=[[ViewSence sharedInstance] valueForKey:@"arrEnemy"];
     [arr removeObject:self];
     __block id obj=self;
