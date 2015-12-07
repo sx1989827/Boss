@@ -310,5 +310,22 @@ router.get("/history",function(req,res)
     });
 
 });
-
+router.get("/exit",function(req,res){
+    user.find({username:req.body.username,_id:req.body.id},function(err,result) {
+        if (err) {
+            res.json({
+                code: 1,
+                msg: err.message
+            });
+            return;
+        }
+        else
+        {
+            res.json({
+                code: 0,
+                msg: "退出成功"
+            });
+        }
+    });
+});
 module.exports = router;
