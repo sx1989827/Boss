@@ -11,6 +11,7 @@
 #import "SGSheetMenu.h"
 #import "EditPhotoReq.h"
 #import "EditNameReq.h"
+#import "Util.h"
 @interface MemberVC ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 @end
@@ -34,6 +35,8 @@
         cl.textLabel.text=@"闯关记录";
     } ClickBlock:^(id cell) {
         
+        
+        
     }];
     [_tableMain addStaticCell:40 CellBlock:^(id cell) {
         UITableViewCell *cl=cell;
@@ -42,6 +45,8 @@
         cl.textLabel.text=@"修改密码";
     } ClickBlock:^(id cell) {
         
+        
+        
     }];
     [_tableMain addStaticCell:40 CellBlock:^(id cell) {
         UITableViewCell *cl=cell;
@@ -49,6 +54,19 @@
         cl.imageView.image=[UIImage imageNamed:@"aboutus"];
         cl.textLabel.text=@"关于我们";
     } ClickBlock:^(id cell) {
+        
+        
+        
+    }];
+    [_tableMain addStaticCell:40 CellBlock:^(id cell) {
+        UITableViewCell *cl=cell;
+        cl.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
+        cl.imageView.image=[UIImage imageNamed:@"aboutus"];
+        cl.textLabel.text=@"退出登陆";
+    } ClickBlock:^(id cell) {
+        
+//        [Util getWithUrl:@"" withParams:<#(NSDictionary *)#> SuccessBlock:<#^(NSDictionary *dic)blockSucess#> FailBlock:<#^(NSError *error)blockFail#> ShowHud:<#(BOOL)#>]
+        
         
     }];
     [_tableMain reloadStatic];

@@ -28,7 +28,7 @@
         vc2.tabBarItem.image=[[UIImage imageNamed:@"rank"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         vc2.tabBarItem.selectedImage=[[UIImage imageNamed:@"ranksel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         MemberVC *vc3=[[MemberVC alloc] init];
-        vc3.tabBarItem.title=@"首页";
+        vc3.tabBarItem.title=@"我的";
         vc3.tabBarItem.image=[[UIImage imageNamed:@"member"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         vc3.tabBarItem.selectedImage=[[UIImage imageNamed:@"membersel"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UINavigationController *nav1=[[UINavigationController alloc] initWithRootViewController:vc1];
