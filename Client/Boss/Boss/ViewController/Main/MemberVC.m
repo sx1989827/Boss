@@ -11,7 +11,7 @@
 #import "SGSheetMenu.h"
 #import "EditPhotoReq.h"
 #import "EditNameReq.h"
-#import "Util.h"
+#import "UserDefaults.h"
 @interface MemberVC ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 @end
@@ -64,10 +64,15 @@
         cl.imageView.image=[UIImage imageNamed:@"aboutus"];
         cl.textLabel.text=@"退出登陆";
     } ClickBlock:^(id cell) {
+        UserDefaults *user = [UserDefaults sharedInstance];
+        user.resModel = nil;
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"userModel"];
         
-//        [Util getWithUrl:@"" withParams:<#(NSDictionary *)#> SuccessBlock:<#^(NSDictionary *dic)blockSucess#> FailBlock:<#^(NSError *error)blockFail#> ShowHud:<#(BOOL)#>]
-        
-        
+        Class cls=NSClassFromString(@"LoginVC");
+        UIViewController *vc=[[cls alloc] init];
+        UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:vc];
+        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+        window.rootViewController=nav;
     }];
     [_tableMain reloadStatic];
 }

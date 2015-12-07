@@ -62,7 +62,6 @@
         }
     }  ShowHud:bHud];
 }
-
 +(instancetype)sharedInstance
 {
     static UserDefaults *obj=nil;
