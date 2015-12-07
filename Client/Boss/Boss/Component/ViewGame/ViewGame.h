@@ -10,7 +10,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import "ViewGameProtovol.h"
 @interface ViewGame : SKView
--(instancetype)initWithPowerCount:(NSInteger)count Money:(NSInteger)money Score:(NSInteger)score Time:(NSInteger)usetime Enemy:(NSDictionary*)enemy LevelName:(NSString*)levelName Delegate:(id<ViewGameDelegate>)delegate;
+-(instancetype)initWithPowerCount:(NSInteger)count Money:(NSInteger)money Time:(NSInteger)usetime Enemy:(NSDictionary*)enemy LevelName:(NSString*)levelName Delegate:(id<ViewGameDelegate>)delegate;
 @property (strong, nonatomic) IBOutlet UILabel *lbMoney;
 @property (strong, nonatomic) IBOutlet UILabel *lbScore;
 @property (strong, nonatomic) IBOutlet UILabel *lbTime;

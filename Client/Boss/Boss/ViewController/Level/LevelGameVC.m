@@ -11,12 +11,14 @@
 #import "Header.h"
 #import "ChooseView.h"
 #import "PreStartView.h"
+#import "LevelLeaveReq.h"
 @interface LevelGameVC ()<ViewGameDelegate,ItemViewDelegate,ChooseViewDelegate>
 {
     ViewGame *game;
     LevelStartData *itemData;
     NSMutableArray *arrWrong;
     NSString *ok;
+    NSString *createTime;
 }
 @end
 
@@ -25,8 +27,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     srand((unsigned int)time(0));
+    createTime=[[NSDate date] stringValue];
     arrWrong=[[NSMutableArray alloc] initWithCapacity:30];
-    game=[[ViewGame alloc] initWithPowerCount:_powerCount Money:[[UserDefaults sharedInstance] money:[[UserDefaults sharedInstance] level:_type]] Score:[UserDefaults sharedInstance].resModel.data.score Time:_time Enemy:_dicEnemy LevelName:_level Delegate:self];
+    game=[[ViewGame alloc] initWithPowerCount:_powerCount Money:[[UserDefaults sharedInstance] money:[[UserDefaults sharedInstance] level:_type]] Time:_time Enemy:_dicEnemy LevelName:_level Delegate:self];
     [self.view addSubview:game];
     _viewItem.delegate=self;
 }
@@ -129,6 +132,7 @@
         else
         {
             [_viewItem setOK:NO Text:text];
+            [arrWrong addObject:itemData._id];
             [game hurtUser:[[UserDefaults sharedInstance] powerName:itemData.power]/2];
         }
     }
@@ -152,6 +156,47 @@
         }
     }
     return nil;
+}
+
+-(void)over:(BOOL)bWin UseTime:(NSInteger)useTime Score:(NSInteger)score
+{
+    NSString *str=[NSString stringWithFormat:@"耗时:%ld秒 获取积分:%ld",useTime,score];
+    [TipView showWithTitle:bWin?@"闯关成功":@"闯关失败" Tip:[NSString stringWithFormat:@"%@ %@",bWin?@"恭喜你":@"非常遗憾",str] Block:^{
+        [LevelLeaveReq do:^(id req) {
+            LevelLeaveReq *obj=req;
+            obj.type=_type;
+            obj.level=_level;
+            obj.success=bWin?1:0;
+            obj.createtime=createTime;
+            obj.usetime=[NSString stringWithFormat:@"%ld",useTime];
+            obj.percent=(_powerCount-arrWrong.count)*1.0/_powerCount;
+            obj.score=score;
+            obj.item=[arrWrong componentsJoinedByString:@","];
+        } Res:^(id res) {
+            LevelLeaveRes *obj=res;
+            if(obj.code==0)
+            {
+                [[UserDefaults sharedInstance] updateScore:obj.data.score];
+                [[UserDefaults sharedInstance] updateLevel:_type Level:obj.data.level];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [[NSNotificationCenter defaultCenter] postNotificationName:msgUpdateLevel object:nil userInfo:@{@"level":obj.data.level}];
+                });
+            }
+            else
+            {
+                E(obj.msg);
+            }
+            for(UIViewController *vc in self.navigationController.viewControllers)
+            {
+                if([vc isKindOfClass:NSClassFromString(@"LevelVC")])
+                {
+                    self.navigationController.navigationBarHidden=NO;
+                    [self.navigationController popToViewController:vc animated:YES];
+                    break;
+                }
+            }
+        } ShowHud:YES];
+    }];
 }
 @end
 

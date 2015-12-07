@@ -98,6 +98,7 @@
 		B5977FA51C040A0500175174 /* ForgotFinishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5977FA31C040A0500175174 /* ForgotFinishVC.m */; };
 		B5977FA61C040A0500175174 /* ForgotFinishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5977FA41C040A0500175174 /* ForgotFinishVC.xib */; };
 		B5C3DE4C1C13DE8D00CA1C51 /* PreStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DE4B1C13DE8D00CA1C51 /* PreStartView.m */; };
+		B5C3DE4F1C146E8400CA1C51 /* LevelLeaveReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DE4E1C146E8400CA1C51 /* LevelLeaveReq.m */; };
 		B5CD9DCF1C0750DA00DABCAA /* LevelInfoReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD9DCE1C0750DA00DABCAA /* LevelInfoReq.m */; };
 		B5CD9DD31C07FA1800DABCAA /* LevelSetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD9DD11C07FA1800DABCAA /* LevelSetVC.m */; };
 		B5CD9DD41C07FA1800DABCAA /* LevelSetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CD9DD21C07FA1800DABCAA /* LevelSetVC.xib */; };
@@ -265,6 +266,8 @@
 		B5977FA41C040A0500175174 /* ForgotFinishVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotFinishVC.xib; sourceTree = "<group>"; };
 		B5C3DE4A1C13DE8D00CA1C51 /* PreStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreStartView.h; sourceTree = "<group>"; };
 		B5C3DE4B1C13DE8D00CA1C51 /* PreStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreStartView.m; sourceTree = "<group>"; };
+		B5C3DE4D1C146E8400CA1C51 /* LevelLeaveReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelLeaveReq.h; sourceTree = "<group>"; };
+		B5C3DE4E1C146E8400CA1C51 /* LevelLeaveReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelLeaveReq.m; sourceTree = "<group>"; };
 		B5CD9DCD1C0750DA00DABCAA /* LevelInfoReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelInfoReq.h; sourceTree = "<group>"; };
 		B5CD9DCE1C0750DA00DABCAA /* LevelInfoReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelInfoReq.m; sourceTree = "<group>"; };
 		B5CD9DD01C07FA1800DABCAA /* LevelSetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelSetVC.h; sourceTree = "<group>"; };
@@ -754,6 +757,8 @@
 				B5CD9DD91C080CBD00DABCAA /* LevelEnterReq.m */,
 				B570C5C41C11CBE0008A2C3F /* LevelStartReq.h */,
 				B570C5C51C11CBE0008A2C3F /* LevelStartReq.m */,
+				B5C3DE4D1C146E8400CA1C51 /* LevelLeaveReq.h */,
+				B5C3DE4E1C146E8400CA1C51 /* LevelLeaveReq.m */,
 			);
 			path = Level;
 			sourceTree = "<group>";
@@ -969,6 +974,7 @@
 				B58212161BFEFBD000168A57 /* BaseViewController.m in Sources */,
 				B58212291BFEFD7F00168A57 /* LoginVC.m in Sources */,
 				B5108B3E1C045D0C005F6CC6 /* MemberVC.m in Sources */,
+				B5C3DE4F1C146E8400CA1C51 /* LevelLeaveReq.m in Sources */,
 				B570C5BE1C11C7AF008A2C3F /* TimePower.m in Sources */,
 				B570C5B71C11C7AF008A2C3F /* BarrierPower.m in Sources */,
 				B5977F7C1C03507600175174 /* RegisterFinishVC.m in Sources */,

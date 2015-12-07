@@ -14,7 +14,7 @@
 }
 @end
 @implementation ViewGame
--(instancetype)initWithPowerCount:(NSInteger)count Money:(NSInteger)money Score:(NSInteger)score Time:(NSInteger)usetime Enemy:(NSDictionary*)enemy LevelName:(NSString*)levelName Delegate:(id<ViewGameDelegate>)delegate
+-(instancetype)initWithPowerCount:(NSInteger)count Money:(NSInteger)money Time:(NSInteger)usetime Enemy:(NSDictionary*)enemy LevelName:(NSString*)levelName Delegate:(id<ViewGameDelegate>)delegate
 {
     self=(ViewGame*)[[[NSBundle mainBundle] loadNibNamed:@"ViewGame" owner:nil options:nil] lastObject];
     if(self)
@@ -26,7 +26,7 @@
         self.showsFPS = YES;
         self.showsDrawCount = YES;
         self.showsNodeCount = YES;
-        sence=[[ViewSence alloc] initWithSize:self.bounds.size PowerCount:count Money:money Score:score Time:usetime Enemy:enemy LevelName:levelName Delegate:delegate ViewGameDeleagte:self];
+        sence=[[ViewSence alloc] initWithSize:self.bounds.size PowerCount:count Money:money Time:usetime Enemy:enemy LevelName:levelName Delegate:delegate ViewGameDeleagte:self];
         [self presentScene:sence];
     }
     return self;

@@ -19,7 +19,7 @@ var app = express();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-
+app.disable('etag');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());

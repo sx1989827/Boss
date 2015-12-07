@@ -51,12 +51,17 @@
             [self.navigationController popViewControllerAnimated:YES];
         }
     } ShowHud:NO];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateLevel:) name:msgUpdateLevel object:nil];
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,6 +78,16 @@
                                            @"level":text
                                                        }];
     }
+}
+
+-(void)updateLevel:(NSNotification*)nofi
+{
+    indexLevel++;
+    if(indexLevel>=arrLevel.count)
+    {
+        return;
+    }
+    [viewLevel updateUser:arrLevel[indexLevel+1]];
 }
 @end
 

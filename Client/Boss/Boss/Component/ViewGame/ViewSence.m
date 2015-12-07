@@ -45,7 +45,7 @@ static __weak ViewSence* singleObj=nil;
     [self addChild:back];
 }
 
--(instancetype)initWithSize:(CGSize)size PowerCount:(NSInteger)powercount Money:(NSInteger)money Score:(NSInteger)score Time:(NSInteger)time Enemy:(NSDictionary*)enemy LevelName:(NSString*)levelName Delegate:(id<ViewGameDelegate>)delegate ViewGameDeleagte:(id)object
+-(instancetype)initWithSize:(CGSize)size PowerCount:(NSInteger)powercount Money:(NSInteger)money Time:(NSInteger)time Enemy:(NSDictionary*)enemy LevelName:(NSString*)levelName Delegate:(id<ViewGameDelegate>)delegate ViewGameDeleagte:(id)object
 {
 	if(self=[super initWithSize:size])
     {
@@ -72,12 +72,12 @@ static __weak ViewSence* singleObj=nil;
         bossName=levelName;
         delegateVC=delegate;
         game.lbMoney.text=[NSString stringWithFormat:@"%ld",money];
-        game.lbScore.text=[NSString stringWithFormat:@"%ld",score];
+        game.lbScore.text=@"0";
         game.lbTime.text=[NSString stringWithFormat:@"%ld",time];
         game.lbPower.text=[NSString stringWithFormat:@"%ld",powerCount];
         userMoney=money;
         totleTime=time;
-        totleScore=score;
+        totleScore=0;
         originTime=time;
         arrEnemy=[[NSMutableArray alloc] initWithCapacity:30];
         arrInitEnemy=[[NSMutableArray alloc] initWithCapacity:30];

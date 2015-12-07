@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <AFNetworking.h>
 extern NSString *serverUrl;
+extern NSString *msgUpdateLevel;
 @interface UIViewController(PushView)
 -(UIViewController*)pushViewController:(NSString *)ToView Param:(NSDictionary*)param;
 -(UIViewController*)presentViewController:(NSString *)ToView Param:(NSDictionary*)param;
@@ -63,6 +64,9 @@ extern NSString *serverUrl;
 @property (strong,nonatomic) NSString *text;
 @end
 
+@interface NSDate (String)
+-(NSString*)stringValue;
+@end
 
 
 

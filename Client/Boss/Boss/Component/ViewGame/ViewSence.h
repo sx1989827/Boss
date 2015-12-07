@@ -10,7 +10,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import "ViewGameProtovol.h"
 @interface ViewSence : SKScene
--(instancetype)initWithSize:(CGSize)size PowerCount:(NSInteger)powercount Money:(NSInteger)money Score:(NSInteger)score Time:(NSInteger)time Enemy:(NSDictionary*)enemy LevelName:(NSString*)levelName Delegate:(id<ViewGameDelegate>)delegate ViewGameDeleagte:(id)object;
+-(instancetype)initWithSize:(CGSize)size PowerCount:(NSInteger)powercount Money:(NSInteger)money Time:(NSInteger)time Enemy:(NSDictionary*)enemy LevelName:(NSString*)levelName Delegate:(id<ViewGameDelegate>)delegate ViewGameDeleagte:(id)object;
 +(instancetype)sharedInstance;
 -(void)start;
 -(void)stop;
