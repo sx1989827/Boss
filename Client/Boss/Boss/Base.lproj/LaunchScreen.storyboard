@@ -39,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="start" width="320" height="568"/>
+        <image name="start" width="640" height="1136"/>
     </resources>
 </document>

@@ -26,6 +26,9 @@
 		B53660C01C06EB4200D09686 /* LevelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B53660BE1C06EB4200D09686 /* LevelVC.m */; };
 		B53660C11C06EB4200D09686 /* LevelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53660BF1C06EB4200D09686 /* LevelVC.xib */; };
 		B53660C51C06ECC900D09686 /* LevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = B53660C41C06ECC900D09686 /* LevelView.m */; };
+		B54373901C15519E0002346A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58211FE1BFEEE6500168A57 /* LaunchScreen.storyboard */; };
+		B54373941C1554A20002346A /* StartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B54373921C1554A20002346A /* StartVC.m */; };
+		B54373951C1554A20002346A /* StartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54373931C1554A20002346A /* StartVC.xib */; };
 		B570C5871C11C69B008A2C3F /* LevelGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5851C11C69B008A2C3F /* LevelGameVC.m */; };
 		B570C5881C11C69B008A2C3F /* LevelGameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B570C5861C11C69B008A2C3F /* LevelGameVC.xib */; };
 		B570C58C1C11C784008A2C3F /* TextDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C58B1C11C784008A2C3F /* TextDrawView.m */; };
@@ -60,7 +63,6 @@
 		B58211F21BFEEE6500168A57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B58211F11BFEEE6500168A57 /* main.m */; };
 		B58211F51BFEEE6500168A57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B58211F41BFEEE6500168A57 /* AppDelegate.m */; };
 		B58211FD1BFEEE6500168A57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B58211FC1BFEEE6500168A57 /* Assets.xcassets */; };
-		B58212001BFEEE6500168A57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58211FE1BFEEE6500168A57 /* LaunchScreen.storyboard */; };
 		B582120E1BFEFB1B00168A57 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B582120D1BFEFB1B00168A57 /* Game.xcassets */; };
 		B58212161BFEFBD000168A57 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B58212151BFEFBD000168A57 /* BaseViewController.m */; };
 		B582121F1BFEFD5300168A57 /* HUDLoading1.png in Resources */ = {isa = PBXBuildFile; fileRef = B58212181BFEFD5300168A57 /* HUDLoading1.png */; };
@@ -146,6 +148,9 @@
 		B53660BF1C06EB4200D09686 /* LevelVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelVC.xib; sourceTree = "<group>"; };
 		B53660C31C06ECC900D09686 /* LevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelView.h; sourceTree = "<group>"; };
 		B53660C41C06ECC900D09686 /* LevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelView.m; sourceTree = "<group>"; };
+		B54373911C1554A20002346A /* StartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartVC.h; sourceTree = "<group>"; };
+		B54373921C1554A20002346A /* StartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartVC.m; sourceTree = "<group>"; };
+		B54373931C1554A20002346A /* StartVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartVC.xib; sourceTree = "<group>"; };
 		B570C5841C11C69B008A2C3F /* LevelGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelGameVC.h; sourceTree = "<group>"; };
 		B570C5851C11C69B008A2C3F /* LevelGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelGameVC.m; sourceTree = "<group>"; };
 		B570C5861C11C69B008A2C3F /* LevelGameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelGameVC.xib; sourceTree = "<group>"; };
@@ -601,6 +606,9 @@
 				B5977FA21C040A0500175174 /* ForgotFinishVC.h */,
 				B5977FA31C040A0500175174 /* ForgotFinishVC.m */,
 				B5977FA41C040A0500175174 /* ForgotFinishVC.xib */,
+				B54373911C1554A20002346A /* StartVC.h */,
+				B54373921C1554A20002346A /* StartVC.m */,
+				B54373931C1554A20002346A /* StartVC.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -841,10 +849,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54373901C15519E0002346A /* LaunchScreen.storyboard in Resources */,
 				B58212251BFEFD5300168A57 /* HUDLoading7.png in Resources */,
 				B582122A1BFEFD7F00168A57 /* LoginVC.xib in Resources */,
 				B58212201BFEFD5300168A57 /* HUDLoading2.png in Resources */,
-				B58212001BFEEE6500168A57 /* LaunchScreen.storyboard in Resources */,
 				B58212241BFEFD5300168A57 /* HUDLoading6.png in Resources */,
 				B5CD9DDF1C082D5500DABCAA /* EnemyCell.xib in Resources */,
 				B5977FA61C040A0500175174 /* ForgotFinishVC.xib in Resources */,
@@ -857,6 +865,7 @@
 				B57722831C046F7300EE189E /* TypeCell.xib in Resources */,
 				B5977FA11C0406D400175174 /* ForgotVC.xib in Resources */,
 				B5977F981C035BD100175174 /* slidercenter.png in Resources */,
+				B54373951C1554A20002346A /* StartVC.xib in Resources */,
 				B58212221BFEFD5300168A57 /* HUDLoading4.png in Resources */,
 				B570C5B11C11C7AF008A2C3F /* bomb.sks in Resources */,
 				B58211FD1BFEEE6500168A57 /* Assets.xcassets in Resources */,
@@ -974,6 +983,7 @@
 				B58212161BFEFBD000168A57 /* BaseViewController.m in Sources */,
 				B58212291BFEFD7F00168A57 /* LoginVC.m in Sources */,
 				B5108B3E1C045D0C005F6CC6 /* MemberVC.m in Sources */,
+				B54373941C1554A20002346A /* StartVC.m in Sources */,
 				B5C3DE4F1C146E8400CA1C51 /* LevelLeaveReq.m in Sources */,
 				B570C5BE1C11C7AF008A2C3F /* TimePower.m in Sources */,
 				B570C5B71C11C7AF008A2C3F /* BarrierPower.m in Sources */,
@@ -1103,6 +1113,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Boss/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.Boss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1116,6 +1127,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Boss/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.Boss;
 				PRODUCT_NAME = "$(TARGET_NAME)";

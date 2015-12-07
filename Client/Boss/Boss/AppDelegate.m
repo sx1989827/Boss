@@ -17,21 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     _window =[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    _window.backgroundColor=[UIColor whiteColor];
     [self initApp];
-    if([[UserDefaults sharedInstance] isAvailable])
-    {
-        [[UserDefaults sharedInstance] update:nil Pwd:nil SucBlock:^(UserInfoModel *model) {
-            [self showMainTab];
-        } FailBlock:^(NSString *msg) {
-            NSLog(@"%@",msg);
-            [self showLoginVC];
-        }  Hud:NO];
-    }
-    else
-    {
-        [self showLoginVC];
-    }
     return YES;
 
 }
@@ -41,24 +27,15 @@
     [[UINavigationBar appearance] setBarTintColor:COL(34, 51, 61, 1)];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
-}
-
--(void)showMainTab
-{
-    Class cls=NSClassFromString(@"MainTabVC");
-    UITabBarController *vc=[[cls alloc] init];
-    _window.rootViewController=vc;
-    [self.window makeKeyAndVisible];
-}
-
--(void)showLoginVC
-{
-    Class cls=NSClassFromString(@"LoginVC");
+    Class cls=NSClassFromString(@"StartVC");
     UIViewController *vc=[[cls alloc] init];
     UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:vc];
     _window.rootViewController=nav;
     [self.window makeKeyAndVisible];
+    
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

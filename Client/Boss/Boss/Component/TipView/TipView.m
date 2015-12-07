@@ -36,6 +36,7 @@ typedef void (^BLOCK)() ;
         _viewContent.layer.cornerRadius=5;
         _viewContent.layer.borderColor=[UIColor colorWithRed:0.133 green:0.200 blue:0.239 alpha:1.000].CGColor;
         _lbTitle=[[UILabel alloc] initWithFrame:CGRectMake(0, 0, _viewContent.bounds.size.width, 40)];
+        _lbTitle.translatesAutoresizingMaskIntoConstraints=NO;
         _lbTitle.textAlignment=NSTextAlignmentCenter;
         _lbTitle.textColor=[UIColor whiteColor];
         _lbTitle.backgroundColor=[UIColor colorWithRed:0.133 green:0.200 blue:0.239 alpha:1.000];
