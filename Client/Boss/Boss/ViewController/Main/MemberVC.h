@@ -13,6 +13,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnPhoto;
 - (IBAction)onPhoto:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *btnName;
+@property (strong, nonatomic) NSString *passWord;
+@property (strong, nonatomic) NSArray  *typeArray;
 - (IBAction)onName:(id)sender;
 
 @end

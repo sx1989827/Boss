@@ -12,6 +12,8 @@
 #import "EditPhotoReq.h"
 #import "EditNameReq.h"
 #import "UserDefaults.h"
+#import "TipView.h"
+#import "EditPswReq.h"
 @interface MemberVC ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 @end
@@ -27,6 +29,7 @@
     LazyTableBaseSection *sec=[[LazyTableBaseSection alloc] init];
     sec.headerHeight=15;
     [_tableMain addSection:sec];
+     __weak MemberVC *weakSelf = self;
     [_tableMain addStaticCell:40 CellBlock:^(id cell) {
         UITableViewCell *cl=cell;
         cl.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
@@ -34,7 +37,9 @@
         cl.textLabel.text=@"闯关记录";
     } ClickBlock:^(id cell) {
         
-        
+
+
+        [weakSelf pushViewController:@"RecodeHistoryViewController" Param:@{@"type":@"iOS"}];
         
     }];
     [_tableMain addStaticCell:40 CellBlock:^(id cell) {
@@ -44,8 +49,10 @@
         cl.textLabel.text=@"修改密码";
     } ClickBlock:^(id cell) {
         
+       
+        [weakSelf pushViewController:@"EditPswViewController" Param:nil];
         
-        
+
     }];
     [_tableMain addStaticCell:40 CellBlock:^(id cell) {
         UITableViewCell *cl=cell;
@@ -63,15 +70,17 @@
         cl.imageView.image=[UIImage imageNamed:@"aboutus"];
         cl.textLabel.text=@"退出登陆";
     } ClickBlock:^(id cell) {
-        UserDefaults *user = [UserDefaults sharedInstance];
-        user.resModel = nil;
-        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"userModel"];
-        
-        Class cls=NSClassFromString(@"LoginVC");
-        UIViewController *vc=[[cls alloc] init];
-        UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:vc];
-        UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        window.rootViewController=nav;
+        [TipView showWithTitle:@"确定退出？" Tip:@"你就这么忍心点YES？" YesBlock:^{
+            UserDefaults *user = [UserDefaults sharedInstance];
+            user.resModel = nil;
+            [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"userModel"];
+            Class cls=NSClassFromString(@"LoginVC");
+            UIViewController *vc=[[cls alloc] init];
+            UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:vc];
+            UIWindow *window = [UIApplication sharedApplication].keyWindow;
+            window.rootViewController=nav;
+        } NoBlock:^{
+        }];
     }];
     [_tableMain reloadStatic];
 }
@@ -159,7 +168,6 @@
         }
     }];
 }
-
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
@@ -181,13 +189,10 @@
     } ShowHud:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
 @end
 
 
