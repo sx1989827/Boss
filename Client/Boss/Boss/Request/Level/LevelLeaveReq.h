@@ -17,6 +17,7 @@
 @property (assign,nonatomic) float percent;
 @property (assign,nonatomic) NSInteger score;
 @property (strong,nonatomic) NSString* item;
+@property (assign,nonatomic) NSInteger challenge;
 @end
 
 @interface LevelLeaveModel : JSONModel

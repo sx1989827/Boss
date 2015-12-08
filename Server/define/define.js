@@ -243,6 +243,7 @@ exports.service=[
             usetime:String,
             percent:Number,
             score:Number,
+            challenge:Number
             //item:String
         },
         data:{

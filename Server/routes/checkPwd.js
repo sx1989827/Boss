@@ -64,7 +64,7 @@ router.use(function(req,res,next)
     var param=con.service[index].param;
     for(var key in param)
     {
-        if (clientParam[key] == undefined || clientParam[key] == "") {
+        if (clientParam[key] == undefined || clientParam[key].toString() == "") {
             res.json({
                 code: 1,
                 msg: "缺少" + key + "参数"

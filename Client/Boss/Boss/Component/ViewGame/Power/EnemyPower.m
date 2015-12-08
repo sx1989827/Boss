@@ -31,6 +31,7 @@
         [self.node runAction:action];
         [self.node runAction:[SKAction repeatActionForever:[SKAction rotateByAngle:-10.0/180*31.4 duration:0.1]]];
         [[ViewSence sharedInstance] addChild:self.node];
+        [self.node runAction:[SKAction playSoundFileNamed:@"子弹.wav" waitForCompletion:NO]];
     }
     return self;
 }
@@ -38,6 +39,7 @@
 -(void)remove
 {
     [self.node removeAllActions];
+    [self.node runAction:[SKAction playSoundFileNamed:@"男受伤.wav" waitForCompletion:NO]];
     NSMutableArray *arr=[[ViewSence sharedInstance] valueForKey:@"arrEnemyPower"];
     [arr removeObject:self];
     __block id obj=self;

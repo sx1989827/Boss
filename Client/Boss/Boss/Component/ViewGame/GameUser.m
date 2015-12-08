@@ -44,7 +44,7 @@
 
 -(void)initNode
 {
-    _node=[SKSpriteNode spriteNodeWithTexture:[[ViewTexture atlasForName:@"user"] firstObject]];
+    _node=[SKSpriteNode spriteNodeWithTexture:[ViewTexture textureForName:@"user"]];
     _node.name=@"user";
     _node.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_node.size];
     _node.physicsBody.usesPreciseCollisionDetection=YES;
@@ -54,7 +54,7 @@
     _node.physicsBody.collisionBitMask = 0x000000000;
     _node.physicsBody.contactTestBitMask = EnemyFlag|EnemyPowerFlag;
     _node.position = CGPointMake(_node.size.width/2, _node.size.height/2);
-    [_node runAction:[SKAction sequence:@[[SKAction repeatActionForever:[SKAction animateWithTextures:[ViewTexture atlasForName:@"user"] timePerFrame:0.2]]]]];
+    //[_node runAction:[SKAction sequence:@[[SKAction repeatActionForever:[SKAction animateWithTextures:[ViewTexture atlasForName:@"user"] timePerFrame:0.2]]]]];
     [[ViewSence sharedInstance] addChild:_node];
 
 }

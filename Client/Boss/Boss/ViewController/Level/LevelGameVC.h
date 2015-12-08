@@ -19,4 +19,5 @@
 @property (assign,nonatomic) NSInteger powerCount;
 @property (assign,nonatomic) NSInteger time;
 @property (strong,nonatomic) NSArray<LevelStartModel*> *arrItem;
+@property (assign,nonatomic) BOOL bChallenge;
 @end

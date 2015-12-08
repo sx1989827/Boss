@@ -349,16 +349,18 @@ static __weak ViewSence* singleObj=nil;
 
 -(void)initTexture
 {
-    [ViewTexture registerAtlasName:@"user" Count:5];
     [ViewTexture registerAtlasName:@"码农" Count:5];
     [ViewTexture registerAtlasName:@"美工" Count:5];
     [ViewTexture registerAtlasName:@"测试" Count:5];
     [ViewTexture registerAtlasName:@"码畜" Count:5];
+    [ViewTexture registerAtlasName:@"组长" Count:4];
+    [ViewTexture registerName:@"user"];
     [ViewTexture registerName:@"bullet"];
     [ViewTexture registerName:@"bomb"];
     [ViewTexture registerName:@"enemybullet"];
     [ViewTexture registerName:@"backcompany"];
     [ViewTexture registerName:@"wall"];
+    [ViewTexture registerName:@"laser"];
 }
 
 -(void)postPower:(NSString*)power  Value:(NSInteger)value

@@ -18,4 +18,5 @@
 - (IBAction)onSubmit:(id)sender;
 @property (strong,nonatomic) NSString* type;
 @property (strong,nonatomic) NSString* level;
+@property (assign,nonatomic) BOOL bChallenge;
 @end

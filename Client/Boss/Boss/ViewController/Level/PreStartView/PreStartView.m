@@ -36,8 +36,8 @@
             } completion:^(BOOL finished) {
                 lb.text=@"Go";
                 lb.alpha=1;
-                [UIView animateWithDuration:1 animations:^{
-                    lb.center=CGPointMake(lb.center.x, -200);
+                [UIView animateWithDuration:0.5 delay:0.8 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                    lb.center=CGPointMake(lb.center.x, -100);
                     view.backgroundColor=[UIColor colorWithRed:1 green:1 blue:1 alpha:0];
                 } completion:^(BOOL finished) {
                     if(block)

@@ -120,7 +120,7 @@ router.get("/start", function (req, res)
         item.find({type:req.query.type,level:req.query.level,power:obj.name}).limit(parseInt(obj.count)).select("power content answer").exec(function(err,result)
         {
             var ret={
-                name:result[0].power,
+                name:obj.name,
                 data:result
             }
             callback(err,ret);
@@ -195,24 +195,27 @@ router.post("/leave", function (req, res)
             (function func2(obj,callback)
             {
                 var arrLevel=req.userInfo.level;
-                var objLevel;
-                for (var key in arrLevel) {
-                    if (arrLevel[key].name == req.body.type) {
-                        objLevel=arrLevel[key];
-                        break;
+                var challenge=parseInt(req.body.challenge);
+                if(challenge)
+                {
+                    var objLevel;
+                    for (var key in arrLevel) {
+                        if (arrLevel[key].name == req.body.type) {
+                            objLevel=arrLevel[key];
+                            break;
+                        }
+                    }
+                    if (objLevel) {
+                        objLevel.level = obj.name;
+                    }
+                    else {
+                        arrLevel.push({
+                            name: obj.type,
+                            level: obj.name
+                        });
+
                     }
                 }
-                if (objLevel) {
-                    objLevel.level = obj.name;
-                }
-                else {
-                    arrLevel.push({
-                        name: obj.type,
-                        level: obj.name
-                    });
-
-                }
-
                 user.update({
                     username:req.body.username
                 },{
