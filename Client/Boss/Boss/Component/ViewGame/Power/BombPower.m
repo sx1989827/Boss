@@ -48,6 +48,7 @@
         SKAction *action=[SKAction followPath:aPath.CGPath speed:80*screenWidthExtra];
         [self.node runAction:action];
         [[ViewSence sharedInstance] addChild:self.node];
+        [self.node runAction:[SKAction playSoundFileNamed:@"炸弹.wav" waitForCompletion:NO]];
     }
     return self;
 }

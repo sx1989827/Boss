@@ -51,6 +51,7 @@
         SKAction *action=[SKAction sequence:@[[SKAction fadeInWithDuration:0.5],[SKAction waitForDuration:self.value],[SKAction performSelector:@selector(remove) onTarget:self]]];
         [self.node runAction:action];
         [[ViewSence sharedInstance] addChild:self.node];
+        [self.node runAction:[SKAction playSoundFileNamed:@"屏障.wav" waitForCompletion:NO]];
     }
     return self;
 }

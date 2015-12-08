@@ -33,6 +33,7 @@
         SKAction *action=[SKAction sequence:@[[SKAction scaleXTo:[UIScreen mainScreen].bounds.size.width duration:1],[SKAction waitForDuration:2],[SKAction performSelector:@selector(remove) onTarget:self]]];
         [self.node runAction:action];
         [[ViewSence sharedInstance] addChild:self.node];
+        [self.node runAction:[SKAction playSoundFileNamed:@"激光.wav" waitForCompletion:NO]];
     }
     return self;
 }

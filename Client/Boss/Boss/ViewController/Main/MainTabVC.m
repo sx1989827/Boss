@@ -10,8 +10,11 @@
 #import "HomeVC.h"
 #import "RankVC.h"
 #import "MemberVC.h"
-@interface MainTabVC ()
-
+#import "AnimateInOut.h"
+@interface MainTabVC ()<UITabBarControllerDelegate>
+{
+    AnimateInOut *ani;
+}
 @end
 
 @implementation MainTabVC
@@ -35,6 +38,8 @@
         UINavigationController *nav2=[[UINavigationController alloc] initWithRootViewController:vc2];
         UINavigationController *nav3=[[UINavigationController alloc] initWithRootViewController:vc3];
         self.viewControllers=@[nav1,nav2,nav3];
+        ani=[[AnimateInOut alloc] init];
+        self.delegate=self;
     }
     return self;
 }
@@ -47,14 +52,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (id <UIViewControllerAnimatedTransitioning>)tabBarController:(UITabBarController *)tabBarController
+            animationControllerForTransitionFromViewController:(UIViewController *)fromVC
+                                              toViewController:(UIViewController *)toVC  NS_AVAILABLE_IOS(7_0);
+{
+    
+    
+    return ani;
+    
 }
-*/
 
 @end

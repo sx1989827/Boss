@@ -10,11 +10,13 @@
 #import "LevelView.h"
 #import "LevelInfoReq.h"
 #import "Header.h"
-@interface LevelVC ()<LevelViewDelegate>
+#import "AnimateRotate.h"
+@interface LevelVC ()<LevelViewDelegate,UINavigationControllerDelegate>
 {
     LevelView *viewLevel;
     NSArray *arrLevel;
     NSInteger indexLevel;
+    AnimateRotate *ani;
 }
 @end
 
@@ -53,6 +55,7 @@
         }
     } ShowHud:NO];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateLevel:) name:msgUpdateLevel object:nil];
+    ani=[[AnimateRotate alloc] init];
 }
 
 -(void)dealloc
@@ -74,6 +77,7 @@
 {
     if(index>indexLevel)
     {
+        self.navigationController.delegate=self;
         [self pushViewController:@"LevelSetVC" Param:@{
                                            @"type":_type,
                                            @"level":text
@@ -89,6 +93,21 @@
         return;
     }
     [viewLevel updateUser:arrLevel[indexLevel+1]];
+}
+
+- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                            animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                         fromViewController:(UIViewController *)fromVC
+                                                           toViewController:(UIViewController *)toVC
+{
+    if(operation==UINavigationControllerOperationPush)
+    {
+        if(fromVC==self)
+        {
+            return ani;
+        }
+    }
+    return nil;
 }
 @end
 

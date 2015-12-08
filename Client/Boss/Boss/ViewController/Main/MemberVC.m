@@ -23,7 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.bHud=NO;
-    self.title=@"我的";
     [self hideBackButton];
     [_tableMain setDelegateAndDataSource:self];
     [_tableMain registarCell:NSStringFromClass([UITableViewCell class]) StrItem:nil];

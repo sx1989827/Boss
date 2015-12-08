@@ -20,7 +20,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="piD-tt-gUD">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="33A-Wx-qzR">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginheader" translatesAutoresizingMaskIntoConstraints="NO" id="33A-Wx-qzR">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                             <animations/>
                         </imageView>
@@ -154,6 +154,6 @@
         </view>
     </objects>
     <resources>
-        <image name="header" width="398" height="295"/>
+        <image name="loginheader" width="341" height="170"/>
     </resources>
 </document>

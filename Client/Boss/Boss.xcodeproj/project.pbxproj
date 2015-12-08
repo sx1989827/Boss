@@ -39,6 +39,18 @@
 		B54373901C15519E0002346A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B58211FE1BFEEE6500168A57 /* LaunchScreen.storyboard */; };
 		B54373941C1554A20002346A /* StartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B54373921C1554A20002346A /* StartVC.m */; };
 		B54373951C1554A20002346A /* StartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B54373931C1554A20002346A /* StartVC.xib */; };
+		B54373991C156A600002346A /* AnimateInOut.m in Sources */ = {isa = PBXBuildFile; fileRef = B54373981C156A600002346A /* AnimateInOut.m */; };
+		B543739C1C157C110002346A /* AnimateRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = B543739B1C157C110002346A /* AnimateRotate.m */; };
+		B54373C41C15C1EB0002346A /* 加工资.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373BA1C15C1EB0002346A /* 加工资.wav */; };
+		B54373C51C15C1EB0002346A /* 加时间.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373BB1C15C1EB0002346A /* 加时间.wav */; };
+		B54373C61C15C1EB0002346A /* 女受伤.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373BC1C15C1EB0002346A /* 女受伤.wav */; };
+		B54373C71C15C1EB0002346A /* 女死亡.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373BD1C15C1EB0002346A /* 女死亡.wav */; };
+		B54373C81C15C1EB0002346A /* 子弹.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373BE1C15C1EB0002346A /* 子弹.wav */; };
+		B54373C91C15C1EB0002346A /* 屏障.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373BF1C15C1EB0002346A /* 屏障.wav */; };
+		B54373CA1C15C1EB0002346A /* 激光.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373C01C15C1EB0002346A /* 激光.wav */; };
+		B54373CB1C15C1EB0002346A /* 炸弹.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373C11C15C1EB0002346A /* 炸弹.wav */; };
+		B54373CC1C15C1EB0002346A /* 男受伤.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373C21C15C1EB0002346A /* 男受伤.wav */; };
+		B54373CD1C15C1EB0002346A /* 男死亡.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373C31C15C1EB0002346A /* 男死亡.wav */; };
 		B570C5871C11C69B008A2C3F /* LevelGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5851C11C69B008A2C3F /* LevelGameVC.m */; };
 		B570C5881C11C69B008A2C3F /* LevelGameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B570C5861C11C69B008A2C3F /* LevelGameVC.xib */; };
 		B570C58C1C11C784008A2C3F /* TextDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C58B1C11C784008A2C3F /* TextDrawView.m */; };
@@ -181,6 +193,20 @@
 		B54373911C1554A20002346A /* StartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartVC.h; sourceTree = "<group>"; };
 		B54373921C1554A20002346A /* StartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartVC.m; sourceTree = "<group>"; };
 		B54373931C1554A20002346A /* StartVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartVC.xib; sourceTree = "<group>"; };
+		B54373971C156A600002346A /* AnimateInOut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimateInOut.h; sourceTree = "<group>"; };
+		B54373981C156A600002346A /* AnimateInOut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimateInOut.m; sourceTree = "<group>"; };
+		B543739A1C157C110002346A /* AnimateRotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimateRotate.h; sourceTree = "<group>"; };
+		B543739B1C157C110002346A /* AnimateRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimateRotate.m; sourceTree = "<group>"; };
+		B54373BA1C15C1EB0002346A /* 加工资.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "加工资.wav"; sourceTree = "<group>"; };
+		B54373BB1C15C1EB0002346A /* 加时间.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "加时间.wav"; sourceTree = "<group>"; };
+		B54373BC1C15C1EB0002346A /* 女受伤.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "女受伤.wav"; sourceTree = "<group>"; };
+		B54373BD1C15C1EB0002346A /* 女死亡.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "女死亡.wav"; sourceTree = "<group>"; };
+		B54373BE1C15C1EB0002346A /* 子弹.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "子弹.wav"; sourceTree = "<group>"; };
+		B54373BF1C15C1EB0002346A /* 屏障.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "屏障.wav"; sourceTree = "<group>"; };
+		B54373C01C15C1EB0002346A /* 激光.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "激光.wav"; sourceTree = "<group>"; };
+		B54373C11C15C1EB0002346A /* 炸弹.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "炸弹.wav"; sourceTree = "<group>"; };
+		B54373C21C15C1EB0002346A /* 男受伤.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "男受伤.wav"; sourceTree = "<group>"; };
+		B54373C31C15C1EB0002346A /* 男死亡.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "男死亡.wav"; sourceTree = "<group>"; };
 		B570C5841C11C69B008A2C3F /* LevelGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelGameVC.h; sourceTree = "<group>"; };
 		B570C5851C11C69B008A2C3F /* LevelGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelGameVC.m; sourceTree = "<group>"; };
 		B570C5861C11C69B008A2C3F /* LevelGameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelGameVC.xib; sourceTree = "<group>"; };
@@ -433,6 +459,34 @@
 			path = LevelView;
 			sourceTree = "<group>";
 		};
+		B54373961C155F180002346A /* Animate */ = {
+			isa = PBXGroup;
+			children = (
+				B54373971C156A600002346A /* AnimateInOut.h */,
+				B54373981C156A600002346A /* AnimateInOut.m */,
+				B543739A1C157C110002346A /* AnimateRotate.h */,
+				B543739B1C157C110002346A /* AnimateRotate.m */,
+			);
+			path = Animate;
+			sourceTree = "<group>";
+		};
+		B54373B91C15C1EB0002346A /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				B54373BA1C15C1EB0002346A /* 加工资.wav */,
+				B54373BB1C15C1EB0002346A /* 加时间.wav */,
+				B54373BC1C15C1EB0002346A /* 女受伤.wav */,
+				B54373BD1C15C1EB0002346A /* 女死亡.wav */,
+				B54373BE1C15C1EB0002346A /* 子弹.wav */,
+				B54373BF1C15C1EB0002346A /* 屏障.wav */,
+				B54373C01C15C1EB0002346A /* 激光.wav */,
+				B54373C11C15C1EB0002346A /* 炸弹.wav */,
+				B54373C21C15C1EB0002346A /* 男受伤.wav */,
+				B54373C31C15C1EB0002346A /* 男死亡.wav */,
+			);
+			path = sound;
+			sourceTree = "<group>";
+		};
 		B570C5891C11C784008A2C3F /* TextDraw */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,6 +499,7 @@
 		B570C58D1C11C7AF008A2C3F /* ViewGame */ = {
 			isa = PBXGroup;
 			children = (
+				B54373B91C15C1EB0002346A /* sound */,
 				B570C58E1C11C7AF008A2C3F /* bomb.sks */,
 				B570C58F1C11C7AF008A2C3F /* bullet.sks */,
 				B570C5901C11C7AF008A2C3F /* GameDefine.h */,
@@ -537,6 +592,7 @@
 		B58211EF1BFEEE6500168A57 /* Boss */ = {
 			isa = PBXGroup;
 			children = (
+				B54373961C155F180002346A /* Animate */,
 				B5977F6B1C02FDA500175174 /* User */,
 				B58212071BFEFAEB00168A57 /* Component */,
 				B58212081BFEFAEB00168A57 /* Request */,
@@ -944,19 +1000,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54373C41C15C1EB0002346A /* 加工资.wav in Resources */,
 				B54373901C15519E0002346A /* LaunchScreen.storyboard in Resources */,
+				B54373C91C15C1EB0002346A /* 屏障.wav in Resources */,
 				B58212251BFEFD5300168A57 /* HUDLoading7.png in Resources */,
 				B582122A1BFEFD7F00168A57 /* LoginVC.xib in Resources */,
 				B58212201BFEFD5300168A57 /* HUDLoading2.png in Resources */,
+				B54373C61C15C1EB0002346A /* 女受伤.wav in Resources */,
 				B58212241BFEFD5300168A57 /* HUDLoading6.png in Resources */,
 				B5015F5B1C1585990003E71F /* RecodeHistoryViewController.xib in Resources */,
 				B5CD9DDF1C082D5500DABCAA /* EnemyCell.xib in Resources */,
+				B54373C51C15C1EB0002346A /* 加时间.wav in Resources */,
 				B5977FA61C040A0500175174 /* ForgotFinishVC.xib in Resources */,
+				B54373CB1C15C1EB0002346A /* 炸弹.wav in Resources */,
 				B58212211BFEFD5300168A57 /* HUDLoading3.png in Resources */,
 				B51A02B71C084B8300610020 /* ChooseItemCountView.xib in Resources */,
 				B570C5881C11C69B008A2C3F /* LevelGameVC.xib in Resources */,
 				B53660C11C06EB4200D09686 /* LevelVC.xib in Resources */,
 				B5977F781C034B3200175174 /* back.png in Resources */,
+				B54373C71C15C1EB0002346A /* 女死亡.wav in Resources */,
 				B5108B3F1C045D0C005F6CC6 /* MemberVC.xib in Resources */,
 				B57722831C046F7300EE189E /* TypeCell.xib in Resources */,
 				B5977FA11C0406D400175174 /* ForgotVC.xib in Resources */,
@@ -968,6 +1030,7 @@
 				B5CB64171C16B01C006DC72A /* TypeView.xib in Resources */,
 				B5108B3A1C045CE7005F6CC6 /* RankVC.xib in Resources */,
 				B5977F991C035BD100175174 /* slidertag.png in Resources */,
+				B54373CA1C15C1EB0002346A /* 激光.wav in Resources */,
 				B582121F1BFEFD5300168A57 /* HUDLoading1.png in Resources */,
 				B570C5C11C11C7AF008A2C3F /* ViewGame.xib in Resources */,
 				B570C5BF1C11C7AF008A2C3F /* spark.png in Resources */,
@@ -975,13 +1038,16 @@
 				B5977F761C03465900175174 /* RegisterVC.xib in Resources */,
 				B5977F8B1C035A3600175174 /* cellcheck.png in Resources */,
 				B570C5B21C11C7AF008A2C3F /* bullet.sks in Resources */,
+				B54373CD1C15C1EB0002346A /* 男死亡.wav in Resources */,
 				B58212231BFEFD5300168A57 /* HUDLoading5.png in Resources */,
 				B5CD9DD41C07FA1800DABCAA /* LevelSetVC.xib in Resources */,
+				B54373C81C15C1EB0002346A /* 子弹.wav in Resources */,
 				B5108B351C045C80005F6CC6 /* HomeVC.xib in Resources */,
 				B5977F7D1C03507600175174 /* RegisterFinishVC.xib in Resources */,
 				B5015F601C15884C0003E71F /* HistoryCell.xib in Resources */,
 				B5CB641A1C16B205006DC72A /* arrow@2x.png in Resources */,
 				B5015F551C1572970003E71F /* EditPswViewController.xib in Resources */,
+				B54373CC1C15C1EB0002346A /* 男受伤.wav in Resources */,
 				B582120E1BFEFB1B00168A57 /* Game.xcassets in Resources */,
 				B570C5B61C11C7AF008A2C3F /* laser.sks in Resources */,
 			);
@@ -1063,6 +1129,7 @@
 				B570C5CA1C131694008A2C3F /* ItemView.m in Sources */,
 				B570C5871C11C69B008A2C3F /* LevelGameVC.m in Sources */,
 				B5108B2D1C045139005F6CC6 /* ResetPwdReq.m in Sources */,
+				B543739C1C157C110002346A /* AnimateRotate.m in Sources */,
 				B5CD9DE21C08307F00DABCAA /* EnemyItem.m in Sources */,
 				B570C5B51C11C7AF008A2C3F /* GameUser.m in Sources */,
 				B53660C01C06EB4200D09686 /* LevelVC.m in Sources */,
@@ -1090,6 +1157,7 @@
 				B5108B3E1C045D0C005F6CC6 /* MemberVC.m in Sources */,
 				B54373941C1554A20002346A /* StartVC.m in Sources */,
 				B5C3DE4F1C146E8400CA1C51 /* LevelLeaveReq.m in Sources */,
+				B54373991C156A600002346A /* AnimateInOut.m in Sources */,
 				B570C5BE1C11C7AF008A2C3F /* TimePower.m in Sources */,
 				B570C5B71C11C7AF008A2C3F /* BarrierPower.m in Sources */,
 				B5977F7C1C03507600175174 /* RegisterFinishVC.m in Sources */,

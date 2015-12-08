@@ -366,6 +366,10 @@ CGFloat RunDelegateGetWidthCallback(void *refCon){
             break;
         }
     }
+    if(line==0)
+    {
+        return;
+    }
     location.x -= lineOrigin.x;
     CFIndex index = CTLineGetStringIndexForPosition(line, location);
     CFArrayRef runs = CTLineGetGlyphRuns(line);

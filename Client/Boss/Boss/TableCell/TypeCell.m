@@ -28,6 +28,18 @@
     TypeItem *data=item;
     UIViewController *vc=(UIViewController*)data.viewControllerDelegate;
     [vc pushViewController:@"LevelVC" Param:@{@"type":data.name}];
+    UIImage *img=[self.contentView image];
+    CGRect frame=[self.contentView convertRect:self.contentView.bounds toView:[UIApplication sharedApplication].keyWindow];
+    UIImageView *view=[[UIImageView alloc] initWithImage:img];
+    view.frame=frame;
+    view.layer.zPosition=FLT_MAX;
+    [[UIApplication sharedApplication].keyWindow addSubview:view];
+    [UIView animateWithDuration:0.2 animations:^{
+        view.frame=CGRectInset(view.frame, -20, -30);
+        view.alpha=0;
+    } completion:^(BOOL finished) {
+        [view removeFromSuperview];
+    }];
 }
 
 @end

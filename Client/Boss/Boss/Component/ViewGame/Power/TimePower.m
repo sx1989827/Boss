@@ -8,6 +8,7 @@
 
 #import "TimePower.h"
 #import "GameDefine.h"
+#import "ViewSence.h"
 @interface TimePower()
 @end
 @implementation TimePower
@@ -22,6 +23,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [self remove];
         });
+        [[ViewSence sharedInstance] runAction:[SKAction playSoundFileNamed:@"加时间.wav" waitForCompletion:NO]];
     }
     return self;
 }

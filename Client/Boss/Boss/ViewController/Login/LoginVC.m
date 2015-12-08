@@ -89,6 +89,7 @@
         UITabBarController *vc=[[cls alloc] init];
         AppDelegate *app=(AppDelegate*)[UIApplication sharedApplication].delegate;
         app.window.rootViewController=vc;
+        [self dismiss];
     } FailBlock:^(NSString *msg) {
         E(msg);
     } Hud:YES];
