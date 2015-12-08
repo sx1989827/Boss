@@ -167,7 +167,30 @@
 -(void)over:(BOOL)bWin UseTime:(NSInteger)useTime Score:(NSInteger)score
 {
     NSString *str=[NSString stringWithFormat:@"耗时:%ld秒 获取积分:%ld",useTime,score];
-    [TipView showWithTitle:bWin?@"闯关成功":@"闯关失败" Tip:[NSString stringWithFormat:@"%@ %@",bWin?@"恭喜你":@"非常遗憾",str] Block:^{
+    NSString *title;
+    if(_bChallenge)
+    {
+        if(bWin)
+        {
+            title=@"挑战成功";
+        }
+        else
+        {
+            title=@"挑战失败";
+        }
+    }
+    else
+    {
+        if(bWin)
+        {
+            title=@"蹂躏成功";
+        }
+        else
+        {
+            title=@"蹂躏失败";
+        }
+    }
+    [TipView showWithTitle:title Tip:[NSString stringWithFormat:@"%@ %@",bWin?@"你太棒啦！":@"你一辈子都是个屌丝！",str] Block:^{
         [LevelLeaveReq do:^(id req) {
             LevelLeaveReq *obj=req;
             obj.type=_type;
@@ -178,15 +201,19 @@
             obj.percent=(_powerCount-arrWrong.count)*1.0/_powerCount;
             obj.score=score;
             obj.item=[arrWrong componentsJoinedByString:@","];
+            obj.challenge=_bChallenge;
         } Res:^(id res) {
             LevelLeaveRes *obj=res;
             if(obj.code==0)
             {
                 [[UserDefaults sharedInstance] updateScore:obj.data.score];
                 [[UserDefaults sharedInstance] updateLevel:_type Level:obj.data.level];
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [[NSNotificationCenter defaultCenter] postNotificationName:msgUpdateLevel object:nil userInfo:@{@"level":obj.data.level}];
-                });
+                if(bWin && _bChallenge)
+                {
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        [[NSNotificationCenter defaultCenter] postNotificationName:msgUpdateLevel object:nil userInfo:@{@"level":obj.data.level}];
+                    });
+                }  
             }
             else
             {

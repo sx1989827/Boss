@@ -122,7 +122,18 @@ typedef void (^BLOCK)() ;
     }];
     [UIView animateWithDuration:0.3 delay:0.1 usingSpringWithDamping:0.6 initialSpringVelocity:15 options:0 animations:^{
         view.viewContent.center=[UIApplication sharedApplication].keyWindow.center ;
-    } completion:nil];
+    } completion:^(BOOL finished) {
+        UIImageView *imgView=[[UIImageView alloc] initWithFrame:CGRectMake(view.viewContent.center.x-60, view.viewContent.frame.origin.y-110, 120, 120)];
+        UIImageView *imgLeft=[[UIImageView alloc] initWithFrame:CGRectMake(view.viewContent.frame.origin.x+10, view.viewContent.frame.origin.y-10, 20, 20)];
+        imgLeft.image=[UIImage imageNamed:@"AlertLeft.png"];
+        [view.contentView addSubview:imgLeft];
+        UIImageView *imgRight=[[UIImageView alloc] initWithFrame:CGRectMake(view.viewContent.frame.origin.x+view.viewContent.frame.size.width-30, view.viewContent.frame.origin.y-10, 20, 20)];
+        imgRight.image=[UIImage imageNamed:@"AlertRight.png"];
+        [view.contentView addSubview:imgRight];
+        imgView.image=[UIImage imageNamed:@"AlertStatus.png"];
+        [view.contentView addSubview:imgView];
+        [view.contentView sendSubviewToBack:imgView];
+    }];
 }
 
 +(void)showWithTitle:(NSString*)title Tip:(NSString*)text YesBlock:(void (^)())blockYes  NoBlock:(void (^)())blockNo
@@ -144,7 +155,18 @@ typedef void (^BLOCK)() ;
     [UIView animateWithDuration:0.3 delay:0.1 usingSpringWithDamping:0.6 initialSpringVelocity:15 options:0 animations:^{
         view.viewContent.translatesAutoresizingMaskIntoConstraints=YES;
         view.viewContent.center=[UIApplication sharedApplication].keyWindow.center ;
-    } completion:nil];
+    } completion:^(BOOL finished) {
+        UIImageView *imgView=[[UIImageView alloc] initWithFrame:CGRectMake(view.viewContent.center.x-60, view.viewContent.frame.origin.y-110, 120, 120)];
+        UIImageView *imgLeft=[[UIImageView alloc] initWithFrame:CGRectMake(view.viewContent.frame.origin.x+10, view.viewContent.frame.origin.y-10, 20, 20)];
+        imgLeft.image=[UIImage imageNamed:@"AlertLeft.png"];
+        [view.contentView addSubview:imgLeft];
+        UIImageView *imgRight=[[UIImageView alloc] initWithFrame:CGRectMake(view.viewContent.frame.origin.x+view.viewContent.frame.size.width-30, view.viewContent.frame.origin.y-10, 20, 20)];
+        imgRight.image=[UIImage imageNamed:@"AlertRight.png"];
+        [view.contentView addSubview:imgRight];
+        imgView.image=[UIImage imageNamed:@"AlertInfo.png"];
+        [view.contentView addSubview:imgView];
+        [view.contentView sendSubviewToBack:imgView];
+    }];
 }
 
 -(void)onYes

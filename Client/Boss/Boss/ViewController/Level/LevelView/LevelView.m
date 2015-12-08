@@ -15,7 +15,7 @@
 @end
 @interface LevelView()
 {
-    NSMutableArray *arrNodes;
+    NSMutableArray<Node*> *arrNodes;
     NSMutableArray *arrPointX;
     NSInteger indexLast;
     CGFloat y;
@@ -23,6 +23,7 @@
     CGFloat radius;
     UIButton *btnUser;
     NSInteger iMaxCount;
+    UIImageView *imageView;
 }
 @end
 @implementation LevelView
@@ -67,11 +68,13 @@
             if(btn.tag==indexUser)
             {
                 btnUser=[UIButton buttonWithType:UIButtonTypeSystem];
+                btnUser.userInteractionEnabled=NO;
+                btnUser.tag=indexUser;
                 btnUser.frame=CGRectMake(node.point.x-(radius-4)/2, node.point.y-(radius-4)/2, (radius-4), (radius-4));
                 btnUser.layer.masksToBounds=YES;
                 btnUser.layer.cornerRadius=btnUser.bounds.size.width/2;
                 btnUser.layer.zPosition=FLT_MAX;
-                [btnUser setBackgroundColor:[UIColor greenColor]];
+                [btnUser setBackgroundImage:[UIImage imageNamed:@"userheader"] forState:UIControlStateNormal];
                 [self addSubview:btnUser];
             }
         }
@@ -93,6 +96,19 @@
         layer.path=path.CGPath;
         layer.strokeStart=0;
         layer.strokeEnd=1;
+        imageView=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, btnUser.bounds.size.width, btnUser.bounds.size.width)];
+        imageView.backgroundColor=[UIColor clearColor];
+        imageView.contentMode=UIViewContentModeScaleAspectFit;
+        imageView.layer.zPosition=MAXFLOAT;
+        imageView.animationImages=@[[UIImage imageNamed:@"up1.png"],[UIImage imageNamed:@"up2.png"],[UIImage imageNamed:@"up3.png"],[UIImage imageNamed:@"up4.png"],[UIImage imageNamed:@"up5.png"],[UIImage imageNamed:@"up6.png"]];
+        imageView.animationDuration=0.8;
+        imageView.animationRepeatCount=-1;
+        if(btnUser.tag<iMaxCount-1)
+        {
+            [self addSubview:imageView];
+            imageView.center=CGPointMake(arrNodes[btnUser.tag+1].point.x, btnUser.center.y-5);
+            [imageView startAnimating];
+        }
     }
     return self;
 }
@@ -113,7 +129,9 @@
         btnUser.center=((Node*)arrNodes[arrNodes.count-2]).point;
         [btnUser.superview bringSubviewToFront:btnUser];
     } completion:^(BOOL finished) {
-        
+        btnUser.tag=btnUser.tag+1;
+        imageView.hidden=NO;
+        imageView.center=CGPointMake(arrNodes[btnUser.tag+1].point.x, btnUser.center.y-5);
     }];
 
 }
@@ -128,9 +146,20 @@
 
 -(BOOL)updateUser:(NSString*)nextText
 {
-    if(arrNodes.count==iMaxCount)
+    imageView.hidden=YES;
+    if(arrNodes.count==iMaxCount && btnUser.tag==iMaxCount-1)
     {
         return NO;
+    }
+    else if(arrNodes.count==iMaxCount && btnUser.tag==iMaxCount-2)
+    {
+        [UIView animateWithDuration:1 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseOut animations:^{
+            btnUser.center=((Node*)arrNodes[arrNodes.count-1]).point;
+            [btnUser.superview bringSubviewToFront:btnUser];
+        } completion:^(BOOL finished) {
+            btnUser.tag=btnUser.tag+1;
+        }];
+        return YES;
     }
     while (1) {
         NSInteger index=rand()%3;

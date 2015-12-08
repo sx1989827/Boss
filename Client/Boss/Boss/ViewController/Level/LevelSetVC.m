@@ -55,7 +55,7 @@
 
 -(void)handleData:(LevelEnterModel*)data
 {
-    NSMutableAttributedString *str=[[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"你要挑战的等级:%@",_level ]];
+    NSMutableAttributedString *str=[[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@",_bChallenge?@"你要挑战的等级:":@"你要蹂躏的对象:",_level ]];
     [str setAttributes:@{
                          NSForegroundColorAttributeName:[UIColor colorWithRed:0.145 green:0.600 blue:1.000 alpha:1.000],
                          NSFontAttributeName:[UIFont systemFontOfSize:20]
@@ -183,6 +183,11 @@
                     model.index=@0;
                     count+=model.data.count;
                 }
+                if(count==0)
+                {
+                    E(@"服务器尚未有该级别的题目，敬请期待！");
+                    return;
+                }
                 NSMutableDictionary *dic=[[NSMutableDictionary alloc] initWithCapacity:30];
                 [dic setObject: @{
                                  @"money":@([[UserDefaults sharedInstance] peopleName:_level].money),
@@ -203,7 +208,8 @@
                                                                 @"dicEnemy":dic,
                                                                 @"powerCount":@(count),
                                                                 @"time":@(time),
-                                                                @"arrItem":obj.data
+                                                                @"arrItem":obj.data,
+                                                                @"bChallenge":@(_bChallenge)
                                                                 }];
             }
             else

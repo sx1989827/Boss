@@ -75,24 +75,48 @@
 
 -(void)LevelViewClick:(NSInteger)index Text:(NSString *)text
 {
-    if(index>indexLevel)
+    if(index==0)
+    {
+        E(@"你还想做回码畜吗！");
+    }
+    else if(index>indexLevel)
     {
         self.navigationController.delegate=self;
         [self pushViewController:@"LevelSetVC" Param:@{
                                            @"type":_type,
-                                           @"level":text
+                                           @"level":text,
+                                           @"bChallenge":@(YES)
                                                        }];
+    }
+    else
+    {
+        [TipView showWithTitle:@"蹂躏模式" Tip:@"你将蹂躏你的下属们，是否开始享受！" YesBlock:^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                self.navigationController.delegate=self;
+                [self pushViewController:@"LevelSetVC" Param:@{
+                                                               @"type":_type,
+                                                               @"level":text,
+                                                               @"bChallenge":@(NO)
+                                                               }];
+            });
+        } NoBlock:nil];
     }
 }
 
 -(void)updateLevel:(NSNotification*)nofi
 {
-    indexLevel++;
-    if(indexLevel>=arrLevel.count)
+    if(indexLevel<arrLevel.count-1)
     {
-        return;
+        indexLevel++;
     }
-    [viewLevel updateUser:arrLevel[indexLevel+1]];
+    if(indexLevel==arrLevel.count-1)
+    {
+        [viewLevel updateUser:nil];
+    }
+    else
+    {
+        [viewLevel updateUser:arrLevel[indexLevel+1]];
+    }
 }
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController

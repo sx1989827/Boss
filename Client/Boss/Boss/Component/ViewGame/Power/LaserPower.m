@@ -18,7 +18,7 @@
     {
         self.name=name;
         self.value=value;
-        self.node=[SKSpriteNode spriteNodeWithColor:[UIColor colorWithRed:0.996 green:0.949 blue:0.227 alpha:1.000] size:CGSizeMake(10, 5)];
+        self.node=[SKSpriteNode spriteNodeWithTexture:[ViewTexture textureForName:@"laser"] size:CGSizeMake(5, 15)];
         GameUser *user=[[ViewSence sharedInstance] valueForKey:@"user"];
         self.node.position=CGPointMake(user.node.position.x+user.node.size.width/2, 30);
         self.node.zPosition=FLT_MAX;
@@ -32,6 +32,10 @@
         self.node.anchorPoint=CGPointMake(0, 0.5);
         SKAction *action=[SKAction sequence:@[[SKAction scaleXTo:[UIScreen mainScreen].bounds.size.width duration:1],[SKAction waitForDuration:2],[SKAction performSelector:@selector(remove) onTarget:self]]];
         [self.node runAction:action];
+        SKEmitterNode *spark = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"laserStart" ofType:@"sks"]];
+        spark.position =self.node.position ;
+        [spark runAction:[SKAction sequence:@[[SKAction waitForDuration:3],[SKAction fadeOutWithDuration:0.5],[SKAction removeFromParent]]]];
+        [[ViewSence sharedInstance] addChild:spark];
         [[ViewSence sharedInstance] addChild:self.node];
         [self.node runAction:[SKAction playSoundFileNamed:@"激光.wav" waitForCompletion:NO]];
     }

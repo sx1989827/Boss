@@ -47,7 +47,7 @@
         interal+=0.1;
     }
     [UIView animateWithDuration:0.2 animations:^{
-        UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
         self.effect=blur;
     }];
 }

@@ -50,6 +50,8 @@
                 {
                     bBossMove=YES;
                     [_node runAction:[SKAction repeatActionForever:[SKAction moveByX:-_speed y:0 duration:1]] withKey:@"move" ];
+                    SKAction *action=[SKAction repeatActionForever:[SKAction animateWithTextures:[ViewTexture atlasForName:_name] timePerFrame:0.2]];
+                    [_node runAction:action];
                 }
             }
         }
@@ -83,11 +85,11 @@
         GameEnemy *boss=[[ViewSence sharedInstance] valueForKey:@"boss"];
         _node.position = CGPointMake([UIScreen mainScreen].bounds.size.width-_node.size.width/2-boss.node.size.width, _node.size.height/2);
     }
-    SKAction *action=[SKAction repeatActionForever:[SKAction animateWithTextures:[ViewTexture atlasForName:_name] timePerFrame:0.2]];
-    [_node runAction:action];
     if(!_bBoss)
     {
         [_node runAction:[SKAction repeatActionForever:[SKAction moveByX:-_speed y:0 duration:1]] withKey:@"move"];
+        SKAction *action=[SKAction repeatActionForever:[SKAction animateWithTextures:[ViewTexture atlasForName:_name] timePerFrame:0.2]];
+        [_node runAction:action];
     }
     [[ViewSence sharedInstance] addChild:_node];
 }
