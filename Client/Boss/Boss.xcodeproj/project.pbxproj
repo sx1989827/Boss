@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5015F4C1C156C740003E71F /* EditPswReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5015F4B1C156C740003E71F /* EditPswReq.m */; };
+		B5015F541C1572970003E71F /* EditPswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5015F521C1572970003E71F /* EditPswViewController.m */; };
+		B5015F551C1572970003E71F /* EditPswViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5015F531C1572970003E71F /* EditPswViewController.xib */; };
+		B5015F5A1C1585990003E71F /* RecodeHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5015F581C1585990003E71F /* RecodeHistoryViewController.m */; };
+		B5015F5B1C1585990003E71F /* RecodeHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5015F591C1585990003E71F /* RecodeHistoryViewController.xib */; };
+		B5015F5E1C15882E0003E71F /* HistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5015F5D1C15882E0003E71F /* HistoryCell.m */; };
+		B5015F601C15884C0003E71F /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5015F5F1C15884C0003E71F /* HistoryCell.xib */; };
+		B5015F631C1674860003E71F /* HistoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B5015F621C1674860003E71F /* HistoryItem.m */; };
+		B5015F671C16851B0003E71F /* TypeReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5015F661C16851B0003E71F /* TypeReq.m */; };
+		B5015F6A1C169E620003E71F /* PercentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5015F691C169E620003E71F /* PercentView.m */; };
 		B5108B2A1C044F34005F6CC6 /* UserQuestionReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5108B291C044F34005F6CC6 /* UserQuestionReq.m */; };
 		B5108B2D1C045139005F6CC6 /* ResetPwdReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5108B2C1C045139005F6CC6 /* ResetPwdReq.m */; };
 		B5108B301C045C0D005F6CC6 /* MainTabVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5108B2F1C045C0D005F6CC6 /* MainTabVC.m */; };
@@ -101,6 +111,9 @@
 		B5977FA61C040A0500175174 /* ForgotFinishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5977FA41C040A0500175174 /* ForgotFinishVC.xib */; };
 		B5C3DE4C1C13DE8D00CA1C51 /* PreStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DE4B1C13DE8D00CA1C51 /* PreStartView.m */; };
 		B5C3DE4F1C146E8400CA1C51 /* LevelLeaveReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DE4E1C146E8400CA1C51 /* LevelLeaveReq.m */; };
+		B5CB64151C16AFFA006DC72A /* TypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CB64141C16AFFA006DC72A /* TypeView.m */; };
+		B5CB64171C16B01C006DC72A /* TypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CB64161C16B01C006DC72A /* TypeView.xib */; };
+		B5CB641A1C16B205006DC72A /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CB64191C16B205006DC72A /* arrow@2x.png */; };
 		B5CD9DCF1C0750DA00DABCAA /* LevelInfoReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD9DCE1C0750DA00DABCAA /* LevelInfoReq.m */; };
 		B5CD9DD31C07FA1800DABCAA /* LevelSetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD9DD11C07FA1800DABCAA /* LevelSetVC.m */; };
 		B5CD9DD41C07FA1800DABCAA /* LevelSetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CD9DD21C07FA1800DABCAA /* LevelSetVC.xib */; };
@@ -115,6 +128,23 @@
 /* Begin PBXFileReference section */
 		012E798E76C4260698B6DEF4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		314F08315C612BD5D16A7BF1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B5015F4A1C156C740003E71F /* EditPswReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPswReq.h; sourceTree = "<group>"; };
+		B5015F4B1C156C740003E71F /* EditPswReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPswReq.m; sourceTree = "<group>"; };
+		B5015F511C1572970003E71F /* EditPswViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPswViewController.h; sourceTree = "<group>"; };
+		B5015F521C1572970003E71F /* EditPswViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPswViewController.m; sourceTree = "<group>"; };
+		B5015F531C1572970003E71F /* EditPswViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPswViewController.xib; sourceTree = "<group>"; };
+		B5015F571C1585990003E71F /* RecodeHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecodeHistoryViewController.h; sourceTree = "<group>"; };
+		B5015F581C1585990003E71F /* RecodeHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecodeHistoryViewController.m; sourceTree = "<group>"; };
+		B5015F591C1585990003E71F /* RecodeHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecodeHistoryViewController.xib; sourceTree = "<group>"; };
+		B5015F5C1C15882E0003E71F /* HistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCell.h; sourceTree = "<group>"; };
+		B5015F5D1C15882E0003E71F /* HistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryCell.m; sourceTree = "<group>"; };
+		B5015F5F1C15884C0003E71F /* HistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
+		B5015F611C1674860003E71F /* HistoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryItem.h; sourceTree = "<group>"; };
+		B5015F621C1674860003E71F /* HistoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryItem.m; sourceTree = "<group>"; };
+		B5015F651C16851B0003E71F /* TypeReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeReq.h; sourceTree = "<group>"; };
+		B5015F661C16851B0003E71F /* TypeReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeReq.m; sourceTree = "<group>"; };
+		B5015F681C169E620003E71F /* PercentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentView.h; sourceTree = "<group>"; };
+		B5015F691C169E620003E71F /* PercentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentView.m; sourceTree = "<group>"; };
 		B5108B281C044F34005F6CC6 /* UserQuestionReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserQuestionReq.h; sourceTree = "<group>"; };
 		B5108B291C044F34005F6CC6 /* UserQuestionReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserQuestionReq.m; sourceTree = "<group>"; };
 		B5108B2B1C045139005F6CC6 /* ResetPwdReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPwdReq.h; sourceTree = "<group>"; };
@@ -273,6 +303,10 @@
 		B5C3DE4B1C13DE8D00CA1C51 /* PreStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreStartView.m; sourceTree = "<group>"; };
 		B5C3DE4D1C146E8400CA1C51 /* LevelLeaveReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelLeaveReq.h; sourceTree = "<group>"; };
 		B5C3DE4E1C146E8400CA1C51 /* LevelLeaveReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelLeaveReq.m; sourceTree = "<group>"; };
+		B5CB64131C16AFFA006DC72A /* TypeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeView.h; sourceTree = "<group>"; };
+		B5CB64141C16AFFA006DC72A /* TypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeView.m; sourceTree = "<group>"; };
+		B5CB64161C16B01C006DC72A /* TypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeView.xib; sourceTree = "<group>"; };
+		B5CB64191C16B205006DC72A /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		B5CD9DCD1C0750DA00DABCAA /* LevelInfoReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelInfoReq.h; sourceTree = "<group>"; };
 		B5CD9DCE1C0750DA00DABCAA /* LevelInfoReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelInfoReq.m; sourceTree = "<group>"; };
 		B5CD9DD01C07FA1800DABCAA /* LevelSetVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelSetVC.h; sourceTree = "<group>"; };
@@ -309,6 +343,47 @@
 				314F08315C612BD5D16A7BF1 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B5015F4D1C156DBA0003E71F /* EditPsw */ = {
+			isa = PBXGroup;
+			children = (
+				B5015F511C1572970003E71F /* EditPswViewController.h */,
+				B5015F521C1572970003E71F /* EditPswViewController.m */,
+				B5015F531C1572970003E71F /* EditPswViewController.xib */,
+			);
+			name = EditPsw;
+			sourceTree = "<group>";
+		};
+		B5015F561C15856D0003E71F /* RecodeHistory */ = {
+			isa = PBXGroup;
+			children = (
+				B5015F571C1585990003E71F /* RecodeHistoryViewController.h */,
+				B5015F581C1585990003E71F /* RecodeHistoryViewController.m */,
+				B5015F591C1585990003E71F /* RecodeHistoryViewController.xib */,
+				B5CB64131C16AFFA006DC72A /* TypeView.h */,
+				B5CB64141C16AFFA006DC72A /* TypeView.m */,
+				B5CB64161C16B01C006DC72A /* TypeView.xib */,
+			);
+			name = RecodeHistory;
+			sourceTree = "<group>";
+		};
+		B5015F641C1684F90003E71F /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				B5015F651C16851B0003E71F /* TypeReq.h */,
+				B5015F661C16851B0003E71F /* TypeReq.m */,
+			);
+			name = Type;
+			sourceTree = "<group>";
+		};
+		B5015F6B1C169E6E0003E71F /* PercentView */ = {
+			isa = PBXGroup;
+			children = (
+				B5015F681C169E620003E71F /* PercentView.h */,
+				B5015F691C169E620003E71F /* PercentView.m */,
+			);
+			name = PercentView;
 			sourceTree = "<group>";
 		};
 		B51A02B21C084B4F00610020 /* ChooseItemCountView */ = {
@@ -483,6 +558,7 @@
 		B58211F01BFEEE6500168A57 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B5CB64181C16B1F2006DC72A /* images */,
 				B58211F11BFEEE6500168A57 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -491,6 +567,7 @@
 		B58212071BFEFAEB00168A57 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				B5015F6B1C169E6E0003E71F /* PercentView */,
 				B570C5CB1C13D36F008A2C3F /* ChooseView */,
 				B570C58D1C11C7AF008A2C3F /* ViewGame */,
 				B570C5891C11C784008A2C3F /* TextDraw */,
@@ -506,6 +583,7 @@
 		B58212081BFEFAEB00168A57 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				B5015F641C1684F90003E71F /* Type */,
 				B51A02B81C08509A00610020 /* Power */,
 				B5CD9DE31C0835CC00DABCAA /* People */,
 				B5CD9DCC1C0750C600DABCAA /* Level */,
@@ -529,6 +607,9 @@
 				B5CD9DDB1C082C7E00DABCAA /* EnemyCell.h */,
 				B5CD9DDC1C082C7E00DABCAA /* EnemyCell.m */,
 				B5CD9DDE1C082D5500DABCAA /* EnemyCell.xib */,
+				B5015F5C1C15882E0003E71F /* HistoryCell.h */,
+				B5015F5D1C15882E0003E71F /* HistoryCell.m */,
+				B5015F5F1C15884C0003E71F /* HistoryCell.xib */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -542,6 +623,8 @@
 				B57722911C04AFE400EE189E /* RankItem.m */,
 				B5CD9DE01C08307F00DABCAA /* EnemyItem.h */,
 				B5CD9DE11C08307F00DABCAA /* EnemyItem.m */,
+				B5015F611C1674860003E71F /* HistoryItem.h */,
+				B5015F621C1674860003E71F /* HistoryItem.m */,
 			);
 			path = TableItem;
 			sourceTree = "<group>";
@@ -559,6 +642,8 @@
 		B582120C1BFEFAEB00168A57 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B5015F561C15856D0003E71F /* RecodeHistory */,
+				B5015F4D1C156DBA0003E71F /* EditPsw */,
 				B582120F1BFEFB6900168A57 /* Level */,
 				B58212101BFEFB6900168A57 /* Login */,
 				B58212111BFEFB6900168A57 /* Main */,
@@ -680,6 +765,8 @@
 				B53660AD1C05A10400D09686 /* EditPhotoReq.m */,
 				B53660B31C05BBA500D09686 /* EditNameReq.h */,
 				B53660B41C05BBA500D09686 /* EditNameReq.m */,
+				B5015F4A1C156C740003E71F /* EditPswReq.h */,
+				B5015F4B1C156C740003E71F /* EditPswReq.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -754,6 +841,14 @@
 				B5C3DE4B1C13DE8D00CA1C51 /* PreStartView.m */,
 			);
 			path = PreStartView;
+			sourceTree = "<group>";
+		};
+		B5CB64181C16B1F2006DC72A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B5CB64191C16B205006DC72A /* arrow@2x.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		B5CD9DCC1C0750C600DABCAA /* Level */ = {
@@ -854,6 +949,7 @@
 				B582122A1BFEFD7F00168A57 /* LoginVC.xib in Resources */,
 				B58212201BFEFD5300168A57 /* HUDLoading2.png in Resources */,
 				B58212241BFEFD5300168A57 /* HUDLoading6.png in Resources */,
+				B5015F5B1C1585990003E71F /* RecodeHistoryViewController.xib in Resources */,
 				B5CD9DDF1C082D5500DABCAA /* EnemyCell.xib in Resources */,
 				B5977FA61C040A0500175174 /* ForgotFinishVC.xib in Resources */,
 				B58212211BFEFD5300168A57 /* HUDLoading3.png in Resources */,
@@ -869,6 +965,7 @@
 				B58212221BFEFD5300168A57 /* HUDLoading4.png in Resources */,
 				B570C5B11C11C7AF008A2C3F /* bomb.sks in Resources */,
 				B58211FD1BFEEE6500168A57 /* Assets.xcassets in Resources */,
+				B5CB64171C16B01C006DC72A /* TypeView.xib in Resources */,
 				B5108B3A1C045CE7005F6CC6 /* RankVC.xib in Resources */,
 				B5977F991C035BD100175174 /* slidertag.png in Resources */,
 				B582121F1BFEFD5300168A57 /* HUDLoading1.png in Resources */,
@@ -882,6 +979,9 @@
 				B5CD9DD41C07FA1800DABCAA /* LevelSetVC.xib in Resources */,
 				B5108B351C045C80005F6CC6 /* HomeVC.xib in Resources */,
 				B5977F7D1C03507600175174 /* RegisterFinishVC.xib in Resources */,
+				B5015F601C15884C0003E71F /* HistoryCell.xib in Resources */,
+				B5CB641A1C16B205006DC72A /* arrow@2x.png in Resources */,
+				B5015F551C1572970003E71F /* EditPswViewController.xib in Resources */,
 				B582120E1BFEFB1B00168A57 /* Game.xcassets in Resources */,
 				B570C5B61C11C7AF008A2C3F /* laser.sks in Resources */,
 			);
@@ -942,6 +1042,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5015F6A1C169E620003E71F /* PercentView.m in Sources */,
 				B5CD9DDA1C080CBD00DABCAA /* LevelEnterReq.m in Sources */,
 				B5CD9DDD1C082C7E00DABCAA /* EnemyCell.m in Sources */,
 				B57722861C04712D00EE189E /* TypeItem.m in Sources */,
@@ -949,7 +1050,9 @@
 				B582122E1BFF094B00168A57 /* Util.m in Sources */,
 				B5977F6E1C02FDBB00175174 /* UserDefaults.m in Sources */,
 				B5108B391C045CE7005F6CC6 /* RankVC.m in Sources */,
+				B5015F4C1C156C740003E71F /* EditPswReq.m in Sources */,
 				B570C5B81C11C7AF008A2C3F /* BombPower.m in Sources */,
+				B5015F631C1674860003E71F /* HistoryItem.m in Sources */,
 				B57722811C046F6300EE189E /* TypeCell.m in Sources */,
 				B51A02B51C084B6B00610020 /* ChooseItemCountView.m in Sources */,
 				B570C5C61C11CBE0008A2C3F /* LevelStartReq.m in Sources */,
@@ -979,8 +1082,10 @@
 				B570C5BD1C11C7AF008A2C3F /* MyPower.m in Sources */,
 				B570C5CE1C13D387008A2C3F /* ChooseView.m in Sources */,
 				B58212351BFF255500168A57 /* CheckUserNameReq.m in Sources */,
+				B5CB64151C16AFFA006DC72A /* TypeView.m in Sources */,
 				B570C5B41C11C7AF008A2C3F /* GameEnemy.m in Sources */,
 				B58212161BFEFBD000168A57 /* BaseViewController.m in Sources */,
+				B5015F671C16851B0003E71F /* TypeReq.m in Sources */,
 				B58212291BFEFD7F00168A57 /* LoginVC.m in Sources */,
 				B5108B3E1C045D0C005F6CC6 /* MemberVC.m in Sources */,
 				B54373941C1554A20002346A /* StartVC.m in Sources */,
@@ -1001,10 +1106,13 @@
 				B577228D1C04AE9700EE189E /* RankCell.m in Sources */,
 				B5977F941C035B3A00175174 /* SliderView.m in Sources */,
 				B53660C51C06ECC900D09686 /* LevelView.m in Sources */,
+				B5015F541C1572970003E71F /* EditPswViewController.m in Sources */,
 				B5CD9DCF1C0750DA00DABCAA /* LevelInfoReq.m in Sources */,
 				B5108B301C045C0D005F6CC6 /* MainTabVC.m in Sources */,
+				B5015F5A1C1585990003E71F /* RecodeHistoryViewController.m in Sources */,
 				B5977F8F1C035A3600175174 /* SGGridMenu.m in Sources */,
 				B57722921C04AFE400EE189E /* RankItem.m in Sources */,
+				B5015F5E1C15882E0003E71F /* HistoryCell.m in Sources */,
 				B51A02BB1C0850AE00610020 /* PowerInfoReq.m in Sources */,
 				B5977F6A1C02BED000175174 /* LoginInputView.m in Sources */,
 				B5977F711C03004000175174 /* UserInfoReq.m in Sources */,
