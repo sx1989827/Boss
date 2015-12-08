@@ -26,6 +26,7 @@
 		B5152BB61C16D7A800C81AB3 /* AlertLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = B5152BB21C16D7A800C81AB3 /* AlertLeft.png */; };
 		B5152BB71C16D7A800C81AB3 /* AlertRight.png in Resources */ = {isa = PBXBuildFile; fileRef = B5152BB31C16D7A800C81AB3 /* AlertRight.png */; };
 		B5152BB81C16D7A800C81AB3 /* AlertStatus.png in Resources */ = {isa = PBXBuildFile; fileRef = B5152BB41C16D7A800C81AB3 /* AlertStatus.png */; };
+		B5152BBB1C16DB5100C81AB3 /* EditPswReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5152BBA1C16DB5100C81AB3 /* EditPswReq.m */; };
 		B51A02B51C084B6B00610020 /* ChooseItemCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = B51A02B41C084B6B00610020 /* ChooseItemCountView.m */; };
 		B51A02B71C084B8300610020 /* ChooseItemCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51A02B61C084B8300610020 /* ChooseItemCountView.xib */; };
 		B51A02BB1C0850AE00610020 /* PowerInfoReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B51A02BA1C0850AE00610020 /* PowerInfoReq.m */; };
@@ -163,6 +164,8 @@
 		B5152BB21C16D7A800C81AB3 /* AlertLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlertLeft.png; sourceTree = "<group>"; };
 		B5152BB31C16D7A800C81AB3 /* AlertRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlertRight.png; sourceTree = "<group>"; };
 		B5152BB41C16D7A800C81AB3 /* AlertStatus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlertStatus.png; sourceTree = "<group>"; };
+		B5152BB91C16DB5100C81AB3 /* EditPswReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPswReq.h; sourceTree = "<group>"; };
+		B5152BBA1C16DB5100C81AB3 /* EditPswReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPswReq.m; sourceTree = "<group>"; };
 		B51A02B31C084B6B00610020 /* ChooseItemCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseItemCountView.h; sourceTree = "<group>"; };
 		B51A02B41C084B6B00610020 /* ChooseItemCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseItemCountView.m; sourceTree = "<group>"; };
 		B51A02B61C084B8300610020 /* ChooseItemCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseItemCountView.xib; sourceTree = "<group>"; };
@@ -771,6 +774,8 @@
 		B58212321BFF251C00168A57 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				B5152BB91C16DB5100C81AB3 /* EditPswReq.h */,
+				B5152BBA1C16DB5100C81AB3 /* EditPswReq.m */,
 				B58212331BFF255500168A57 /* CheckUserNameReq.h */,
 				B58212341BFF255500168A57 /* CheckUserNameReq.m */,
 				B5977F6F1C03004000175174 /* UserInfoReq.h */,
@@ -1123,6 +1128,7 @@
 				B5977F901C035A3600175174 /* SGSheetMenu.m in Sources */,
 				B5108B2A1C044F34005F6CC6 /* UserQuestionReq.m in Sources */,
 				B58211F21BFEEE6500168A57 /* main.m in Sources */,
+				B5152BBB1C16DB5100C81AB3 /* EditPswReq.m in Sources */,
 				B570C5B91C11C7AF008A2C3F /* BulletPower.m in Sources */,
 				B5CD9DE61C0835E700DABCAA /* PeopleInfoReq.m in Sources */,
 				B5C3DE4C1C13DE8D00CA1C51 /* PreStartView.m in Sources */,
