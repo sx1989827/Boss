@@ -14,6 +14,7 @@
 @interface GameEnemy()
 {
     BOOL bBossMove;
+    SKLabelNode *bloodNode;
 }
 @end
 @implementation GameEnemy
@@ -56,6 +57,7 @@
             }
         }
     }
+    bloodNode.text=[NSString stringWithFormat:@"%ld",_money];
 }
 
 -(void)hurtUser:(GameUser*)user
@@ -92,10 +94,18 @@
         [_node runAction:action];
     }
     [[ViewSence sharedInstance] addChild:_node];
+    bloodNode=[[SKLabelNode alloc] initWithFontNamed:@"Chalkduster"];
+    bloodNode.text=[NSString stringWithFormat:@"%ld",_money];
+    bloodNode.fontSize=14;
+    bloodNode.fontColor=[UIColor colorWithRed:0.707 green:0.000 blue:0.000 alpha:1.000];
+    bloodNode.position=CGPointMake(_node.position.x, _node.position.y+_node.size.height/2);
+    [bloodNode setConstraints:@[[SKConstraint distance:[SKRange rangeWithLowerLimit:_node.size.height/2.0 upperLimit:_node.size.height/2.0] toNode:_node],[SKConstraint positionY:[SKRange rangeWithLowerLimit:_node.position.y+_node.size.height/2.0 upperLimit:_node.position.y+_node.size.height/2.0]]]];
+    [[ViewSence sharedInstance] addChild:bloodNode];
 }
 
 -(void)remove
 {
+    [bloodNode removeFromParent];
     [_node removeAllActions];
     _node.physicsBody.collisionBitMask=0;
     _node.physicsBody.contactTestBitMask=0;

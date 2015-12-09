@@ -12,9 +12,9 @@
 #include <sys/types.h>
 #include <sys/sysctl.h>
 #import <CommonCrypto/CommonDigest.h>
-//NSString *serverUrl=@"http://123.57.77.6:3000";
+NSString *serverUrl=@"http://123.57.77.6:3000";
 //NSString *serverUrl=@"http://192.168.199.154:3000";
-NSString *serverUrl=@"http://192.168.31.155:3000";
+//NSString *serverUrl=@"http://192.168.31.155:3000";
 //NSString *serverUrl=@"http://localhost:3000";
 NSString *msgUpdateLevel=@"msgUpdateLevel";
 @implementation Util
@@ -393,6 +393,18 @@ NSString *msgUpdateLevel=@"msgUpdateLevel";
     } completion:^(BOOL finished) {
         [view removeFromSuperview];
     }];
+}
+
+-(void)flipToView:(UIView*)view
+ {
+     UIImage *img=[[UIApplication sharedApplication].keyWindow image];
+     UIImageView *v=[[UIImageView alloc] initWithImage:img];
+     v.frame=[UIScreen mainScreen].bounds;
+     v.layer.zPosition=FLT_MAX;
+     [[UIApplication sharedApplication].keyWindow addSubview:v];
+     [UIView transitionFromView:v toView:view duration:1 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
+         [v removeFromSuperview];
+     }];
 }
 @end
 

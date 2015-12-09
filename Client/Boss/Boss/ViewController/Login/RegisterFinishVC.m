@@ -120,12 +120,19 @@
         obj.sex=_btnSex.text;
         obj.question=_texQuestion.text;
         obj.answer=_texAnswer.text;
+        obj.time=[[NSDate date] stringValue];
     } Res:^(id res) {
         BaseRes *obj=res;
         if(obj.code==0)
         {
             S(@"注册成功");
-            [self.navigationController popToRootViewControllerAnimated:YES];
+            for(UIViewController *vc in self.navigationController.viewControllers)
+            {
+                if([vc isKindOfClass:NSClassFromString(@"LoginVC")])
+                {
+                    [self.navigationController popToViewController:vc animated:YES];
+                }
+            }
         }
         else
         {

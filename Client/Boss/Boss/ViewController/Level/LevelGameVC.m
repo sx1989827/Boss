@@ -125,6 +125,10 @@
 {
     if(view.tag==0)
     {
+        UIImageView *view=[[UIImageView alloc] initWithFrame:_viewScroll.bounds];
+        view.backgroundColor=[UIColor clearColor];
+        view.contentMode=UIViewContentModeCenter;
+        [_viewScroll addSubview:view];
         if([text isEqualToString:ok])
         {
             [_viewItem setOK:YES Text:text];
@@ -133,13 +137,18 @@
             {
                 [game postPower:itemData.power Value:[[UserDefaults sharedInstance] powerName:itemData.power]];
             }
+            view.image=[UIImage imageNamed:@"ok"];
         }
         else
         {
             [_viewItem setOK:NO Text:text];
             [arrWrong addObject:itemData._id];
             [game hurtUser:[[UserDefaults sharedInstance] powerName:itemData.power]/2];
+            view.image=[UIImage imageNamed:@"wrong"];
         }
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [view removeFromSuperview];
+        });
     }
     else if(view.tag==1)
     {

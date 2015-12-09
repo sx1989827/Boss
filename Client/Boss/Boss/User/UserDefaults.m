@@ -44,6 +44,7 @@
             obj.username=_resModel.data.username;
             obj.pwd=_resModel.data.pwd;
         }
+        obj.time=[[NSDate date] stringValue];
     } Res:^(id res) {
         UserInfoRes *obj=res;
         if(obj.code==0)

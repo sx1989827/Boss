@@ -22,7 +22,8 @@ exports.service=[
             age:Number,
             sex:String,
             question:String,
-            answer:String
+            answer:String,
+            time:String
         },
         data:String
     },
@@ -31,7 +32,8 @@ exports.service=[
         path:"/user/info",
         param: {
             username:String,
-            pwd:String
+            pwd:String,
+            time:String
         },
         data:{
             _id:String,
@@ -44,6 +46,7 @@ exports.service=[
             answer:String,
             photo:String,
             score:Number,
+            logincount:Number,
             level:[
                 {
                     name:String,

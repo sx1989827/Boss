@@ -96,7 +96,7 @@
         layer.path=path.CGPath;
         layer.strokeStart=0;
         layer.strokeEnd=1;
-        imageView=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, btnUser.bounds.size.width, btnUser.bounds.size.width)];
+        imageView=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, btnUser.bounds.size.width-5, btnUser.bounds.size.width-5)];
         imageView.backgroundColor=[UIColor clearColor];
         imageView.contentMode=UIViewContentModeScaleAspectFit;
         imageView.layer.zPosition=MAXFLOAT;

@@ -27,6 +27,13 @@
 		B5152BB71C16D7A800C81AB3 /* AlertRight.png in Resources */ = {isa = PBXBuildFile; fileRef = B5152BB31C16D7A800C81AB3 /* AlertRight.png */; };
 		B5152BB81C16D7A800C81AB3 /* AlertStatus.png in Resources */ = {isa = PBXBuildFile; fileRef = B5152BB41C16D7A800C81AB3 /* AlertStatus.png */; };
 		B5152BBB1C16DB5100C81AB3 /* EditPswReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5152BBA1C16DB5100C81AB3 /* EditPswReq.m */; };
+		B5152BBD1C171DE900C81AB3 /* 敌人子弹.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5152BBC1C171DE900C81AB3 /* 敌人子弹.wav */; };
+		B5152BC31C17BEAD00C81AB3 /* bomb.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5152BBF1C17BEAD00C81AB3 /* bomb.sks */; };
+		B5152BC41C17BEAD00C81AB3 /* bullet.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5152BC01C17BEAD00C81AB3 /* bullet.sks */; };
+		B5152BC51C17BEAD00C81AB3 /* laser.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5152BC11C17BEAD00C81AB3 /* laser.sks */; };
+		B5152BC61C17BEAD00C81AB3 /* laserStart.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5152BC21C17BEAD00C81AB3 /* laserStart.sks */; };
+		B5152BC91C17BED400C81AB3 /* barrier.sks in Resources */ = {isa = PBXBuildFile; fileRef = B5152BC71C17BED400C81AB3 /* barrier.sks */; };
+		B5152BCA1C17BED400C81AB3 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = B5152BC81C17BED400C81AB3 /* spark.png */; };
 		B51A02B51C084B6B00610020 /* ChooseItemCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = B51A02B41C084B6B00610020 /* ChooseItemCountView.m */; };
 		B51A02B71C084B8300610020 /* ChooseItemCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B51A02B61C084B8300610020 /* ChooseItemCountView.xib */; };
 		B51A02BB1C0850AE00610020 /* PowerInfoReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B51A02BA1C0850AE00610020 /* PowerInfoReq.m */; };
@@ -52,16 +59,12 @@
 		B54373CB1C15C1EB0002346A /* 炸弹.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373C11C15C1EB0002346A /* 炸弹.wav */; };
 		B54373CC1C15C1EB0002346A /* 男受伤.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373C21C15C1EB0002346A /* 男受伤.wav */; };
 		B54373CD1C15C1EB0002346A /* 男死亡.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373C31C15C1EB0002346A /* 男死亡.wav */; };
-		B54373D11C164FF50002346A /* laserStart.sks in Resources */ = {isa = PBXBuildFile; fileRef = B54373D01C164FF50002346A /* laserStart.sks */; };
 		B570C5871C11C69B008A2C3F /* LevelGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5851C11C69B008A2C3F /* LevelGameVC.m */; };
 		B570C5881C11C69B008A2C3F /* LevelGameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B570C5861C11C69B008A2C3F /* LevelGameVC.xib */; };
 		B570C58C1C11C784008A2C3F /* TextDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C58B1C11C784008A2C3F /* TextDrawView.m */; };
-		B570C5B11C11C7AF008A2C3F /* bomb.sks in Resources */ = {isa = PBXBuildFile; fileRef = B570C58E1C11C7AF008A2C3F /* bomb.sks */; };
-		B570C5B21C11C7AF008A2C3F /* bullet.sks in Resources */ = {isa = PBXBuildFile; fileRef = B570C58F1C11C7AF008A2C3F /* bullet.sks */; };
 		B570C5B31C11C7AF008A2C3F /* GameDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5911C11C7AF008A2C3F /* GameDefine.m */; };
 		B570C5B41C11C7AF008A2C3F /* GameEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5931C11C7AF008A2C3F /* GameEnemy.m */; };
 		B570C5B51C11C7AF008A2C3F /* GameUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5951C11C7AF008A2C3F /* GameUser.m */; };
-		B570C5B61C11C7AF008A2C3F /* laser.sks in Resources */ = {isa = PBXBuildFile; fileRef = B570C5961C11C7AF008A2C3F /* laser.sks */; };
 		B570C5B71C11C7AF008A2C3F /* BarrierPower.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5991C11C7AF008A2C3F /* BarrierPower.m */; };
 		B570C5B81C11C7AF008A2C3F /* BombPower.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C59B1C11C7AF008A2C3F /* BombPower.m */; };
 		B570C5B91C11C7AF008A2C3F /* BulletPower.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C59D1C11C7AF008A2C3F /* BulletPower.m */; };
@@ -70,7 +73,6 @@
 		B570C5BC1C11C7AF008A2C3F /* MoneyPower.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5A31C11C7AF008A2C3F /* MoneyPower.m */; };
 		B570C5BD1C11C7AF008A2C3F /* MyPower.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5A51C11C7AF008A2C3F /* MyPower.m */; };
 		B570C5BE1C11C7AF008A2C3F /* TimePower.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5A71C11C7AF008A2C3F /* TimePower.m */; };
-		B570C5BF1C11C7AF008A2C3F /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = B570C5A81C11C7AF008A2C3F /* spark.png */; };
 		B570C5C01C11C7AF008A2C3F /* ViewGame.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5AA1C11C7AF008A2C3F /* ViewGame.m */; };
 		B570C5C11C11C7AF008A2C3F /* ViewGame.xib in Resources */ = {isa = PBXBuildFile; fileRef = B570C5AB1C11C7AF008A2C3F /* ViewGame.xib */; };
 		B570C5C21C11C7AF008A2C3F /* ViewSence.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5AE1C11C7AF008A2C3F /* ViewSence.m */; };
@@ -166,6 +168,13 @@
 		B5152BB41C16D7A800C81AB3 /* AlertStatus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlertStatus.png; sourceTree = "<group>"; };
 		B5152BB91C16DB5100C81AB3 /* EditPswReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPswReq.h; sourceTree = "<group>"; };
 		B5152BBA1C16DB5100C81AB3 /* EditPswReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPswReq.m; sourceTree = "<group>"; };
+		B5152BBC1C171DE900C81AB3 /* 敌人子弹.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "敌人子弹.wav"; sourceTree = "<group>"; };
+		B5152BBF1C17BEAD00C81AB3 /* bomb.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bomb.sks; sourceTree = "<group>"; };
+		B5152BC01C17BEAD00C81AB3 /* bullet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bullet.sks; sourceTree = "<group>"; };
+		B5152BC11C17BEAD00C81AB3 /* laser.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = laser.sks; sourceTree = "<group>"; };
+		B5152BC21C17BEAD00C81AB3 /* laserStart.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = laserStart.sks; sourceTree = "<group>"; };
+		B5152BC71C17BED400C81AB3 /* barrier.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = barrier.sks; sourceTree = "<group>"; };
+		B5152BC81C17BED400C81AB3 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		B51A02B31C084B6B00610020 /* ChooseItemCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseItemCountView.h; sourceTree = "<group>"; };
 		B51A02B41C084B6B00610020 /* ChooseItemCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseItemCountView.m; sourceTree = "<group>"; };
 		B51A02B61C084B8300610020 /* ChooseItemCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseItemCountView.xib; sourceTree = "<group>"; };
@@ -201,21 +210,17 @@
 		B54373C11C15C1EB0002346A /* 炸弹.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "炸弹.wav"; sourceTree = "<group>"; };
 		B54373C21C15C1EB0002346A /* 男受伤.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "男受伤.wav"; sourceTree = "<group>"; };
 		B54373C31C15C1EB0002346A /* 男死亡.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "男死亡.wav"; sourceTree = "<group>"; };
-		B54373D01C164FF50002346A /* laserStart.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = laserStart.sks; sourceTree = "<group>"; };
 		B570C5841C11C69B008A2C3F /* LevelGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelGameVC.h; sourceTree = "<group>"; };
 		B570C5851C11C69B008A2C3F /* LevelGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelGameVC.m; sourceTree = "<group>"; };
 		B570C5861C11C69B008A2C3F /* LevelGameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelGameVC.xib; sourceTree = "<group>"; };
 		B570C58A1C11C784008A2C3F /* TextDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextDrawView.h; sourceTree = "<group>"; };
 		B570C58B1C11C784008A2C3F /* TextDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextDrawView.m; sourceTree = "<group>"; };
-		B570C58E1C11C7AF008A2C3F /* bomb.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bomb.sks; sourceTree = "<group>"; };
-		B570C58F1C11C7AF008A2C3F /* bullet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bullet.sks; sourceTree = "<group>"; };
 		B570C5901C11C7AF008A2C3F /* GameDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDefine.h; sourceTree = "<group>"; };
 		B570C5911C11C7AF008A2C3F /* GameDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDefine.m; sourceTree = "<group>"; };
 		B570C5921C11C7AF008A2C3F /* GameEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEnemy.h; sourceTree = "<group>"; };
 		B570C5931C11C7AF008A2C3F /* GameEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEnemy.m; sourceTree = "<group>"; };
 		B570C5941C11C7AF008A2C3F /* GameUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUser.h; sourceTree = "<group>"; };
 		B570C5951C11C7AF008A2C3F /* GameUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameUser.m; sourceTree = "<group>"; };
-		B570C5961C11C7AF008A2C3F /* laser.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = laser.sks; sourceTree = "<group>"; };
 		B570C5981C11C7AF008A2C3F /* BarrierPower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrierPower.h; sourceTree = "<group>"; };
 		B570C5991C11C7AF008A2C3F /* BarrierPower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrierPower.m; sourceTree = "<group>"; };
 		B570C59A1C11C7AF008A2C3F /* BombPower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BombPower.h; sourceTree = "<group>"; };
@@ -232,7 +237,6 @@
 		B570C5A51C11C7AF008A2C3F /* MyPower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPower.m; sourceTree = "<group>"; };
 		B570C5A61C11C7AF008A2C3F /* TimePower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimePower.h; sourceTree = "<group>"; };
 		B570C5A71C11C7AF008A2C3F /* TimePower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimePower.m; sourceTree = "<group>"; };
-		B570C5A81C11C7AF008A2C3F /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		B570C5A91C11C7AF008A2C3F /* ViewGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewGame.h; sourceTree = "<group>"; };
 		B570C5AA1C11C7AF008A2C3F /* ViewGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewGame.m; sourceTree = "<group>"; };
 		B570C5AB1C11C7AF008A2C3F /* ViewGame.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewGame.xib; sourceTree = "<group>"; };
@@ -386,6 +390,19 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		B5152BBE1C17BEAD00C81AB3 /* effect */ = {
+			isa = PBXGroup;
+			children = (
+				B5152BBF1C17BEAD00C81AB3 /* bomb.sks */,
+				B5152BC01C17BEAD00C81AB3 /* bullet.sks */,
+				B5152BC11C17BEAD00C81AB3 /* laser.sks */,
+				B5152BC21C17BEAD00C81AB3 /* laserStart.sks */,
+				B5152BC71C17BED400C81AB3 /* barrier.sks */,
+				B5152BC81C17BED400C81AB3 /* spark.png */,
+			);
+			path = effect;
+			sourceTree = "<group>";
+		};
 		B51A02B21C084B4F00610020 /* ChooseItemCountView */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +466,7 @@
 		B54373B91C15C1EB0002346A /* sound */ = {
 			isa = PBXGroup;
 			children = (
+				B5152BBC1C171DE900C81AB3 /* 敌人子弹.wav */,
 				B54373BA1C15C1EB0002346A /* 加工资.wav */,
 				B54373BB1C15C1EB0002346A /* 加时间.wav */,
 				B54373BC1C15C1EB0002346A /* 女受伤.wav */,
@@ -475,19 +493,15 @@
 		B570C58D1C11C7AF008A2C3F /* ViewGame */ = {
 			isa = PBXGroup;
 			children = (
+				B5152BBE1C17BEAD00C81AB3 /* effect */,
 				B54373B91C15C1EB0002346A /* sound */,
-				B570C58E1C11C7AF008A2C3F /* bomb.sks */,
-				B54373D01C164FF50002346A /* laserStart.sks */,
-				B570C58F1C11C7AF008A2C3F /* bullet.sks */,
 				B570C5901C11C7AF008A2C3F /* GameDefine.h */,
 				B570C5911C11C7AF008A2C3F /* GameDefine.m */,
 				B570C5921C11C7AF008A2C3F /* GameEnemy.h */,
 				B570C5931C11C7AF008A2C3F /* GameEnemy.m */,
 				B570C5941C11C7AF008A2C3F /* GameUser.h */,
 				B570C5951C11C7AF008A2C3F /* GameUser.m */,
-				B570C5961C11C7AF008A2C3F /* laser.sks */,
 				B570C5971C11C7AF008A2C3F /* Power */,
-				B570C5A81C11C7AF008A2C3F /* spark.png */,
 				B570C5A91C11C7AF008A2C3F /* ViewGame.h */,
 				B570C5AA1C11C7AF008A2C3F /* ViewGame.m */,
 				B570C5AB1C11C7AF008A2C3F /* ViewGame.xib */,
@@ -960,27 +974,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				B54373C41C15C1EB0002346A /* 加工资.wav in Resources */,
+				B5152BC61C17BEAD00C81AB3 /* laserStart.sks in Resources */,
+				B5152BCA1C17BED400C81AB3 /* spark.png in Resources */,
 				B54373901C15519E0002346A /* LaunchScreen.storyboard in Resources */,
 				B54373C91C15C1EB0002346A /* 屏障.wav in Resources */,
 				B58212251BFEFD5300168A57 /* HUDLoading7.png in Resources */,
 				B582122A1BFEFD7F00168A57 /* LoginVC.xib in Resources */,
 				B58212201BFEFD5300168A57 /* HUDLoading2.png in Resources */,
 				B54373C61C15C1EB0002346A /* 女受伤.wav in Resources */,
+				B5152BC51C17BEAD00C81AB3 /* laser.sks in Resources */,
 				B58212241BFEFD5300168A57 /* HUDLoading6.png in Resources */,
 				B5CD9DDF1C082D5500DABCAA /* EnemyCell.xib in Resources */,
 				B54373C51C15C1EB0002346A /* 加时间.wav in Resources */,
 				B5977FA61C040A0500175174 /* ForgotFinishVC.xib in Resources */,
+				B5152BC31C17BEAD00C81AB3 /* bomb.sks in Resources */,
 				B54373CB1C15C1EB0002346A /* 炸弹.wav in Resources */,
 				B58212211BFEFD5300168A57 /* HUDLoading3.png in Resources */,
 				B51A02B71C084B8300610020 /* ChooseItemCountView.xib in Resources */,
 				B5152BAC1C16CA5A00C81AB3 /* up3.png in Resources */,
 				B5152BAE1C16CA5A00C81AB3 /* up5.png in Resources */,
-				B54373D11C164FF50002346A /* laserStart.sks in Resources */,
 				B5152BAF1C16CA5A00C81AB3 /* up6.png in Resources */,
 				B570C5881C11C69B008A2C3F /* LevelGameVC.xib in Resources */,
 				B53660C11C06EB4200D09686 /* LevelVC.xib in Resources */,
 				B5152BB51C16D7A800C81AB3 /* AlertInfo.png in Resources */,
 				B5977F781C034B3200175174 /* back.png in Resources */,
+				B5152BC41C17BEAD00C81AB3 /* bullet.sks in Resources */,
 				B5152BB81C16D7A800C81AB3 /* AlertStatus.png in Resources */,
 				B54373C71C15C1EB0002346A /* 女死亡.wav in Resources */,
 				B5152BAA1C16CA5A00C81AB3 /* up1.png in Resources */,
@@ -989,10 +1007,10 @@
 				B5977FA11C0406D400175174 /* ForgotVC.xib in Resources */,
 				B5977F981C035BD100175174 /* slidercenter.png in Resources */,
 				B54373951C1554A20002346A /* StartVC.xib in Resources */,
+				B5152BC91C17BED400C81AB3 /* barrier.sks in Resources */,
 				B5152BB61C16D7A800C81AB3 /* AlertLeft.png in Resources */,
 				B58212221BFEFD5300168A57 /* HUDLoading4.png in Resources */,
 				B5152BAD1C16CA5A00C81AB3 /* up4.png in Resources */,
-				B570C5B11C11C7AF008A2C3F /* bomb.sks in Resources */,
 				B58211FD1BFEEE6500168A57 /* Assets.xcassets in Resources */,
 				B5108B3A1C045CE7005F6CC6 /* RankVC.xib in Resources */,
 				B5977F991C035BD100175174 /* slidertag.png in Resources */,
@@ -1000,21 +1018,19 @@
 				B582121F1BFEFD5300168A57 /* HUDLoading1.png in Resources */,
 				B570C5C11C11C7AF008A2C3F /* ViewGame.xib in Resources */,
 				B5152BAB1C16CA5A00C81AB3 /* up2.png in Resources */,
-				B570C5BF1C11C7AF008A2C3F /* spark.png in Resources */,
 				B577228F1C04AEA400EE189E /* RankCell.xib in Resources */,
 				B5977F761C03465900175174 /* RegisterVC.xib in Resources */,
 				B5977F8B1C035A3600175174 /* cellcheck.png in Resources */,
-				B570C5B21C11C7AF008A2C3F /* bullet.sks in Resources */,
 				B54373CD1C15C1EB0002346A /* 男死亡.wav in Resources */,
 				B58212231BFEFD5300168A57 /* HUDLoading5.png in Resources */,
 				B5CD9DD41C07FA1800DABCAA /* LevelSetVC.xib in Resources */,
 				B54373C81C15C1EB0002346A /* 子弹.wav in Resources */,
+				B5152BBD1C171DE900C81AB3 /* 敌人子弹.wav in Resources */,
 				B5108B351C045C80005F6CC6 /* HomeVC.xib in Resources */,
 				B5977F7D1C03507600175174 /* RegisterFinishVC.xib in Resources */,
 				B5152BB71C16D7A800C81AB3 /* AlertRight.png in Resources */,
 				B54373CC1C15C1EB0002346A /* 男受伤.wav in Resources */,
 				B582120E1BFEFB1B00168A57 /* Game.xcassets in Resources */,
-				B570C5B61C11C7AF008A2C3F /* laser.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

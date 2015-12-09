@@ -63,7 +63,10 @@ router.post('/register', function(req, res) {
             answer:req.body.answer,
             photo:"",
             level:[],
-            score:0
+            score:0,
+            logincount:0,
+            createtime:req.body.time,
+            lastlogintime:""
         },function(err,result)
         {
             if(err)
@@ -76,7 +79,7 @@ router.post('/register', function(req, res) {
             }
             res.json({
                 code:0,
-                msg:"添加成功"
+                data:"添加成功"
             });
         });
     });
@@ -84,9 +87,28 @@ router.post('/register', function(req, res) {
 
 //获取用户信息
 router.get('/info', function(req, res) {
-    res.json({
-       code:0,
-        data:req.userInfo
+    user.update({
+        username:req.userInfo.username
+    },{
+        logincount:++req.userInfo.logincount,
+        lastlogintime:req.query.time
+    },{
+        multi:false
+    },function(err, numberAffected, raw){
+        if(err)
+        {
+            res.json({
+                code:1,
+                data:err.message
+            });
+        }
+        else
+        {
+            res.json({
+               code:0,
+                data:req.userInfo
+            });
+        }
     });
 });
 

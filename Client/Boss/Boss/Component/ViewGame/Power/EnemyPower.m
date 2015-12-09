@@ -31,7 +31,7 @@
         [self.node runAction:action];
         [self.node runAction:[SKAction repeatActionForever:[SKAction rotateByAngle:-10.0/180*31.4 duration:0.1]]];
         [[ViewSence sharedInstance] addChild:self.node];
-        [self.node runAction:[SKAction playSoundFileNamed:@"子弹.wav" waitForCompletion:NO]];
+        [self.node runAction:[SKAction playSoundFileNamed:@"敌人子弹.wav" waitForCompletion:NO]];
     }
     return self;
 }

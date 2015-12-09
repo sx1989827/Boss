@@ -52,6 +52,10 @@
         [self.node runAction:action];
         [[ViewSence sharedInstance] addChild:self.node];
         [self.node runAction:[SKAction playSoundFileNamed:@"屏障.wav" waitForCompletion:NO]];
+        SKEmitterNode *spark = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"barrier" ofType:@"sks"]];
+        spark.position =CGPointMake(self.node.position.x, 0) ;
+        [spark runAction:[SKAction sequence:@[[SKAction waitForDuration:3],[SKAction fadeOutWithDuration:0.5],[SKAction removeFromParent]]]];
+        [[ViewSence sharedInstance] addChild:spark];
     }
     return self;
 }

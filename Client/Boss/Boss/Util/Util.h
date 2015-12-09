@@ -15,6 +15,7 @@ extern NSString *msgUpdateLevel;
 -(UIViewController*)pushViewController:(NSString *)ToView Param:(NSDictionary*)param;
 -(UIViewController*)presentViewController:(NSString *)ToView Param:(NSDictionary*)param;
 -(void)dismiss;
+-(void)flipToView:(UIView*)view;
 @end
 @interface NSString (Extensin)
 - (NSString *) md5;

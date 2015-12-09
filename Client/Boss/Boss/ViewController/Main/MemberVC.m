@@ -83,14 +83,7 @@
             UINavigationController *nav=[[UINavigationController alloc] initWithRootViewController:vc];
             UIWindow *window = [UIApplication sharedApplication].keyWindow;
             window.rootViewController=nav;
-            UIImage *img=[[UIApplication sharedApplication].keyWindow image];
-            UIImageView *view=[[UIImageView alloc] initWithImage:img];
-            view.frame=[UIScreen mainScreen].bounds;
-            view.layer.zPosition=FLT_MAX;
-            [[UIApplication sharedApplication].keyWindow addSubview:view];
-            [UIView transitionFromView:view toView:nav.view duration:1 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
-                [view removeFromSuperview];
-            }];
+            [weakSelf flipToView:nav.view];
         } NoBlock:^{
         }];
     }];

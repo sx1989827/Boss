@@ -10,8 +10,11 @@
 #import "Header.h"
 #import "LoginInputView.h"
 #import "AppDelegate.h"
-@interface LoginVC ()
-
+#import "AnimateInOut.h"
+@interface LoginVC ()<UINavigationControllerDelegate>
+{
+    AnimateInOut* ani;
+}
 @end
 
 @implementation LoginVC
@@ -36,6 +39,7 @@
     btn.tag=0;
     [btn addTarget:self action:@selector(switchSee:) forControlEvents:UIControlEventTouchUpInside];
     btn.imageView.contentMode=UIViewContentModeCenter;
+    ani=[[AnimateInOut alloc] init];
 }
 
 -(void)switchSee:(UIButton*)btn
@@ -71,6 +75,12 @@
     self.navigationController.navigationBarHidden=NO;
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.navigationController.delegate=self;
+}
+
 - (IBAction)onLogin:(id)sender
 {
     if(_texUsername.text.length==0)
@@ -103,6 +113,18 @@
 - (IBAction)onForgot:(id)sender
 {
     [self pushViewController:@"ForgotVC" Param:nil];
+}
+
+- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                            animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                         fromViewController:(UIViewController *)fromVC
+                                                           toViewController:(UIViewController *)toVC
+{
+    if(operation==UINavigationControllerOperationPush)
+    {
+        return ani;
+    }
+    return nil;
 }
 @end
 

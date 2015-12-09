@@ -13,7 +13,10 @@ var model=new mongoose.Schema({
     answer:String,
     photo:String,
     level:Array,
-    score:Number
+    score:Number,
+    logincount:Number,
+    createtime:String,
+    lastlogintime:String
 });
 var dbManage=db.model("User",model);
 module.exports=dbManage;
