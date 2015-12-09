@@ -15,11 +15,7 @@
 #import "TipView.h"
 #import "EditPswReq.h"
 #import "AnimateInOut.h"
-@interface MemberVC ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIViewControllerTransitioningDelegate>
-{
-    AnimateInOut *ani;
-    
-}
+@interface MemberVC ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @end
 
 @implementation MemberVC
@@ -88,7 +84,7 @@
         }];
     }];
     [_tableMain reloadStatic];
-    ani =[[AnimateInOut alloc]init];
+    
 
     
 }
