@@ -88,20 +88,6 @@
 
     
 }
--(void)exit
-{
-    UIImage *img=[[UIApplication sharedApplication].keyWindow imageCache];
-    UIImageView *view=[[UIImageView alloc] initWithImage:img];
-    view.frame=[UIScreen mainScreen].bounds;
-    view.layer.zPosition=FLT_MAX;
-    [[UIApplication sharedApplication].keyWindow addSubview:view];
-    [UIView transitionWithView:[UIApplication sharedApplication].keyWindow duration:1 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-        view.alpha=0;
-    } completion:^(BOOL finished) {
-        [view removeFromSuperview];
-    }];
-     [self presentViewController:@"LoginVC" Param:nil];
-}
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
