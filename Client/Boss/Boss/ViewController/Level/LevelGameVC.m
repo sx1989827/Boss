@@ -60,32 +60,39 @@
     [PreStartView show:^{
         [game start];
         [self finishQuestion];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [game pause];
-            [IntroView showTitle:@[@{
-                                       @"title":@"这里是你的工资，工资不能小于等于0",
-                                       @"rect":[NSValue valueWithCGRect:CGRectMake(20, 300, 200, 60)],
-                                       @"view":game.lbMoney
-                                       },@{
-                                       @"title":@"这里是你的剩余子弹数，在规定的子弹数内必须将敌人全部消灭",
-                                       @"rect":[NSValue valueWithCGRect:CGRectMake(20, 300, 300, 60)],
-                                       @"view":game.lbPower
-                                       },@{
-                                       @"title":@"这里是你的积分，没消灭一个敌人积分会增长，通关时间越少积分越多",
-                                       @"rect":[NSValue valueWithCGRect:CGRectMake(20, 300, 300, 60)],
-                                       @"view":game.lbScore
-                                       },@{
-                                       @"title":@"这里是你的剩余时间，必须在指定时间内干掉所有敌人",
-                                       @"rect":[NSValue valueWithCGRect:CGRectMake(20, 300, 300, 60)],
-                                       @"view":game.lbTime
-                                       },@{
-                                       @"title":@"这里是选择子弹页，每个不同的子弹用途不一样，每答对一道题目便会发挥子弹的用途，答错你会被扣工资",
-                                       @"rect":[NSValue valueWithCGRect:CGRectMake(20, 20, 300, 90)],
-                                       @"view":[self.view viewWithTag:1]
-                                       }] Block:^{
-                                           [game resume];
-                                       }];
-        });
+        if([[UserDefaults sharedInstance] isFirstLogin] && [[UserDefaults sharedInstance] isFirstLoadVC:NSStringFromClass([self class])])
+        {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [game pause];
+                [IntroView showTitle:@[@{
+                                           @"title":@"这里是你的工资，工资不能小于等于0",
+                                           @"rect":[NSValue valueWithCGRect:CGRectMake(20, 300, 200, 60)],
+                                           @"view":game.lbMoney
+                                           },@{
+                                           @"title":@"这里是你的剩余子弹数，在规定的子弹数内必须将敌人全部消灭",
+                                           @"rect":[NSValue valueWithCGRect:CGRectMake(20, 300, 300, 60)],
+                                           @"view":game.lbPower
+                                           },@{
+                                           @"title":@"这里是你的积分，没消灭一个敌人积分会增长，通关时间越少积分越多",
+                                           @"rect":[NSValue valueWithCGRect:CGRectMake(20, 300, 300, 60)],
+                                           @"view":game.lbScore
+                                           },@{
+                                           @"title":@"这里是你的剩余时间，必须在指定时间内干掉所有敌人",
+                                           @"rect":[NSValue valueWithCGRect:CGRectMake(20, 300, 300, 60)],
+                                           @"view":game.lbTime
+                                           },@{
+                                           @"title":@"这里是剩余敌人的数量，请谨慎选择下一发子弹",
+                                           @"rect":[NSValue valueWithCGRect:CGRectMake(20, 300, 300, 60)],
+                                           @"view":game.lbEnemyCount
+                                           },@{
+                                           @"title":@"这里是选择子弹页，每个不同的子弹用途不一样，每答对一道题目便会发挥子弹的用途，答错你会被扣工资",
+                                           @"rect":[NSValue valueWithCGRect:CGRectMake(20, 20, 300, 90)],
+                                           @"view":[self.view viewWithTag:1]
+                                           }] Block:^{
+                                               [game resume];
+                                           }];
+            });
+        }
     }];
 }
 
@@ -202,6 +209,11 @@
 
 -(void)over:(BOOL)bWin UseTime:(NSInteger)useTime Score:(NSInteger)score
 {
+    UIView *view=[self.view viewWithTag:1];
+    if(view)
+    {
+        [view removeFromSuperview];
+    }
     NSString *str=[NSString stringWithFormat:@"耗时:%ld秒 获取积分:%ld",useTime,score];
     NSString *title;
     if(_bChallenge)

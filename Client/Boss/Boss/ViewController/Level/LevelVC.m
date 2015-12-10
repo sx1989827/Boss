@@ -46,8 +46,8 @@
                 [[UserDefaults sharedInstance] updatePowerInfo:^(NSDictionary *dic){
                     [self removeHud];
                     self.bHud=NO;
-                    //if([[UserDefaults sharedInstance] isFirstLogin] && [[UserDefaults sharedInstance] isFirstLoadVC:NSStringFromClass([self class])])
-                    //{
+                    if([[UserDefaults sharedInstance] isFirstLogin] && [[UserDefaults sharedInstance] isFirstLoadVC:NSStringFromClass([self class])])
+                    {
                     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                         [IntroView showTitle:@[@{
                                                    @"title":@"这是你现在所在的等级",
@@ -62,7 +62,7 @@
                                                    }];
                     });
                     
-                    //}
+                    }
                 } Hud:NO];
             } Hud:NO];
         }
@@ -108,7 +108,7 @@
     }
     else
     {
-        [TipView showWithTitle:@"蹂躏模式" Tip:@"你将蹂躏你的下属们，是否开始享受！" YesBlock:^{
+        [TipView showWithTitle:@"蹂躏模式" Tip:@"你将蹂躏你的下属们,是否开始享受!" YesBlock:^{
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 self.navigationController.delegate=self;
                 [self pushViewController:@"LevelSetVC" Param:@{

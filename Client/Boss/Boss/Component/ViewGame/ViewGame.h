@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lbScore;
 @property (strong, nonatomic) IBOutlet UILabel *lbTime;
 @property (strong, nonatomic) IBOutlet UILabel *lbPower;
+@property (strong, nonatomic) IBOutlet UILabel *lbEnemyCount;
 
 -(void)start;
 -(void)stop;
