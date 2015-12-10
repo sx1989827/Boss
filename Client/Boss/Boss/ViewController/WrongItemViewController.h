@@ -9,7 +9,7 @@
 #import "BaseViewController.h"
 #import <LazyTableView.h>
 @interface WrongItemViewController : BaseViewController
-@property (strong, nonatomic) IBOutlet LazyTableView *mainTableView;
 
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property(nonatomic,strong)NSArray  *item;
 @end

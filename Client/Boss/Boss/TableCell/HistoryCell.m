@@ -14,17 +14,17 @@
 
 -(NSNumber*)LazyTableCellHeight:(id)item Path:(NSIndexPath *)path
 {
-    
     return  @100;
-    
 }
 -(void)LazyTableCellForRowAtIndexPath:(id)item Path:(NSIndexPath *)path
 {
     HistoryItem*data =item;
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.type.text =[NSString stringWithFormat:@"关卡名称:%@",data.level];
     self.useTime.text = [NSString stringWithFormat:@"用时:%@ s",data.usetime];
     self.creatTime.text = data.createtime;
     self.percentView.percent = [data.percent floatValue];
+    [self.percentView setNeedsLayout];
 }
 -(void)LazyTableCellDidSelect:(id)item Path:(NSIndexPath *)path
 {
