@@ -137,6 +137,15 @@
 		B5977FA11C0406D400175174 /* ForgotVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5977F9F1C0406D400175174 /* ForgotVC.xib */; };
 		B5977FA51C040A0500175174 /* ForgotFinishVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B5977FA31C040A0500175174 /* ForgotFinishVC.m */; };
 		B5977FA61C040A0500175174 /* ForgotFinishVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5977FA41C040A0500175174 /* ForgotFinishVC.xib */; };
+		B5BDF4D61C196F9100B98A50 /* 测试0.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5BDF4CD1C196F9100B98A50 /* 测试0.wav */; };
+		B5BDF4D71C196F9100B98A50 /* 测试1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5BDF4CE1C196F9100B98A50 /* 测试1.wav */; };
+		B5BDF4D81C196F9100B98A50 /* 测试2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5BDF4CF1C196F9100B98A50 /* 测试2.wav */; };
+		B5BDF4D91C196F9100B98A50 /* 码畜0.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5BDF4D01C196F9100B98A50 /* 码畜0.wav */; };
+		B5BDF4DA1C196F9100B98A50 /* 码畜1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5BDF4D11C196F9100B98A50 /* 码畜1.wav */; };
+		B5BDF4DB1C196F9100B98A50 /* 码畜2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5BDF4D21C196F9100B98A50 /* 码畜2.wav */; };
+		B5BDF4DC1C196F9100B98A50 /* 美工0.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5BDF4D31C196F9100B98A50 /* 美工0.wav */; };
+		B5BDF4DD1C196F9100B98A50 /* 美工1.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5BDF4D41C196F9100B98A50 /* 美工1.wav */; };
+		B5BDF4DE1C196F9100B98A50 /* 美工2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B5BDF4D51C196F9100B98A50 /* 美工2.wav */; };
 		B5C3DE4C1C13DE8D00CA1C51 /* PreStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DE4B1C13DE8D00CA1C51 /* PreStartView.m */; };
 		B5C3DE4F1C146E8400CA1C51 /* LevelLeaveReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C3DE4E1C146E8400CA1C51 /* LevelLeaveReq.m */; };
 		B5CD9DCF1C0750DA00DABCAA /* LevelInfoReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD9DCE1C0750DA00DABCAA /* LevelInfoReq.m */; };
@@ -356,6 +365,15 @@
 		B5977FA21C040A0500175174 /* ForgotFinishVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotFinishVC.h; sourceTree = "<group>"; };
 		B5977FA31C040A0500175174 /* ForgotFinishVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotFinishVC.m; sourceTree = "<group>"; };
 		B5977FA41C040A0500175174 /* ForgotFinishVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotFinishVC.xib; sourceTree = "<group>"; };
+		B5BDF4CD1C196F9100B98A50 /* 测试0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "测试0.wav"; sourceTree = "<group>"; };
+		B5BDF4CE1C196F9100B98A50 /* 测试1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "测试1.wav"; sourceTree = "<group>"; };
+		B5BDF4CF1C196F9100B98A50 /* 测试2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "测试2.wav"; sourceTree = "<group>"; };
+		B5BDF4D01C196F9100B98A50 /* 码畜0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "码畜0.wav"; sourceTree = "<group>"; };
+		B5BDF4D11C196F9100B98A50 /* 码畜1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "码畜1.wav"; sourceTree = "<group>"; };
+		B5BDF4D21C196F9100B98A50 /* 码畜2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "码畜2.wav"; sourceTree = "<group>"; };
+		B5BDF4D31C196F9100B98A50 /* 美工0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "美工0.wav"; sourceTree = "<group>"; };
+		B5BDF4D41C196F9100B98A50 /* 美工1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "美工1.wav"; sourceTree = "<group>"; };
+		B5BDF4D51C196F9100B98A50 /* 美工2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "美工2.wav"; sourceTree = "<group>"; };
 		B5C3DE4A1C13DE8D00CA1C51 /* PreStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreStartView.h; sourceTree = "<group>"; };
 		B5C3DE4B1C13DE8D00CA1C51 /* PreStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreStartView.m; sourceTree = "<group>"; };
 		B5C3DE4D1C146E8400CA1C51 /* LevelLeaveReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelLeaveReq.h; sourceTree = "<group>"; };
@@ -538,6 +556,7 @@
 		B570C58D1C11C7AF008A2C3F /* ViewGame */ = {
 			isa = PBXGroup;
 			children = (
+				B573BDAC1C1961C6004A8288 /* speak */,
 				B5152BBE1C17BEAD00C81AB3 /* effect */,
 				B54373B91C15C1EB0002346A /* sound */,
 				B570C5901C11C7AF008A2C3F /* GameDefine.h */,
@@ -626,6 +645,22 @@
 				B573BDA91C195C72004A8288 /* PercentView.m */,
 			);
 			path = PercentView;
+			sourceTree = "<group>";
+		};
+		B573BDAC1C1961C6004A8288 /* speak */ = {
+			isa = PBXGroup;
+			children = (
+				B5BDF4CD1C196F9100B98A50 /* 测试0.wav */,
+				B5BDF4CE1C196F9100B98A50 /* 测试1.wav */,
+				B5BDF4CF1C196F9100B98A50 /* 测试2.wav */,
+				B5BDF4D01C196F9100B98A50 /* 码畜0.wav */,
+				B5BDF4D11C196F9100B98A50 /* 码畜1.wav */,
+				B5BDF4D21C196F9100B98A50 /* 码畜2.wav */,
+				B5BDF4D31C196F9100B98A50 /* 美工0.wav */,
+				B5BDF4D41C196F9100B98A50 /* 美工1.wav */,
+				B5BDF4D51C196F9100B98A50 /* 美工2.wav */,
+			);
+			path = speak;
 			sourceTree = "<group>";
 		};
 		B57722871C04ADE800EE189E /* Rank */ = {
@@ -1062,6 +1097,7 @@
 				B5152BCA1C17BED400C81AB3 /* spark.png in Resources */,
 				B54373901C15519E0002346A /* LaunchScreen.storyboard in Resources */,
 				B54373C91C15C1EB0002346A /* 屏障.wav in Resources */,
+				B5BDF4DE1C196F9100B98A50 /* 美工2.wav in Resources */,
 				B58212251BFEFD5300168A57 /* HUDLoading7.png in Resources */,
 				B582122A1BFEFD7F00168A57 /* LoginVC.xib in Resources */,
 				B58212201BFEFD5300168A57 /* HUDLoading2.png in Resources */,
@@ -1069,6 +1105,7 @@
 				B50B70BC1C17CAB2009F3B45 /* RecodeHistoryViewController.xib in Resources */,
 				B5152BC51C17BEAD00C81AB3 /* laser.sks in Resources */,
 				B58212241BFEFD5300168A57 /* HUDLoading6.png in Resources */,
+				B5BDF4D91C196F9100B98A50 /* 码畜0.wav in Resources */,
 				B5CD9DDF1C082D5500DABCAA /* EnemyCell.xib in Resources */,
 				B50B70C71C17CAF6009F3B45 /* HistoryCell.xib in Resources */,
 				B54373C51C15C1EB0002346A /* 加时间.wav in Resources */,
@@ -1077,9 +1114,11 @@
 				B54373CB1C15C1EB0002346A /* 炸弹.wav in Resources */,
 				B58212211BFEFD5300168A57 /* HUDLoading3.png in Resources */,
 				B51A02B71C084B8300610020 /* ChooseItemCountView.xib in Resources */,
+				B5BDF4D71C196F9100B98A50 /* 测试1.wav in Resources */,
 				B5152BAC1C16CA5A00C81AB3 /* up3.png in Resources */,
 				B5152BAE1C16CA5A00C81AB3 /* up5.png in Resources */,
 				B5152BAF1C16CA5A00C81AB3 /* up6.png in Resources */,
+				B5BDF4D81C196F9100B98A50 /* 测试2.wav in Resources */,
 				B570C5881C11C69B008A2C3F /* LevelGameVC.xib in Resources */,
 				B53660C11C06EB4200D09686 /* LevelVC.xib in Resources */,
 				B5152BB51C16D7A800C81AB3 /* AlertInfo.png in Resources */,
@@ -1093,20 +1132,25 @@
 				B5977FA11C0406D400175174 /* ForgotVC.xib in Resources */,
 				B5977F981C035BD100175174 /* slidercenter.png in Resources */,
 				B54373951C1554A20002346A /* StartVC.xib in Resources */,
+				B5BDF4D61C196F9100B98A50 /* 测试0.wav in Resources */,
 				B5152BC91C17BED400C81AB3 /* barrier.sks in Resources */,
 				B5152BB61C16D7A800C81AB3 /* AlertLeft.png in Resources */,
 				B58212221BFEFD5300168A57 /* HUDLoading4.png in Resources */,
 				B5152BAD1C16CA5A00C81AB3 /* up4.png in Resources */,
 				B58211FD1BFEEE6500168A57 /* Assets.xcassets in Resources */,
+				B5BDF4DC1C196F9100B98A50 /* 美工0.wav in Resources */,
 				B5108B3A1C045CE7005F6CC6 /* RankVC.xib in Resources */,
+				B5BDF4DB1C196F9100B98A50 /* 码畜2.wav in Resources */,
 				B5977F991C035BD100175174 /* slidertag.png in Resources */,
 				B54373CA1C15C1EB0002346A /* 激光.wav in Resources */,
 				B582121F1BFEFD5300168A57 /* HUDLoading1.png in Resources */,
 				B570C5C11C11C7AF008A2C3F /* ViewGame.xib in Resources */,
 				B5152BAB1C16CA5A00C81AB3 /* up2.png in Resources */,
+				B5BDF4DA1C196F9100B98A50 /* 码畜1.wav in Resources */,
 				B577228F1C04AEA400EE189E /* RankCell.xib in Resources */,
 				B5977F761C03465900175174 /* RegisterVC.xib in Resources */,
 				B5977F8B1C035A3600175174 /* cellcheck.png in Resources */,
+				B5BDF4DD1C196F9100B98A50 /* 美工1.wav in Resources */,
 				B54373CD1C15C1EB0002346A /* 男死亡.wav in Resources */,
 				B58212231BFEFD5300168A57 /* HUDLoading5.png in Resources */,
 				B573BDA61C195C51004A8288 /* TypeView.xib in Resources */,

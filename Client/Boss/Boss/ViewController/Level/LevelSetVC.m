@@ -123,23 +123,26 @@
         lb.backgroundColor=[UIColor groupTableViewBackgroundColor];
         [_viewItem addSubview:lb];
     }
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [IntroView showTitle:@[@{
-                                   @"title":@"这是将会出现的敌人，及其个数和描述，你需要把他们全部打败",
-                                   @"rect":[NSValue valueWithCGRect:CGRectMake(20, 300, 300, 60)],
-                                   @"view":[_tableMain cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]
-                                   },@{
-                                   @"title":@"这是本关一共的子弹数和所需要的时间，你必须在有限的子弹和时间内完成本关",
-                                   @"rect":[NSValue valueWithCGRect:CGRectMake(10, 40, 300, 90)],
-                                   @"view":_lbDes
-                                   },@{
-                                   @"title":@"这是你需要分配的子弹类型，不能大于总个数",
-                                   @"rect":[NSValue valueWithCGRect:CGRectMake(10, 40, 300, 60)],
-                                   @"view":_viewItem
-                                   }] Block:^{
-                                       
-                                   }];
-    });
+    if([[UserDefaults sharedInstance] isFirstLogin] && [[UserDefaults sharedInstance] isFirstLoadVC:NSStringFromClass([self class])])
+    {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [IntroView showTitle:@[@{
+                                       @"title":@"这是将会出现的敌人，及其个数和描述，你需要把他们全部打败",
+                                       @"rect":[NSValue valueWithCGRect:CGRectMake(20, 300, 300, 60)],
+                                       @"view":[_tableMain cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]]
+                                       },@{
+                                       @"title":@"这是本关一共的子弹数和所需要的时间，你必须在有限的子弹和时间内完成本关",
+                                       @"rect":[NSValue valueWithCGRect:CGRectMake(10, 40, 300, 90)],
+                                       @"view":_lbDes
+                                       },@{
+                                       @"title":@"这是你需要分配的子弹类型，不能大于总个数",
+                                       @"rect":[NSValue valueWithCGRect:CGRectMake(10, 40, 300, 60)],
+                                       @"view":_viewItem
+                                       }] Block:^{
+                                           
+                                       }];
+        });
+    }
     for(ChooseItemCountView *view in arrChooseView)
     {
         view.lbCount.text=@"5";

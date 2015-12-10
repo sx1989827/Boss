@@ -48,6 +48,7 @@ typedef void (^BLOCK)() ;
         _lbText.numberOfLines=0;
         _lbText.font=[UIFont systemFontOfSize:17];
         _lbText.lineBreakMode=NSLineBreakByCharWrapping;
+        _lbText.textAlignment=NSTextAlignmentCenter;
         _lbText.translatesAutoresizingMaskIntoConstraints=NO;
         [_viewContent addSubview:_lbText];
         [_viewContent addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-10-[_lbText]-10-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_lbText)]];

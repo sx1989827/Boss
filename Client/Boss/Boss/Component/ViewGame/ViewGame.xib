@@ -18,11 +18,11 @@
                         <constraint firstAttribute="height" constant="21" id="MiS-iN-bNh"/>
                         <constraint firstAttribute="width" constant="50" id="y23-el-nVd"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZzJ-QT-68o">
-                    <rect key="frame" x="296" y="5" width="16" height="21"/>
+                    <rect key="frame" x="296" y="4" width="16" height="21"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="16" id="epa-Ex-Auz"/>
@@ -33,13 +33,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egg-Af-PB8">
-                    <rect key="frame" x="254" y="5" width="42" height="21"/>
+                    <rect key="frame" x="254" y="4" width="42" height="21"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="7S6-pR-bQe"/>
                         <constraint firstAttribute="width" constant="42" id="A0n-He-aG7"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -93,8 +93,30 @@
                         <constraint firstAttribute="height" constant="21" id="APH-LU-qMA"/>
                         <constraint firstAttribute="width" constant="42" id="NRd-YR-43V"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="剩余敌人:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euD-2F-kyC">
+                    <rect key="frame" x="217" y="25" width="63" height="21"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="2xR-QM-R2a"/>
+                        <constraint firstAttribute="width" constant="63" id="fC8-Mg-6TF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDw-XZ-4xf">
+                    <rect key="frame" x="280" y="25" width="32" height="21"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="7da-Of-2S1"/>
+                        <constraint firstAttribute="height" constant="21" id="nUj-5y-Wpp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
@@ -104,13 +126,17 @@
                 <constraint firstItem="dB2-ZU-eWq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="3" id="6cL-dc-lGs"/>
                 <constraint firstItem="k7B-aK-esR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="9Un-Cn-uus"/>
                 <constraint firstAttribute="trailing" secondItem="ZzJ-QT-68o" secondAttribute="trailing" constant="8" id="AlX-wM-ke2"/>
-                <constraint firstItem="ZzJ-QT-68o" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="JsF-Ts-zAX"/>
-                <constraint firstItem="egg-Af-PB8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="PV4-VI-8ix"/>
+                <constraint firstAttribute="trailing" secondItem="DDw-XZ-4xf" secondAttribute="trailing" constant="8" id="BD4-K4-p0h"/>
+                <constraint firstItem="DDw-XZ-4xf" firstAttribute="top" secondItem="egg-Af-PB8" secondAttribute="bottom" id="EFS-NV-ogu"/>
+                <constraint firstItem="ZzJ-QT-68o" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="JsF-Ts-zAX"/>
+                <constraint firstItem="egg-Af-PB8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="PV4-VI-8ix"/>
                 <constraint firstItem="geO-Eo-Dy3" firstAttribute="leading" secondItem="dB2-ZU-eWq" secondAttribute="trailing" id="PWW-Ar-8si"/>
                 <constraint firstItem="7nr-xe-bfJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="3" id="RCW-33-BVK"/>
                 <constraint firstItem="yhb-MJ-od6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="U1A-bh-F3z"/>
                 <constraint firstItem="dB2-ZU-eWq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="WEA-oc-5Rg"/>
+                <constraint firstItem="euD-2F-kyC" firstAttribute="top" secondItem="egg-Af-PB8" secondAttribute="bottom" id="X9F-7m-KTG"/>
                 <constraint firstItem="yhb-MJ-od6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Xik-GU-0sd"/>
+                <constraint firstItem="DDw-XZ-4xf" firstAttribute="leading" secondItem="euD-2F-kyC" secondAttribute="trailing" id="aHW-cU-3q2"/>
                 <constraint firstItem="geO-Eo-Dy3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="bJk-E2-nrP"/>
                 <constraint firstItem="JVP-Tg-DlH" firstAttribute="top" secondItem="geO-Eo-Dy3" secondAttribute="bottom" id="gH0-Ir-jUR"/>
                 <constraint firstItem="yhb-MJ-od6" firstAttribute="leading" secondItem="k7B-aK-esR" secondAttribute="trailing" constant="0.5" id="lNO-00-sxO"/>
@@ -121,12 +147,13 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="lbEnemyCount" destination="DDw-XZ-4xf" id="0rk-cp-O52"/>
                 <outlet property="lbMoney" destination="geO-Eo-Dy3" id="XKL-WB-xfX"/>
                 <outlet property="lbPower" destination="JVP-Tg-DlH" id="7qL-lu-PPy"/>
                 <outlet property="lbScore" destination="yhb-MJ-od6" id="rFc-VI-mme"/>
                 <outlet property="lbTime" destination="egg-Af-PB8" id="QB2-o4-Ekt"/>
             </connections>
-            <point key="canvasLocation" x="163" y="158"/>
+            <point key="canvasLocation" x="172" y="160"/>
         </view>
     </objects>
 </document>

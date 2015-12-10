@@ -111,11 +111,20 @@ CGFloat pointLen(CGPoint center1,CGPoint center2,CGRect rect)
         NSString *title=dic[@"title"];
         CGRect rect=[dic[@"rect"] CGRectValue];
         UIView *view=dic[@"view"];
+        if(view==nil)
+        {
+            continue;
+        }
         obj.title=title;
         obj.rectTitle=rect;
         obj.img=[view imageCache];
         obj.rectView=[((UIView*)[UIApplication sharedApplication].keyWindow) convertRect:view.bounds fromView:view];
         [viewIntro.arrModel addObject:obj];
+    }
+    if(viewIntro.arrModel.count==0)
+    {
+        [viewIntro removeFromSuperview];
+        return;
     }
     IntroModel *model=viewIntro.arrModel[0];
     viewIntro.imgView=[[UIImageView alloc] initWithFrame:model.rectView];

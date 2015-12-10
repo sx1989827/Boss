@@ -75,6 +75,7 @@ static __weak ViewSence* singleObj=nil;
         game.lbScore.text=@"0";
         game.lbTime.text=[NSString stringWithFormat:@"%ld",time];
         game.lbPower.text=[NSString stringWithFormat:@"%ld",powerCount];
+        game.lbEnemyCount.text=[NSString stringWithFormat:@"%ld",count];
         userMoney=money;
         totleTime=time;
         totleScore=0;
@@ -271,6 +272,7 @@ static __weak ViewSence* singleObj=nil;
     {
         return;
     }
+    game.lbEnemyCount.text=[NSString stringWithFormat:@"%ld",arrEnemy.count+arrInitEnemy.count];
     if(totleTime==0 || userMoney<=0 || (powerCount==0 && arrPower.count==0 && arrEnemy.count>0 && arrInitEnemy.count==0))
     {
         if(delegateVC && [delegateVC respondsToSelector:@selector(over:UseTime:Score:)])
@@ -325,6 +327,22 @@ static __weak ViewSence* singleObj=nil;
     timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerCallback) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     user=[[GameUser alloc] init];
+    [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[
+                                                     [SKAction waitForDuration:8],
+                                                     [SKAction runBlock:^{
+        GameEnemy *enemy=[self leftMostEnemy];
+        if(enemy)
+        {
+            NSInteger index=rand()%3;
+            NSString *sound=[NSString stringWithFormat:@"%@%ld.wav",enemy.name,index];
+            NSString *path=[[NSBundle mainBundle] pathForResource:sound ofType:nil];
+            if(path)
+            {
+                [enemy.node runAction:[SKAction playSoundFileNamed:sound waitForCompletion:NO]];
+            }
+        }
+    }]
+                                                                       ]]]];
 }
 
 -(void)stop
@@ -432,6 +450,26 @@ static __weak ViewSence* singleObj=nil;
     }
     EnemyPower *power=[[EnemyPower alloc] initWithValue:value];
     [arrEnemyPower addObject:power];
+}
+
+-(GameEnemy*)leftMostEnemy
+{
+    GameEnemy *leftEnemy=nil;
+    for(GameEnemy *enemy in arrEnemy)
+    {
+        if(leftEnemy==nil)
+        {
+            leftEnemy=enemy;
+        }
+        else
+        {
+            if(enemy.node.position.x<leftEnemy.node.position.x)
+            {
+                leftEnemy=enemy;
+            }
+        }
+    }
+    return leftEnemy;
 }
 @end
 
