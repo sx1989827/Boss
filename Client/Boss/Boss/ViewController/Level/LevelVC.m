@@ -77,7 +77,7 @@
 {
     if(index==0)
     {
-        E(@"你还想做回码畜吗！");
+        E(([NSString stringWithFormat:@"你还想做回%@吗！",arrLevel[0]]));
     }
     else if(index>indexLevel)
     {

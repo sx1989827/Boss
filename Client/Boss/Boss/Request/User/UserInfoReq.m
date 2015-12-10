@@ -29,7 +29,9 @@
         _answer=[aDecoder decodeObjectForKey:@"answer"];
         _photo=[aDecoder decodeObjectForKey:@"photo"];
         _score=[[aDecoder decodeObjectForKey:@"score"] integerValue];
+        _logincount=[[aDecoder decodeObjectForKey:@"logincount"] integerValue];
         _level=[aDecoder decodeObjectForKey:@"level"];
+        
     }
     return self;
 }
@@ -45,6 +47,7 @@
     [aCoder encodeObject:_answer forKey:@"answer"];
     [aCoder encodeObject:_photo forKey:@"photo"];
     [aCoder encodeObject:@(_score) forKey:@"score"];
+    [aCoder encodeObject:@(_logincount) forKey:@"logincount"];
     [aCoder encodeObject:_level forKey:@"level"];
 }
 @end

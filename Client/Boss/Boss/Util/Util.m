@@ -394,6 +394,18 @@ NSString *msgUpdateLevel=@"msgUpdateLevel";
         [view removeFromSuperview];
     }];
 }
+
+-(void)flipToView:(UIView*)view
+ {
+     UIImage *img=[[UIApplication sharedApplication].keyWindow image];
+     UIImageView *v=[[UIImageView alloc] initWithImage:img];
+     v.frame=[UIScreen mainScreen].bounds;
+     v.layer.zPosition=FLT_MAX;
+     [[UIApplication sharedApplication].keyWindow addSubview:v];
+     [UIView transitionFromView:v toView:view duration:1 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
+         [v removeFromSuperview];
+     }];
+}
 @end
 
 @implementation NSString (Extensin)

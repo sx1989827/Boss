@@ -9,7 +9,7 @@
 #import "BaseReq.h"
 
 @interface UserInfoReq : BaseReq<GET>
-
+@property (strong,nonatomic) NSString* time;
 @end
 
 @interface UserInfoLevelModel : JSONModel<NSCoding>
@@ -31,6 +31,7 @@
 @property (strong,nonatomic) NSString* answer;
 @property (strong,nonatomic) NSString* photo;
 @property (assign,nonatomic) NSInteger score;
+@property (assign,nonatomic) NSInteger logincount;
 @property (strong,nonatomic) NSArray<UserInfoLevelModel>* level;
 @end
 

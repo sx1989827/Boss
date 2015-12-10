@@ -14,4 +14,5 @@
 @property (strong,nonatomic) NSString* sex;
 @property (strong,nonatomic) NSString* question;
 @property (strong,nonatomic) NSString* answer;
+@property (strong,nonatomic) NSString* time;
 @end
