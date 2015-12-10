@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *type;
 @property (strong, nonatomic) IBOutlet UILabel *useTime;
 @property (strong, nonatomic) IBOutlet PercentView *percentView;
-- (IBAction)wrongQuestionArrayButtonClick:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *creatTime;
+
 
 @end

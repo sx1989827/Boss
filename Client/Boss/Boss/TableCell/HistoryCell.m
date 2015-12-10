@@ -9,7 +9,7 @@
 #import "HistoryCell.h"
 #import "percentView.h"
 #import "HistoryItem.h"
-
+#import "Header.h"
 @implementation HistoryCell
 
 -(NSNumber*)LazyTableCellHeight:(id)item Path:(NSIndexPath *)path
@@ -21,17 +21,16 @@
 -(void)LazyTableCellForRowAtIndexPath:(id)item Path:(NSIndexPath *)path
 {
     HistoryItem*data =item;
-    self.type.text =[NSString stringWithFormat:@"关卡名称:%@",data.type];
-    self.useTime.text = [NSString stringWithFormat:@"用时:%@",data.date];
-    self.percentView = [[PercentView alloc]init];
+    self.type.text =[NSString stringWithFormat:@"关卡名称:%@",data.level];
+    self.useTime.text = [NSString stringWithFormat:@"用时:%@ s",data.usetime];
+    self.creatTime.text = data.createtime;
     self.percentView.percent = [data.percent floatValue];
 }
 -(void)LazyTableCellDidSelect:(id)item Path:(NSIndexPath *)path
 {
-    
-    
-    
-    
+    HistoryItem*data = item;
+    UIViewController *vc=(UIViewController*)data.viewControllerDelegate;
+    [vc pushViewController:@"WrongItemViewController" Param:@{@"item":data.item}];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

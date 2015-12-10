@@ -37,8 +37,6 @@
         cl.textLabel.text=@"闯关记录";
     } ClickBlock:^(id cell) {
         
-
-
         [weakSelf pushViewController:@"RecodeHistoryViewController" Param:@{@"type":@"iOS"}];
         
     }];
@@ -61,7 +59,7 @@
         cl.textLabel.text=@"关于我们";
     } ClickBlock:^(id cell) {
         
-        
+        [weakSelf pushViewController:@"AboutUsViewController" Param:nil];
         
     }];
     [_tableMain addStaticCell:40 CellBlock:^(id cell) {

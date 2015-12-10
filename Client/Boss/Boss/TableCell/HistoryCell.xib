@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,43 +15,68 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="95.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="关卡名称：码农" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sfw-ym-58v">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关卡名称：码农" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sfw-ym-58v">
                         <rect key="frame" x="14" y="8" width="205" height="26"/>
                         <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="UNK-V6-itj"/>
+                            <constraint firstAttribute="width" constant="205" id="nli-Sj-blf"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SKm-6n-cjl" customClass="percentView">
-                        <rect key="frame" x="252" y="3" width="50" height="50"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时长：30s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="In5-cR-z7Y">
+                        <rect key="frame" x="14" y="61" width="108" height="21"/>
                         <animations/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="1X5-BH-BVc"/>
+                            <constraint firstAttribute="width" constant="108" id="b8Q-jJ-ohn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOI-uO-fdu">
+                        <rect key="frame" x="125" y="61" width="177" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="4mT-hK-GU6"/>
+                            <constraint firstAttribute="width" constant="177" id="Izx-WM-jDf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKm-6n-cjl" customClass="PercentView">
+                        <rect key="frame" x="252" y="8" width="50" height="50"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="fVX-Tj-h5X"/>
+                            <constraint firstAttribute="height" constant="50" id="pTc-qo-rhb"/>
+                        </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="时长：30s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="In5-cR-z7Y">
-                        <rect key="frame" x="14" y="61" width="129" height="21"/>
-                        <animations/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5J-Ko-Aw9">
-                        <rect key="frame" x="243" y="57" width="69" height="30"/>
-                        <animations/>
-                        <state key="normal" title="错题集"/>
-                        <connections>
-                            <action selector="wrongQuestionArrayButtonClick:" destination="UJA-Ib-RwX" eventType="touchUpInside" id="DZO-Eh-VS2"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <animations/>
+                <constraints>
+                    <constraint firstItem="Sfw-ym-58v" firstAttribute="top" secondItem="iqR-C7-boj" secondAttribute="topMargin" id="KJK-dc-QPI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="vOI-uO-fdu" secondAttribute="trailing" constant="10" id="P8m-xr-bYd"/>
+                    <constraint firstItem="In5-cR-z7Y" firstAttribute="top" secondItem="Sfw-ym-58v" secondAttribute="bottom" constant="27" id="SZe-nP-f9G"/>
+                    <constraint firstItem="SKm-6n-cjl" firstAttribute="top" secondItem="iqR-C7-boj" secondAttribute="topMargin" id="WJ2-9P-Td5"/>
+                    <constraint firstItem="Sfw-ym-58v" firstAttribute="leading" secondItem="iqR-C7-boj" secondAttribute="leadingMargin" constant="6" id="YeD-s8-bgZ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="SKm-6n-cjl" secondAttribute="trailing" constant="10" id="gRw-Wc-UZd"/>
+                    <constraint firstItem="In5-cR-z7Y" firstAttribute="leading" secondItem="iqR-C7-boj" secondAttribute="leadingMargin" constant="6" id="hJT-bE-rM3"/>
+                    <constraint firstItem="vOI-uO-fdu" firstAttribute="top" secondItem="SKm-6n-cjl" secondAttribute="bottom" constant="3" id="yUo-Rg-fgs"/>
+                </constraints>
             </tableViewCellContentView>
             <animations/>
             <connections>
-                <outlet property="percentView" destination="SKm-6n-cjl" id="FWf-h2-kLV"/>
+                <outlet property="creatTime" destination="vOI-uO-fdu" id="C2u-K0-llx"/>
+                <outlet property="percentView" destination="SKm-6n-cjl" id="9Fa-Kt-cNN"/>
                 <outlet property="type" destination="Sfw-ym-58v" id="Vak-x8-fgt"/>
                 <outlet property="useTime" destination="In5-cR-z7Y" id="ce5-nU-v5w"/>
             </connections>
-            <point key="canvasLocation" x="233.5" y="260"/>
+            <point key="canvasLocation" x="233" y="260"/>
         </tableViewCell>
     </objects>
 </document>

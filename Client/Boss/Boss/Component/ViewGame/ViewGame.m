@@ -24,7 +24,7 @@
         self.translatesAutoresizingMaskIntoConstraints=YES;
         self.autoresizingMask=UIViewAutoresizingFlexibleBottomMargin;
         self.frame=CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200);
-        self.showsFPS = YES;
+        self.showsFPS = YES; 
         self.showsDrawCount = YES;
         self.showsNodeCount = YES;
         sence=[[ViewSence alloc] initWithSize:self.bounds.size PowerCount:count Money:money Time:usetime Enemy:enemy LevelName:levelName Delegate:delegate ViewGameDeleagte:self];
