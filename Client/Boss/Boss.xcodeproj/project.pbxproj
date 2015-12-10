@@ -70,6 +70,13 @@
 		B54373CB1C15C1EB0002346A /* 炸弹.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373C11C15C1EB0002346A /* 炸弹.wav */; };
 		B54373CC1C15C1EB0002346A /* 男受伤.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373C21C15C1EB0002346A /* 男受伤.wav */; };
 		B54373CD1C15C1EB0002346A /* 男死亡.wav in Resources */ = {isa = PBXBuildFile; fileRef = B54373C31C15C1EB0002346A /* 男死亡.wav */; };
+		B55C5B1A1C19228900FB3139 /* WrongItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B55C5B181C19228900FB3139 /* WrongItemViewController.m */; };
+		B55C5B1B1C19228900FB3139 /* WrongItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55C5B191C19228900FB3139 /* WrongItemViewController.xib */; };
+		B55C5B201C1923F400FB3139 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B55C5B1E1C1923F400FB3139 /* AboutUsViewController.m */; };
+		B55C5B211C1923F400FB3139 /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55C5B1F1C1923F400FB3139 /* AboutUsViewController.xib */; };
+		B55C5B241C19603200FB3139 /* WrongItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B55C5B231C19603200FB3139 /* WrongItemCell.m */; };
+		B55C5B261C19604F00FB3139 /* WrongItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55C5B251C19604F00FB3139 /* WrongItemCell.xib */; };
+		B55C5B291C1960A800FB3139 /* WrongItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B55C5B281C1960A800FB3139 /* WrongItem.m */; };
 		B570C5871C11C69B008A2C3F /* LevelGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5851C11C69B008A2C3F /* LevelGameVC.m */; };
 		B570C5881C11C69B008A2C3F /* LevelGameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B570C5861C11C69B008A2C3F /* LevelGameVC.xib */; };
 		B570C58C1C11C784008A2C3F /* TextDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C58B1C11C784008A2C3F /* TextDrawView.m */; };
@@ -239,6 +246,17 @@
 		B54373C11C15C1EB0002346A /* 炸弹.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "炸弹.wav"; sourceTree = "<group>"; };
 		B54373C21C15C1EB0002346A /* 男受伤.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "男受伤.wav"; sourceTree = "<group>"; };
 		B54373C31C15C1EB0002346A /* 男死亡.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "男死亡.wav"; sourceTree = "<group>"; };
+		B55C5B171C19228900FB3139 /* WrongItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrongItemViewController.h; sourceTree = "<group>"; };
+		B55C5B181C19228900FB3139 /* WrongItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrongItemViewController.m; sourceTree = "<group>"; };
+		B55C5B191C19228900FB3139 /* WrongItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WrongItemViewController.xib; sourceTree = "<group>"; };
+		B55C5B1D1C1923F400FB3139 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		B55C5B1E1C1923F400FB3139 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		B55C5B1F1C1923F400FB3139 /* AboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		B55C5B221C19603200FB3139 /* WrongItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrongItemCell.h; sourceTree = "<group>"; };
+		B55C5B231C19603200FB3139 /* WrongItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrongItemCell.m; sourceTree = "<group>"; };
+		B55C5B251C19604F00FB3139 /* WrongItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WrongItemCell.xib; sourceTree = "<group>"; };
+		B55C5B271C1960A800FB3139 /* WrongItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrongItem.h; sourceTree = "<group>"; };
+		B55C5B281C1960A800FB3139 /* WrongItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrongItem.m; sourceTree = "<group>"; };
 		B570C5841C11C69B008A2C3F /* LevelGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelGameVC.h; sourceTree = "<group>"; };
 		B570C5851C11C69B008A2C3F /* LevelGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelGameVC.m; sourceTree = "<group>"; };
 		B570C5861C11C69B008A2C3F /* LevelGameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelGameVC.xib; sourceTree = "<group>"; };
@@ -404,6 +422,9 @@
 				B50B70B61C17CAB2009F3B45 /* RecodeHistoryViewController.h */,
 				B50B70B71C17CAB2009F3B45 /* RecodeHistoryViewController.m */,
 				B50B70B81C17CAB2009F3B45 /* RecodeHistoryViewController.xib */,
+				B55C5B171C19228900FB3139 /* WrongItemViewController.h */,
+				B55C5B181C19228900FB3139 /* WrongItemViewController.m */,
+				B55C5B191C19228900FB3139 /* WrongItemViewController.xib */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -531,6 +552,16 @@
 				B54373C31C15C1EB0002346A /* 男死亡.wav */,
 			);
 			path = sound;
+			sourceTree = "<group>";
+		};
+		B55C5B1C1C1923DD00FB3139 /* AboutUs */ = {
+			isa = PBXGroup;
+			children = (
+				B55C5B1D1C1923F400FB3139 /* AboutUsViewController.h */,
+				B55C5B1E1C1923F400FB3139 /* AboutUsViewController.m */,
+				B55C5B1F1C1923F400FB3139 /* AboutUsViewController.xib */,
+			);
+			name = AboutUs;
 			sourceTree = "<group>";
 		};
 		B570C5891C11C784008A2C3F /* TextDraw */ = {
@@ -709,6 +740,9 @@
 				B50B70C31C17CAF6009F3B45 /* HistoryCell.h */,
 				B50B70C41C17CAF6009F3B45 /* HistoryCell.m */,
 				B50B70C51C17CAF6009F3B45 /* HistoryCell.xib */,
+				B55C5B221C19603200FB3139 /* WrongItemCell.h */,
+				B55C5B231C19603200FB3139 /* WrongItemCell.m */,
+				B55C5B251C19604F00FB3139 /* WrongItemCell.xib */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -724,6 +758,8 @@
 				B5CD9DE11C08307F00DABCAA /* EnemyItem.m */,
 				B50B70C81C17CB0E009F3B45 /* HistoryItem.h */,
 				B50B70C91C17CB0E009F3B45 /* HistoryItem.m */,
+				B55C5B271C1960A800FB3139 /* WrongItem.h */,
+				B55C5B281C1960A800FB3139 /* WrongItem.m */,
 			);
 			path = TableItem;
 			sourceTree = "<group>";
@@ -741,6 +777,7 @@
 		B582120C1BFEFAEB00168A57 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B55C5B1C1C1923DD00FB3139 /* AboutUs */,
 				B50B70B21C17CA9C009F3B45 /* User */,
 				B582120F1BFEFB6900168A57 /* Level */,
 				B58212101BFEFB6900168A57 /* Login */,
@@ -1048,8 +1085,10 @@
 				B50B70BC1C17CAB2009F3B45 /* RecodeHistoryViewController.xib in Resources */,
 				B5152BC51C17BEAD00C81AB3 /* laser.sks in Resources */,
 				B58212241BFEFD5300168A57 /* HUDLoading6.png in Resources */,
+				B55C5B211C1923F400FB3139 /* AboutUsViewController.xib in Resources */,
 				B5CD9DDF1C082D5500DABCAA /* EnemyCell.xib in Resources */,
 				B50B70C71C17CAF6009F3B45 /* HistoryCell.xib in Resources */,
+				B55C5B261C19604F00FB3139 /* WrongItemCell.xib in Resources */,
 				B54373C51C15C1EB0002346A /* 加时间.wav in Resources */,
 				B5977FA61C040A0500175174 /* ForgotFinishVC.xib in Resources */,
 				B5152BC31C17BEAD00C81AB3 /* bomb.sks in Resources */,
@@ -1058,7 +1097,6 @@
 				B51A02B71C084B8300610020 /* ChooseItemCountView.xib in Resources */,
 				B5152BAC1C16CA5A00C81AB3 /* up3.png in Resources */,
 				B5152BAE1C16CA5A00C81AB3 /* up5.png in Resources */,
-				B54373D11C164FF50002346A /* laserStart.sks in Resources */,
 				B50B70C21C17CAD8009F3B45 /* TypeView.xib in Resources */,
 				B5152BAF1C16CA5A00C81AB3 /* up6.png in Resources */,
 				B570C5881C11C69B008A2C3F /* LevelGameVC.xib in Resources */,
@@ -1091,6 +1129,7 @@
 				B54373CD1C15C1EB0002346A /* 男死亡.wav in Resources */,
 				B58212231BFEFD5300168A57 /* HUDLoading5.png in Resources */,
 				B5CD9DD41C07FA1800DABCAA /* LevelSetVC.xib in Resources */,
+				B55C5B1B1C19228900FB3139 /* WrongItemViewController.xib in Resources */,
 				B54373C81C15C1EB0002346A /* 子弹.wav in Resources */,
 				B5152BBD1C171DE900C81AB3 /* 敌人子弹.wav in Resources */,
 				B5108B351C045C80005F6CC6 /* HomeVC.xib in Resources */,
@@ -1195,6 +1234,7 @@
 				B570C5C21C11C7AF008A2C3F /* ViewSence.m in Sources */,
 				B5108B341C045C80005F6CC6 /* HomeVC.m in Sources */,
 				B5977FA01C0406D400175174 /* ForgotVC.m in Sources */,
+				B55C5B241C19603200FB3139 /* WrongItemCell.m in Sources */,
 				B58211F51BFEEE6500168A57 /* AppDelegate.m in Sources */,
 				B570C5BD1C11C7AF008A2C3F /* MyPower.m in Sources */,
 				B570C5CE1C13D387008A2C3F /* ChooseView.m in Sources */,
@@ -1225,13 +1265,16 @@
 				B577228D1C04AE9700EE189E /* RankCell.m in Sources */,
 				B5977F941C035B3A00175174 /* SliderView.m in Sources */,
 				B53660C51C06ECC900D09686 /* LevelView.m in Sources */,
+				B55C5B201C1923F400FB3139 /* AboutUsViewController.m in Sources */,
 				B5CD9DCF1C0750DA00DABCAA /* LevelInfoReq.m in Sources */,
 				B5108B301C045C0D005F6CC6 /* MainTabVC.m in Sources */,
 				B5977F8F1C035A3600175174 /* SGGridMenu.m in Sources */,
 				B57722921C04AFE400EE189E /* RankItem.m in Sources */,
 				B51A02BB1C0850AE00610020 /* PowerInfoReq.m in Sources */,
+				B55C5B1A1C19228900FB3139 /* WrongItemViewController.m in Sources */,
 				B5977F6A1C02BED000175174 /* LoginInputView.m in Sources */,
 				B50B70B91C17CAB2009F3B45 /* EditPswViewController.m in Sources */,
+				B55C5B291C1960A800FB3139 /* WrongItem.m in Sources */,
 				B5977F711C03004000175174 /* UserInfoReq.m in Sources */,
 				B5977F8C1C035A3600175174 /* SGActionView.m in Sources */,
 			);

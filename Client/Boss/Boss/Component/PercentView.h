@@ -9,12 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PercentView : UIView
-@property(nonatomic)CGFloat    percent;
-@property(nonatomic)CGFloat    startAngle;
-@property(nonatomic)CGFloat    endInnerAngle;
-@property(nonatomic,strong)UIColor    *fillColor;
-@property(nonatomic,strong)UIColor    *unfillColor;
-@property(nonatomic,strong)UILabel    *percentLabel;
-@property(nonatomic)CGFloat    lineWith;
--(instancetype)initWIthPercent:(NSNumber*)percent showInView:(UIView*)shouInView;
+@property(nonatomic,assign)CGFloat    percent;
 @end

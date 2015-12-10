@@ -49,6 +49,8 @@
 <input type="text" style="width: 150px;height: 20px" id="talk"/>
 <p>工资：</p>
 <input type="text" style="width: 150px;height: 20px" id="money"/>
+<p>描述：</p>
+<input type="text" style="width: 150px;height: 20px" id="des"/>
 <p>速度：</p>
 <input type="text" style="width: 150px;height: 20px" id="speed"/><br/><br/>
 <button id="submit" style="width: 50px;height: 30px">提交</button>
@@ -59,6 +61,7 @@
     var talk=document.getElementById("talk");
     var money=document.getElementById("money");
     var speed=document.getElementById("speed");
+    var  des =document.getElementById("des");
     var editDiv =document.getElementById("editDiv");
     var deleteBntArr =document.getElementsByName("delete");
     var editBtnArr =document.getElementsByName("edit");
@@ -150,11 +153,17 @@
             alert("请添加速度");
             return;
         }
+        else if(speed.value=="")
+        {
+            alert("请添加描述");
+            return;
+        }
         var content={};
         content.talk=talk.value;
         content.name=name1.value;
         content.money=money.value;
         content.speed=speed.value;
+        content.des =des.value;
         xhr=new XMLHttpRequest();
         xhr.onreadystatechange=state_Change;
         xhr.open("POST","addPeople",true);

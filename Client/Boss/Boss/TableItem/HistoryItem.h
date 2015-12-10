@@ -10,9 +10,10 @@
 #import "LazyTableBaseItem.h"
 @interface HistoryItem : LazyTableBaseItem
 @property(nonatomic,strong)NSString  *type;
-@property(nonatomic,strong)NSString  *date;
-@property(nonatomic,strong)NSString  *use;
+@property(nonatomic,strong)NSString  *createtime;
+@property(nonatomic,strong)NSString  *usetime;
 @property(nonatomic,strong)NSString *percent;
 @property(nonatomic,strong)NSArray  *item;
+@property(nonatomic,strong)NSString  *level;
 
 @end
