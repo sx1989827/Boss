@@ -284,5 +284,25 @@ exports.service=[
                 des:String
             }
         ]
+    },
+    {
+        method:"GET",
+        path:"/item",
+        param: {
+            username:String,
+            pwd:String,
+            item:String       //以逗号分隔
+        },
+        data:[
+            {
+                _id:String,
+                power:String,
+                content:String,
+                answer:{
+                    ok:String,
+                    wrong:[String]
+                }
+            }
+        ]
     }
 ];

@@ -11,12 +11,9 @@
 		B50B70BA1C17CAB2009F3B45 /* EditPswViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50B70B51C17CAB2009F3B45 /* EditPswViewController.xib */; };
 		B50B70BB1C17CAB2009F3B45 /* RecodeHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B70B71C17CAB2009F3B45 /* RecodeHistoryViewController.m */; };
 		B50B70BC1C17CAB2009F3B45 /* RecodeHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50B70B81C17CAB2009F3B45 /* RecodeHistoryViewController.xib */; };
-		B50B70C11C17CAD8009F3B45 /* TypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B70BF1C17CAD8009F3B45 /* TypeView.m */; };
-		B50B70C21C17CAD8009F3B45 /* TypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50B70C01C17CAD8009F3B45 /* TypeView.xib */; };
 		B50B70C61C17CAF6009F3B45 /* HistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B70C41C17CAF6009F3B45 /* HistoryCell.m */; };
 		B50B70C71C17CAF6009F3B45 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50B70C51C17CAF6009F3B45 /* HistoryCell.xib */; };
 		B50B70CA1C17CB0F009F3B45 /* HistoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B70C91C17CB0E009F3B45 /* HistoryItem.m */; };
-		B50B70CD1C17CB79009F3B45 /* PercentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B70CC1C17CB79009F3B45 /* PercentView.m */; };
 		B50B70D01C17CBEB009F3B45 /* TypeReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B50B70CF1C17CBEB009F3B45 /* TypeReq.m */; };
 		B5108B2A1C044F34005F6CC6 /* UserQuestionReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5108B291C044F34005F6CC6 /* UserQuestionReq.m */; };
 		B5108B2D1C045139005F6CC6 /* ResetPwdReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5108B2C1C045139005F6CC6 /* ResetPwdReq.m */; };
@@ -98,6 +95,10 @@
 		B570C5C61C11CBE0008A2C3F /* LevelStartReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5C51C11CBE0008A2C3F /* LevelStartReq.m */; };
 		B570C5CA1C131694008A2C3F /* ItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5C91C131694008A2C3F /* ItemView.m */; };
 		B570C5CE1C13D387008A2C3F /* ChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5CD1C13D387008A2C3F /* ChooseView.m */; };
+		B573BDA01C18F90D004A8288 /* IntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = B573BD9F1C18F90D004A8288 /* IntroView.m */; };
+		B573BDA51C195C51004A8288 /* TypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B573BDA31C195C51004A8288 /* TypeView.m */; };
+		B573BDA61C195C51004A8288 /* TypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B573BDA41C195C51004A8288 /* TypeView.xib */; };
+		B573BDAA1C195C72004A8288 /* PercentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B573BDA91C195C72004A8288 /* PercentView.m */; };
 		B57722811C046F6300EE189E /* TypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B57722801C046F6300EE189E /* TypeCell.m */; };
 		B57722831C046F7300EE189E /* TypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57722821C046F7300EE189E /* TypeCell.xib */; };
 		B57722861C04712D00EE189E /* TypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B57722851C04712D00EE189E /* TypeItem.m */; };
@@ -165,16 +166,11 @@
 		B50B70B61C17CAB2009F3B45 /* RecodeHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecodeHistoryViewController.h; sourceTree = "<group>"; };
 		B50B70B71C17CAB2009F3B45 /* RecodeHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecodeHistoryViewController.m; sourceTree = "<group>"; };
 		B50B70B81C17CAB2009F3B45 /* RecodeHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecodeHistoryViewController.xib; sourceTree = "<group>"; };
-		B50B70BE1C17CAD8009F3B45 /* TypeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeView.h; sourceTree = "<group>"; };
-		B50B70BF1C17CAD8009F3B45 /* TypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeView.m; sourceTree = "<group>"; };
-		B50B70C01C17CAD8009F3B45 /* TypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeView.xib; sourceTree = "<group>"; };
 		B50B70C31C17CAF6009F3B45 /* HistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCell.h; sourceTree = "<group>"; };
 		B50B70C41C17CAF6009F3B45 /* HistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryCell.m; sourceTree = "<group>"; };
 		B50B70C51C17CAF6009F3B45 /* HistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		B50B70C81C17CB0E009F3B45 /* HistoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryItem.h; sourceTree = "<group>"; };
 		B50B70C91C17CB0E009F3B45 /* HistoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryItem.m; sourceTree = "<group>"; };
-		B50B70CB1C17CB79009F3B45 /* PercentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentView.h; sourceTree = "<group>"; };
-		B50B70CC1C17CB79009F3B45 /* PercentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentView.m; sourceTree = "<group>"; };
 		B50B70CE1C17CBEB009F3B45 /* TypeReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeReq.h; sourceTree = "<group>"; };
 		B50B70CF1C17CBEB009F3B45 /* TypeReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeReq.m; sourceTree = "<group>"; };
 		B5108B281C044F34005F6CC6 /* UserQuestionReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserQuestionReq.h; sourceTree = "<group>"; };
@@ -298,6 +294,13 @@
 		B570C5C91C131694008A2C3F /* ItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemView.m; sourceTree = "<group>"; };
 		B570C5CC1C13D387008A2C3F /* ChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseView.h; sourceTree = "<group>"; };
 		B570C5CD1C13D387008A2C3F /* ChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseView.m; sourceTree = "<group>"; };
+		B573BD9E1C18F90D004A8288 /* IntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroView.h; sourceTree = "<group>"; };
+		B573BD9F1C18F90D004A8288 /* IntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroView.m; sourceTree = "<group>"; };
+		B573BDA21C195C51004A8288 /* TypeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeView.h; sourceTree = "<group>"; };
+		B573BDA31C195C51004A8288 /* TypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeView.m; sourceTree = "<group>"; };
+		B573BDA41C195C51004A8288 /* TypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeView.xib; sourceTree = "<group>"; };
+		B573BDA81C195C72004A8288 /* PercentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PercentView.h; sourceTree = "<group>"; };
+		B573BDA91C195C72004A8288 /* PercentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PercentView.m; sourceTree = "<group>"; };
 		B577227F1C046F6300EE189E /* TypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeCell.h; sourceTree = "<group>"; };
 		B57722801C046F6300EE189E /* TypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeCell.m; sourceTree = "<group>"; };
 		B57722821C046F7300EE189E /* TypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeCell.xib; sourceTree = "<group>"; };
@@ -427,16 +430,6 @@
 				B55C5B191C19228900FB3139 /* WrongItemViewController.xib */,
 			);
 			name = User;
-			sourceTree = "<group>";
-		};
-		B50B70BD1C17CAC4009F3B45 /* TypeView */ = {
-			isa = PBXGroup;
-			children = (
-				B50B70BE1C17CAD8009F3B45 /* TypeView.h */,
-				B50B70BF1C17CAD8009F3B45 /* TypeView.m */,
-				B50B70C01C17CAD8009F3B45 /* TypeView.xib */,
-			);
-			name = TypeView;
 			sourceTree = "<group>";
 		};
 		B5152BA31C16CA5A00C81AB3 /* img */ = {
@@ -638,6 +631,34 @@
 			path = ChooseView;
 			sourceTree = "<group>";
 		};
+		B573BD9D1C18F8F9004A8288 /* IntroView */ = {
+			isa = PBXGroup;
+			children = (
+				B573BD9E1C18F90D004A8288 /* IntroView.h */,
+				B573BD9F1C18F90D004A8288 /* IntroView.m */,
+			);
+			path = IntroView;
+			sourceTree = "<group>";
+		};
+		B573BDA11C195C51004A8288 /* TypeView */ = {
+			isa = PBXGroup;
+			children = (
+				B573BDA21C195C51004A8288 /* TypeView.h */,
+				B573BDA31C195C51004A8288 /* TypeView.m */,
+				B573BDA41C195C51004A8288 /* TypeView.xib */,
+			);
+			path = TypeView;
+			sourceTree = "<group>";
+		};
+		B573BDA71C195C72004A8288 /* PercentView */ = {
+			isa = PBXGroup;
+			children = (
+				B573BDA81C195C72004A8288 /* PercentView.h */,
+				B573BDA91C195C72004A8288 /* PercentView.m */,
+			);
+			path = PercentView;
+			sourceTree = "<group>";
+		};
 		B57722871C04ADE800EE189E /* Rank */ = {
 			isa = PBXGroup;
 			children = (
@@ -696,9 +717,9 @@
 		B58212071BFEFAEB00168A57 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				B50B70CB1C17CB79009F3B45 /* PercentView.h */,
-				B50B70CC1C17CB79009F3B45 /* PercentView.m */,
-				B50B70BD1C17CAC4009F3B45 /* TypeView */,
+				B573BDA71C195C72004A8288 /* PercentView */,
+				B573BDA11C195C51004A8288 /* TypeView */,
+				B573BD9D1C18F8F9004A8288 /* IntroView */,
 				B570C5CB1C13D36F008A2C3F /* ChooseView */,
 				B570C58D1C11C7AF008A2C3F /* ViewGame */,
 				B570C5891C11C784008A2C3F /* TextDraw */,
@@ -1128,6 +1149,7 @@
 				B5977F8B1C035A3600175174 /* cellcheck.png in Resources */,
 				B54373CD1C15C1EB0002346A /* 男死亡.wav in Resources */,
 				B58212231BFEFD5300168A57 /* HUDLoading5.png in Resources */,
+				B573BDA61C195C51004A8288 /* TypeView.xib in Resources */,
 				B5CD9DD41C07FA1800DABCAA /* LevelSetVC.xib in Resources */,
 				B55C5B1B1C19228900FB3139 /* WrongItemViewController.xib in Resources */,
 				B54373C81C15C1EB0002346A /* 子弹.wav in Resources */,
@@ -1200,7 +1222,6 @@
 				B5CD9DDD1C082C7E00DABCAA /* EnemyCell.m in Sources */,
 				B57722861C04712D00EE189E /* TypeItem.m in Sources */,
 				B53660AE1C05A10400D09686 /* EditPhotoReq.m in Sources */,
-				B50B70CD1C17CB79009F3B45 /* PercentView.m in Sources */,
 				B582122E1BFF094B00168A57 /* Util.m in Sources */,
 				B5977F6E1C02FDBB00175174 /* UserDefaults.m in Sources */,
 				B5108B391C045CE7005F6CC6 /* RankVC.m in Sources */,
@@ -1209,6 +1230,7 @@
 				B51A02B51C084B6B00610020 /* ChooseItemCountView.m in Sources */,
 				B570C5C61C11CBE0008A2C3F /* LevelStartReq.m in Sources */,
 				B50B70BB1C17CAB2009F3B45 /* RecodeHistoryViewController.m in Sources */,
+				B573BDAA1C195C72004A8288 /* PercentView.m in Sources */,
 				B570C58C1C11C784008A2C3F /* TextDrawView.m in Sources */,
 				B5977F9C1C036BCE00175174 /* RegisterReq.m in Sources */,
 				B58212311BFF1B7100168A57 /* BaseReq.m in Sources */,
@@ -1227,16 +1249,17 @@
 				B53660B51C05BBA500D09686 /* EditNameReq.m in Sources */,
 				B5977F8D1C035A3600175174 /* SGAlertMenu.m in Sources */,
 				B53660BC1C06ADBA00D09686 /* TipView.m in Sources */,
-				B50B70C11C17CAD8009F3B45 /* TypeView.m in Sources */,
 				B5977F751C03465900175174 /* RegisterVC.m in Sources */,
 				B570C5BB1C11C7AF008A2C3F /* LaserPower.m in Sources */,
 				B5977F8E1C035A3600175174 /* SGBaseMenu.m in Sources */,
+				B573BDA51C195C51004A8288 /* TypeView.m in Sources */,
 				B570C5C21C11C7AF008A2C3F /* ViewSence.m in Sources */,
 				B5108B341C045C80005F6CC6 /* HomeVC.m in Sources */,
 				B5977FA01C0406D400175174 /* ForgotVC.m in Sources */,
 				B55C5B241C19603200FB3139 /* WrongItemCell.m in Sources */,
 				B58211F51BFEEE6500168A57 /* AppDelegate.m in Sources */,
 				B570C5BD1C11C7AF008A2C3F /* MyPower.m in Sources */,
+				B573BDA01C18F90D004A8288 /* IntroView.m in Sources */,
 				B570C5CE1C13D387008A2C3F /* ChooseView.m in Sources */,
 				B58212351BFF255500168A57 /* CheckUserNameReq.m in Sources */,
 				B570C5B41C11C7AF008A2C3F /* GameEnemy.m in Sources */,

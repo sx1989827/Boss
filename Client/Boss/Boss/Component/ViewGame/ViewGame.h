@@ -20,4 +20,14 @@
 -(void)stop;
 -(void)postPower:(NSString*)power Value:(NSInteger)value;
 -(void)hurtUser:(NSInteger)value;
+-(void)pause;
+-(void)resume;
 @end
+
+
+
+
+
+
+
+

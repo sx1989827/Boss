@@ -56,7 +56,7 @@ extern NSString *msgUpdateLevel;
 
 @interface UIView (Additions)
 -(UIViewController *)viewController;
--(UIImage*)image;
+-(UIImage*)imageCache;
 @end
 
 @interface NSDictionary (WG)
@@ -71,6 +71,11 @@ extern NSString *msgUpdateLevel;
 -(NSString*)stringValue;
 @end
 
+@interface NSTimer (TFAddition)
+-(void)pause;
+-(void)resume;
+
+@end
 
 
 

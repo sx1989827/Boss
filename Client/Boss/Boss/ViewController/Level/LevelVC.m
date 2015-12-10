@@ -11,6 +11,7 @@
 #import "LevelInfoReq.h"
 #import "Header.h"
 #import "AnimateRotate.h"
+#import "IntroView.h"
 @interface LevelVC ()<LevelViewDelegate,UINavigationControllerDelegate>
 {
     LevelView *viewLevel;
@@ -45,6 +46,23 @@
                 [[UserDefaults sharedInstance] updatePowerInfo:^(NSDictionary *dic){
                     [self removeHud];
                     self.bHud=NO;
+                    //if([[UserDefaults sharedInstance] isFirstLogin] && [[UserDefaults sharedInstance] isFirstLoadVC:NSStringFromClass([self class])])
+                    //{
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                        [IntroView showTitle:@[@{
+                                                   @"title":@"这是你现在所在的等级",
+                                                   @"rect":[NSValue valueWithCGRect:CGRectMake(10, 70, 250, 40)],
+                                                   @"view":[viewLevel valueForKey:@"btnUser"]
+                                                   },@{
+                                                   @"title":@"这是你需要闯关的等级",
+                                                   @"rect":[NSValue valueWithCGRect:CGRectMake(10, 70,250, 40)],
+                                                   @"view":[viewLevel viewWithTag:indexLevel+1]
+                                                   }] Block:^{
+                                                       
+                                                   }];
+                    });
+                    
+                    //}
                 } Hud:NO];
             } Hud:NO];
         }
@@ -133,7 +151,16 @@
     }
     return nil;
 }
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
 @end
+
+
+
+
 
 
 

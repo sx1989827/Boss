@@ -28,7 +28,7 @@
     TypeItem *data=item;
     UIViewController *vc=(UIViewController*)data.viewControllerDelegate;
     [vc pushViewController:@"LevelVC" Param:@{@"type":data.name}];
-    UIImage *img=[self.contentView image];
+    UIImage *img=[self.contentView imageCache];
     CGRect frame=[self.contentView convertRect:self.contentView.bounds toView:[UIApplication sharedApplication].keyWindow];
     UIImageView *view=[[UIImageView alloc] initWithImage:img];
     view.frame=frame;
