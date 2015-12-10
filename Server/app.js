@@ -13,6 +13,7 @@ var rank=require("./routes/rank");
 var level=require("./routes/level");
 var power=require("./routes/power");
 var people=require("./routes/people");
+var item=require("./routes/item");
 var checkPwd=require("./routes/checkPwd");
 var con=require("./define/define")
 var app = express();
@@ -34,6 +35,7 @@ app.use("/rank",checkPwd,rank);
 app.use("/level",checkPwd,level);
 app.use("/power",checkPwd,power);
 app.use("/people",checkPwd,people);
+app.use("/item",checkPwd,item);
 app.use("/public",express.static(path.join(__dirname, 'public')));
 app.use("/img",express.static(con.imgpath+"/img"));
 app.use(function(req, res, next) {

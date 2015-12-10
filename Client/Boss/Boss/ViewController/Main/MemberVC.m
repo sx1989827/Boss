@@ -90,7 +90,7 @@
 }
 -(void)exit
 {
-    UIImage *img=[[UIApplication sharedApplication].keyWindow image];
+    UIImage *img=[[UIApplication sharedApplication].keyWindow imageCache];
     UIImageView *view=[[UIImageView alloc] initWithImage:img];
     view.frame=[UIScreen mainScreen].bounds;
     view.layer.zPosition=FLT_MAX;

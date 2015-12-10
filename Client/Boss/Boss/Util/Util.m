@@ -383,7 +383,7 @@ NSString *msgUpdateLevel=@"msgUpdateLevel";
 
 -(void)dismiss
 {
-    UIImage *img=[[UIApplication sharedApplication].keyWindow image];
+    UIImage *img=[[UIApplication sharedApplication].keyWindow imageCache];
     UIImageView *view=[[UIImageView alloc] initWithImage:img];
     view.frame=[UIScreen mainScreen].bounds;
     view.layer.zPosition=FLT_MAX;
@@ -397,7 +397,7 @@ NSString *msgUpdateLevel=@"msgUpdateLevel";
 
 -(void)flipToView:(UIView*)view
  {
-     UIImage *img=[[UIApplication sharedApplication].keyWindow image];
+     UIImage *img=[[UIApplication sharedApplication].keyWindow imageCache];
      UIImageView *v=[[UIImageView alloc] initWithImage:img];
      v.frame=[UIScreen mainScreen].bounds;
      v.layer.zPosition=FLT_MAX;
@@ -530,9 +530,9 @@ void addRoundRectToPath(CGContextRef context, CGRect rect, float ovalWidth,
     return vc;
 }
 
--(UIImage*)image
+-(UIImage*)imageCache
 {
-        UIGraphicsBeginImageContext(self.bounds.size);
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size,NO,[[UIScreen mainScreen] scale]);
         [self.layer renderInContext:UIGraphicsGetCurrentContext()];
         UIImage*img = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
@@ -592,7 +592,27 @@ void addRoundRectToPath(CGContextRef context, CGRect rect, float ovalWidth,
 
 @end
 
+@implementation NSTimer (TFAddition)
+-(void)pause
+{
+    if (![self isValid])
+    {
+        return ;
+    }
+    [self setFireDate:[NSDate distantFuture]];
+}
 
+
+-(void)resume
+{
+    if (![self isValid])
+    {
+        return ;
+    }
+    [self setFireDate:[NSDate date]];
+}
+
+@end
 
 
 

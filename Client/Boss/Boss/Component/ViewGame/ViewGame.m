@@ -8,6 +8,7 @@
 
 #import "ViewGame.h"
 #import "ViewSence.h"
+#import "Header.h"
 @interface ViewGame()
 {
     ViewSence *sence;
@@ -35,6 +36,7 @@
 -(void)start
 {
     [sence start];
+    
 }
 
 -(void)stop
@@ -50,6 +52,20 @@
 -(void)hurtUser:(NSInteger)value
 {
     [sence hurtUser:value];
+}
+
+-(void)pause
+{
+    [sence setPaused:YES];
+    NSTimer *timer=[sence valueForKey:@"timer"];
+    [timer pause];
+}
+
+-(void)resume
+{
+    [sence setPaused:NO];
+    NSTimer *timer=[sence valueForKey:@"timer"];
+    [timer resume];
 }
 
 @end

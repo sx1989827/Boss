@@ -9,6 +9,7 @@
 #import "UserDefaults.h"
 #import "Header.h"
 @interface UserDefaults()
+@property (strong,nonatomic)    NSMutableDictionary *dicVC;
 @property (strong,nonatomic)    NSMutableDictionary *dicPeople;
 @end
 @implementation UserDefaults
@@ -71,6 +72,7 @@
         obj=[[[self class] alloc] init];
         obj.dicPeople=[[NSMutableDictionary alloc] initWithCapacity:30];
         obj.dicPower=[[NSMutableDictionary alloc] initWithCapacity:30];
+        obj.dicVC=[[NSMutableDictionary alloc] initWithCapacity:30];
         NSUserDefaults *user=[NSUserDefaults standardUserDefaults];
         NSData *data=[user objectForKey:@"userModel"];
         if(data)
@@ -181,6 +183,24 @@
 -(NSInteger)money:(NSString*)levelName
 {
     return [self peopleName:levelName].money;
+}
+
+-(BOOL)isFirstLogin
+{
+    return _resModel.data.logincount==1;
+}
+
+-(BOOL)isFirstLoadVC:(NSString*)vc
+{
+	if(_dicVC[vc]==nil)
+    {
+        [_dicVC setObject:@YES forKey:vc];
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
 }
 
 @end

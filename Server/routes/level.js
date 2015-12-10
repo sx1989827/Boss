@@ -147,6 +147,7 @@ router.post("/leave", function (req, res)
 {
     var arrItem=req.body.item.split(",");
     record.create({
+        username:req.body.username,
         type:req.body.type,
         level:req.body.level,
         success:parseInt(req.body.success),
