@@ -32,7 +32,6 @@
     [_mainTableView registarCell:@"HistoryCell" StrItem:@"HistoryItem"];
     [_mainTableView setPageParam:@"page" Page:0];
     [_mainTableView reloadRequest:[NSString stringWithFormat:@"%@/user/history",serverUrl] Param:@{@"username":USERNAME,@"pwd":PWD,@"type":_type}];
-    NSLog(@"----%@?username=%@&pwd=%@&type=iOS",[NSString stringWithFormat:@"%@/user/history",serverUrl],USERNAME,PWD);
 }
 -(NSArray*)LazyTableViewDidFinishRequest:(LazyTableView *)tableview Request:(NSDictionary *)dic
 {
