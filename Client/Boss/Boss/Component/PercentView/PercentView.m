@@ -17,25 +17,17 @@
 @property(nonatomic,strong)CAShapeLayer   *bgLayer;
 @end
 @implementation PercentView
--(instancetype)initWithFrame:(CGRect)frame
+-(instancetype)initWithCoder:(NSCoder *)aDecoder
 {
-    if (self = [super initWithFrame:frame]) {
-       
+    if (self = [super initWithCoder:aDecoder])
+    {
+        [self bgLayer];
+        [self shapeLayer];
     }
     
     return self;
 }
--(void)drawRect:(CGRect)rect{
-    NSString *percentString = [NSString stringWithFormat:@"%.1f",self.percent*100];
-    NSString * string = [percentString stringByAppendingString:@"%"];
-    self.percenLabel.text =string;
-}
--(void)layoutSubviews{
-    
-    [super layoutSubviews];
-    [self bgLayer];
-    [self shapeLayer];
-}
+
 -(CAShapeLayer*)bgLayer{
     if (!_bgLayer) {
         _bgLayer = [CAShapeLayer layer];
@@ -54,7 +46,7 @@
         _shapeLayer = [CAShapeLayer layer];
         _shapeLayer.lineWidth = 5.0;
         _shapeLayer.strokeStart = 0.0;
-        _shapeLayer.strokeEnd =self.percent;
+        _shapeLayer.strokeEnd =1;
         _shapeLayer.speed =1.0;
         _shapeLayer.fillColor = [UIColor clearColor].CGColor;
         _shapeLayer.lineJoin = kCALineJoinBevel;
@@ -88,12 +80,14 @@
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center radius:rect.size.width/2 startAngle:-1.5*M_PI endAngle:0.5*M_PI clockwise:YES];
     return  path;
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+
+-(void)setPercent:(CGFloat)percent
+{
+    _percent=percent;
+    NSString *percentString = [NSString stringWithFormat:@"%ld",(NSInteger)(percent*100)];
+    NSString * string = [percentString stringByAppendingString:@"%"];
+    self.percenLabel.text =string;
+    _shapeLayer.strokeEnd =_percent;
 }
-*/
 
 @end

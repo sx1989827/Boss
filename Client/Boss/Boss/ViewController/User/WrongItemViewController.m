@@ -25,7 +25,6 @@
 
 - (void)viewDidLoad {
         [super viewDidLoad];
-        self.bHud =NO;
         self.title = @"错题";
         self.automaticallyAdjustsScrollViewInsets =NO;
         NSString *str ;
@@ -53,8 +52,9 @@
         self.scrollView.pagingEnabled = YES;
         self.scrollView.bounces = NO;
         [self setNavgitionLabel];
-        [self creatView];
-    } ShowHud:YES];
+        [self createView];
+        [self removeHud];
+    } ShowHud:NO];
 }
 -(void)setNavgitionLabel
 {
@@ -65,7 +65,7 @@
         UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithCustomView:_countLabel];
         self.navigationItem.rightBarButtonItem = right;
 }
--(void)creatView
+-(void)createView
 {
     if(self.itemArray.count>=3)
     {
@@ -190,14 +190,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
