@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WrongItemViewController">
             <connections>
-                <outlet property="mainTableView" destination="Hds-ub-G0n" id="UcC-4k-o84"/>
+                <outlet property="scrollView" destination="Qoj-Vv-Rvb" id="8g7-uE-XcO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,19 +16,18 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hds-ub-G0n" customClass="LazyTableView">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qoj-Vv-Rvb">
                     <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                     <animations/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </tableView>
+                </scrollView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Hds-ub-G0n" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="1sZ-XO-jDj"/>
-                <constraint firstAttribute="bottom" secondItem="Hds-ub-G0n" secondAttribute="bottom" id="9SY-ft-hBb"/>
-                <constraint firstAttribute="trailing" secondItem="Hds-ub-G0n" secondAttribute="trailing" id="Jqw-d1-B7a"/>
-                <constraint firstItem="Hds-ub-G0n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RJj-5M-vCC"/>
+                <constraint firstAttribute="trailing" secondItem="Qoj-Vv-Rvb" secondAttribute="trailing" id="HcF-f6-N7t"/>
+                <constraint firstAttribute="bottom" secondItem="Qoj-Vv-Rvb" secondAttribute="bottom" id="Ibs-F3-lu8"/>
+                <constraint firstItem="Qoj-Vv-Rvb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="aAw-AS-MkE"/>
+                <constraint firstItem="Qoj-Vv-Rvb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mDj-Pf-3hy"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="356" y="155"/>
