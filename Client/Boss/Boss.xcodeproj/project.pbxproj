@@ -72,6 +72,7 @@
 		B55C5B4C1C1A662200FB3139 /* RecodeHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55C5B451C1A662200FB3139 /* RecodeHistoryViewController.xib */; };
 		B55C5B4D1C1A662200FB3139 /* WrongItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B55C5B471C1A662200FB3139 /* WrongItemViewController.m */; };
 		B55C5B4E1C1A662200FB3139 /* WrongItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55C5B481C1A662200FB3139 /* WrongItemViewController.xib */; };
+		B55C5B521C1A926200FB3139 /* CustomContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B55C5B511C1A926200FB3139 /* CustomContentView.m */; };
 		B570C5871C11C69B008A2C3F /* LevelGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C5851C11C69B008A2C3F /* LevelGameVC.m */; };
 		B570C5881C11C69B008A2C3F /* LevelGameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B570C5861C11C69B008A2C3F /* LevelGameVC.xib */; };
 		B570C58C1C11C784008A2C3F /* TextDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = B570C58B1C11C784008A2C3F /* TextDrawView.m */; };
@@ -257,6 +258,8 @@
 		B55C5B461C1A662200FB3139 /* WrongItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WrongItemViewController.h; sourceTree = "<group>"; };
 		B55C5B471C1A662200FB3139 /* WrongItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WrongItemViewController.m; sourceTree = "<group>"; };
 		B55C5B481C1A662200FB3139 /* WrongItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WrongItemViewController.xib; sourceTree = "<group>"; };
+		B55C5B501C1A926200FB3139 /* CustomContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomContentView.h; sourceTree = "<group>"; };
+		B55C5B511C1A926200FB3139 /* CustomContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomContentView.m; sourceTree = "<group>"; };
 		B570C5841C11C69B008A2C3F /* LevelGameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelGameVC.h; sourceTree = "<group>"; };
 		B570C5851C11C69B008A2C3F /* LevelGameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelGameVC.m; sourceTree = "<group>"; };
 		B570C5861C11C69B008A2C3F /* LevelGameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelGameVC.xib; sourceTree = "<group>"; };
@@ -570,6 +573,15 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		B55C5B4F1C1A924400FB3139 /* CustomContentView */ = {
+			isa = PBXGroup;
+			children = (
+				B55C5B501C1A926200FB3139 /* CustomContentView.h */,
+				B55C5B511C1A926200FB3139 /* CustomContentView.m */,
+			);
+			path = CustomContentView;
+			sourceTree = "<group>";
+		};
 		B570C5891C11C784008A2C3F /* TextDraw */ = {
 			isa = PBXGroup;
 			children = (
@@ -747,6 +759,7 @@
 		B58212071BFEFAEB00168A57 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				B55C5B4F1C1A924400FB3139 /* CustomContentView */,
 				B573BDA71C195C72004A8288 /* PercentView */,
 				B573BDA11C195C51004A8288 /* TypeView */,
 				B573BD9D1C18F8F9004A8288 /* IntroView */,
@@ -1331,6 +1344,7 @@
 				B57722921C04AFE400EE189E /* RankItem.m in Sources */,
 				B51A02BB1C0850AE00610020 /* PowerInfoReq.m in Sources */,
 				B5977F6A1C02BED000175174 /* LoginInputView.m in Sources */,
+				B55C5B521C1A926200FB3139 /* CustomContentView.m in Sources */,
 				B5977F711C03004000175174 /* UserInfoReq.m in Sources */,
 				B5977F8C1C035A3600175174 /* SGActionView.m in Sources */,
 			);

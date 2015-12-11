@@ -13,6 +13,7 @@
 @interface EditPswViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *oldPswField;
 @property (strong, nonatomic) IBOutlet UITextField *recentlyPswField;
+@property (strong, nonatomic) IBOutlet UITextField *confirmPswField;
 @property (strong, nonatomic) IBOutlet UIImageView *headImageView;
 @end
 
@@ -33,12 +34,16 @@
 - (IBAction)submit:(id)sender {
     if(_oldPswField.text.length==0||_recentlyPswField.text.length==0)
     {
-        S(@"不能有空得选项！");
+        E(@"不能有空得选项！");
         return;
     }
     else if (![_oldPswField.text isEqualToString:[UserDefaults sharedInstance].resModel.data.pwd])
     {
-         S(@"旧密码不正确！");
+         E(@"旧密码不正确！");
+    }
+    else if (![_confirmPswField.text isEqualToString:_recentlyPswField.text])
+    {
+         E(@"两次密码不一致！");
     }
     else
     {

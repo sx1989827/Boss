@@ -10,6 +10,7 @@
 #import "percentView.h"
 #import "HistoryItem.h"
 #import "Header.h"
+#import "TipView.h"
 @implementation HistoryCell
 
 -(NSNumber*)LazyTableCellHeight:(id)item Path:(NSIndexPath *)path
@@ -28,8 +29,16 @@
 -(void)LazyTableCellDidSelect:(id)item Path:(NSIndexPath *)path
 {
     HistoryItem*data = item;
-    UIViewController *vc=(UIViewController*)data.viewControllerDelegate;
-    [vc pushViewController:@"WrongItemViewController" Param:@{@"item":data.item}];
+    if([data.percent integerValue]==1)
+    {
+      [TipView showWithTitle: @"提示" Tip:@"您此关卡表现非常棒，没有错题!" Block:^{
+      }];
+    }
+    else
+    {
+        UIViewController *vc=(UIViewController*)data.viewControllerDelegate;
+        [vc pushViewController:@"WrongItemViewController" Param:@{@"item":data.item}];
+    }
 }
 /*
 // Only override drawRect: if you perform custom drawing.
