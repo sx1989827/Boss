@@ -24,7 +24,6 @@
     self.useTime.text = [NSString stringWithFormat:@"用时:%@ s",data.usetime];
     self.creatTime.text = data.createtime;
     self.percentView.percent = [data.percent floatValue];
-    [self.percentView setNeedsLayout];
 }
 -(void)LazyTableCellDidSelect:(id)item Path:(NSIndexPath *)path
 {
