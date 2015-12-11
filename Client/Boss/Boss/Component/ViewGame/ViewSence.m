@@ -327,22 +327,22 @@ static __weak ViewSence* singleObj=nil;
     timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(timerCallback) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     user=[[GameUser alloc] init];
-    [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[
-                                                     [SKAction waitForDuration:8],
-                                                     [SKAction runBlock:^{
-        GameEnemy *enemy=[self leftMostEnemy];
-        if(enemy)
-        {
-            NSInteger index=rand()%3;
-            NSString *sound=[NSString stringWithFormat:@"%@%ld.wav",enemy.name,index];
-            NSString *path=[[NSBundle mainBundle] pathForResource:sound ofType:nil];
-            if(path)
-            {
-                [enemy.node runAction:[SKAction playSoundFileNamed:sound waitForCompletion:NO]];
-            }
-        }
-    }]
-                                                                       ]]]];
+//    [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[
+//                                                     [SKAction waitForDuration:8],
+//                                                     [SKAction runBlock:^{
+//        GameEnemy *enemy=[self leftMostEnemy];
+//        if(enemy)
+//        {
+//            NSInteger index=rand()%3;
+//            NSString *sound=[NSString stringWithFormat:@"%@%ld.wav",enemy.name,index];
+//            NSString *path=[[NSBundle mainBundle] pathForResource:sound ofType:nil];
+//            if(path)
+//            {
+//                [enemy.node runAction:[SKAction playSoundFileNamed:sound waitForCompletion:NO]];
+//            }
+//        }
+//    }]
+//                                                                       ]]]];
 }
 
 -(void)stop

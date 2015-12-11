@@ -47,7 +47,7 @@
     _shapeLayer.path = [self bezierPath].CGPath;
     _shapeLayer.strokeColor = [UIColor redColor].CGColor;
     [self.layer addSublayer:_shapeLayer];
-    NSString *percentString = [NSString stringWithFormat:@"%.1f",self.percent*100];
+    NSString *percentString = [NSString stringWithFormat:@"%ld",(NSInteger)(self.percent*100)];
     NSString * string = [percentString stringByAppendingString:@"%"];
     self.percenLabel.text =string;
     
