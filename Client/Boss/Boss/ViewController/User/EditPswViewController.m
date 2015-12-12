@@ -22,7 +22,7 @@
 {
     [super viewWillAppear:animated];
     self.headImageView.layer.masksToBounds =YES;
-    self.headImageView.layer.cornerRadius =35;
+    self.headImageView.layer.cornerRadius =45;
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",serverUrl,[UserDefaults sharedInstance].resModel.data.photo]] placeholderImage:[UIImage imageNamed:@"placeholder"]];
     
 }
