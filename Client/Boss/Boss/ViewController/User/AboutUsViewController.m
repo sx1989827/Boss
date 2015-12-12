@@ -18,6 +18,7 @@
     [super viewDidLoad];
     self.bHud =NO;
     self.title = @"关于我们";
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,7 +7,7 @@
 //
 
 #import "CustomContentView.h"
-
+#import "Header.h"
 @implementation CustomContentView
 
 -(instancetype)initWithFrame:(CGRect)frame{
@@ -16,7 +16,7 @@
         _contentTextView = [[UITextView alloc]init];
         _contentTextView.font = [UIFont systemFontOfSize:17];
         _contentTextView.userInteractionEnabled =NO;
-        _contentTextView.backgroundColor = [UIColor grayColor];
+        _contentTextView.backgroundColor = [UIColor whiteColor];
         [self addSubview:_contentTextView];
     }
     return self;

@@ -22,7 +22,6 @@
 @end
 
 @implementation WrongItemViewController
-
 - (void)viewDidLoad {
         [super viewDidLoad];
         self.title = @"错题";
@@ -70,26 +69,30 @@
     if(self.itemArray.count>=3)
     {
         for (int i =0; i<3; i++) {
-            _contentView = [[CustomContentView alloc]init];
-            _contentView.tag =i+1;
-            _contentView.frame = CGRectMake((self.view.frame.size.width*i), 0, self.view.frame.size.width, self.view.frame.size.height-64);
-            _contentView.contentTextView.frame =CGRectMake(10, 10, _contentView.bounds.size.width-20,  _contentView.bounds.size.height-20);
-            NSMutableAttributedString *mutableString = [self stringWithIndex:0];
-            _contentView.contentTextView.attributedText = mutableString;
-            [self.scrollView addSubview:_contentView];
+            [self setContentViewContent:i];
         }
-    }else if (self.itemArray.count==2)
+    }else if (self.itemArray.count==2|self.itemArray.count==1)
     {
         for (int i =0; i<self.itemArray.count; i++) {
-            _contentView = [[CustomContentView alloc]init];
-            _contentView.tag =i+1;
-            _contentView.frame = CGRectMake((self.view.frame.size.width*i), 0, self.view.frame.size.width, self.view.frame.size.height-64);
-            _contentView.contentTextView.frame =CGRectMake(10, 10, _contentView.bounds.size.width-20,  _contentView.bounds.size.height-20);
-            NSMutableAttributedString *mutableString = [self stringWithIndex:0];
-            _contentView.contentTextView.attributedText = mutableString;
-            [self.scrollView addSubview:_contentView];
+           
+            [self setContentViewContent:i];
         }
     }
+}
+-(void)setContentViewContent:(int)i
+{
+    _contentView = [[CustomContentView alloc]init];
+    _contentView.tag =i+1;
+     _contentView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    _contentView.frame = CGRectMake((self.view.frame.size.width*i), 0, self.view.frame.size.width, self.view.frame.size.height-64);
+    _contentView.contentTextView.frame =CGRectMake(10, 10, _contentView.bounds.size.width-20,  _contentView.bounds.size.height-20);
+    WrongModel*model = self.itemArray[0];
+    CGSize viewHeight = [Util getContentSize:model.content withCGSize:CGSizeMake(_contentView.frame.size.width, MAXFLOAT) withSystemFontOfSize:17];
+    _contentView.contentTextView.frame =CGRectMake(10, 10, _contentView.bounds.size.width-20,  viewHeight.height+50);
+    NSMutableAttributedString *mutableString = [self stringWithIndex:0];
+    _contentView.contentTextView.attributedText = mutableString;
+    [self.scrollView addSubview:_contentView];
+    
 }
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
@@ -132,12 +135,15 @@
 }
 -(void)addViewWith:(int)contentOffset with:(int)tag
 {
-    CustomContentView*view =(CustomContentView*)[self.scrollView viewWithTag:tag];
-    view.frame = CGRectMake((self.view.frame.size.width*contentOffset), 0, self.view.frame.size.width, self.view.frame.size.height-64);
-     view.contentTextView.frame =CGRectMake(10, 10, view.bounds.size.width-20,  view.bounds.size.height-20);
     if (contentOffset<0) {
         return;
     }
+     CustomContentView*view =(CustomContentView*)[self.scrollView viewWithTag:tag];
+    view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    view.frame = CGRectMake((self.view.frame.size.width*contentOffset), 0, self.view.frame.size.width, self.view.frame.size.height-64);
+    WrongModel*model = self.itemArray[contentOffset];
+    CGSize viewHeight = [Util getContentSize:model.content withCGSize:CGSizeMake(view.frame.size.width, MAXFLOAT) withSystemFontOfSize:17];
+    view.contentTextView.frame =CGRectMake(10, 10, view.bounds.size.width-20,  viewHeight.height+30);
     NSMutableAttributedString *mutableString = [self stringWithIndex:contentOffset];
     view.contentTextView.attributedText = mutableString;
 }
@@ -149,32 +155,36 @@
     NSString *modelContent=@"";
     int count=1;
     NSMutableArray *rangeArray = [[NSMutableArray alloc]initWithCapacity:30];
+    NSMutableArray *answerLengthArray = [[NSMutableArray alloc]initWithCapacity:30];
     for (int i =0; i<model.answer.count; i++) {
         NSDictionary*dic = model.answer[i];
         NSRange range;
-        answer = dic[@"ok"];
-        if ([model.content containsString:@"?"]) {
+        answer = [NSString stringWithFormat:@"%@",dic[@"ok"]];
+        if ([model.content containsString:@"(?)"]) {
             if (count==1) {
-                range = [model.content rangeOfString:@"?"];
+                range = [model.content rangeOfString:@"(?)"];
                 modelContent = [model.content stringByReplacingCharactersInRange:range withString:answer];
             }else
             {
-                range = [modelContent rangeOfString:@"?"];
+                range = [modelContent rangeOfString:@"(?)"];
                 modelContent = [modelContent stringByReplacingCharactersInRange:range withString:answer];
             }
             count++;
         }
         [rangeArray addObject:[NSValue valueWithRange:range]];
+        [answerLengthArray addObject:[NSNumber numberWithInteger:answer.length]];
         if (count==model.answer.count+1) {
             mutableString = [[NSMutableAttributedString alloc]initWithString:modelContent];
             for (int j=0;j<rangeArray.count;j++) {
                 NSValue *value =rangeArray[j];
                 NSRange range =   [value rangeValue];
-                [mutableString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:range];
+                NSNumber*lengthNumber = answerLengthArray[j];
+                NSInteger answerLength = [lengthNumber integerValue];
+                [mutableString addAttribute:NSForegroundColorAttributeName value:COL(37, 153, 255, 1) range:NSMakeRange(range.location, answerLength)];
             }
         }
     }
-    [mutableString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:17] range:NSMakeRange(0, modelContent.length)];
+    [mutableString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:17]range:NSMakeRange(0, modelContent.length)];
     return mutableString;
 }
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
