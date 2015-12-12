@@ -27,11 +27,11 @@
     NSInteger index=0;
     for(int i=0;i<arr.count;i++)
     {
+        [self addText:arr[i] Style:@{NSFontAttributeName:[UIFont systemFontOfSize:20]} ClickBlock:nil];
         if(i==arr.count-1)
         {
             break;
         }
-        [self addText:arr[i] Style:@{NSFontAttributeName:[UIFont systemFontOfSize:20]} ClickBlock:nil];
         __weak ItemView* weakSelf=self;
         [self addText:flag Style:@{NSFontAttributeName:[UIFont systemFontOfSize:20],@"index":@(index++)} ClickBlock:^BOOL(NSMutableAttributedString *str, NSInteger start, NSInteger len) {
             curStr=str;

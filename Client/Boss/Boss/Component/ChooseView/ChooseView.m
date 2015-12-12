@@ -35,6 +35,8 @@
         [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
         btn.frame=CGRectMake(self.bounds.size.width, top, (self.bounds.size.width-80)/2, 50) ;
         btn.titleLabel.font=[UIFont systemFontOfSize:20];
+        btn.titleLabel.numberOfLines=2;
+        btn.titleLabel.lineBreakMode=NSLineBreakByCharWrapping;
         [btn setBackgroundColor:[UIColor colorWithRed:0.204 green:0.678 blue:0.988 alpha:1.000]];
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         btn.layer.masksToBounds=YES;
