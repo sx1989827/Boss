@@ -48,9 +48,6 @@
 {
     typeArray =[[NSMutableArray alloc]initWithCapacity:0];
     [TypeReq do:^(id req) {
-        TypeReq*obj =req;
-        obj.username =USERNAME;
-        obj.pwd =PWD;
     } Res:^(id res) {
         [self removeHud];
         TypeRes *obj =res;
@@ -72,7 +69,6 @@
 {
     [DeleteHistoryReq do:^(id req) {
         DeleteHistoryReq*obj =req;
-        obj.username = USERNAME;
         obj.type = _typeView.typeSelectButton.titleLabel.text;
     } Res:^(id res) {
         DeleteHistoryRes*obj =res;

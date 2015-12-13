@@ -203,6 +203,14 @@
     }
 }
 
+-(void)synchronize
+{
+    NSUserDefaults *user=[NSUserDefaults standardUserDefaults];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:_resModel];
+    [user setObject:data forKey:@"userModel"];
+    [user synchronize];
+}
+
 @end
 
 

@@ -304,5 +304,15 @@ exports.service=[
                 }
             }
         ]
-    }
+    },
+    {
+        method:"DELETE",
+        path:"/user/deletehistory",
+        param: {
+            username:String,
+            pwd:String,
+            type:String
+        },
+        data:String
+    },
 ];

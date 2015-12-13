@@ -32,14 +32,10 @@
     self.title =@"修改密码";
 }
 - (IBAction)submit:(id)sender {
-    if(_oldPswField.text.length==0||_recentlyPswField.text.length==0)
+    if(_oldPswField.text.length==0||_recentlyPswField.text.length==0||_confirmPswField.text.length==0)
     {
         E(@"不能有空得选项！");
         return;
-    }
-    else if (![_oldPswField.text isEqualToString:[UserDefaults sharedInstance].resModel.data.pwd])
-    {
-         E(@"旧密码不正确！");
     }
     else if (![_confirmPswField.text isEqualToString:_recentlyPswField.text])
     {
@@ -56,6 +52,8 @@
             {
                 S(obj.msg);
                 [UserDefaults sharedInstance].resModel.data.pwd=_recentlyPswField.text;
+                [[UserDefaults sharedInstance] synchronize];
+                [self.navigationController popViewControllerAnimated:YES];
                
             }
             else
