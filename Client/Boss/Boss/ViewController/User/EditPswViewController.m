@@ -45,6 +45,7 @@
     {
         [EditPswReq do:^(id req) {
             EditPswReq *obj=req;
+            obj.pwd=_oldPswField.text;
             obj.newpwd=_recentlyPswField.text;
         } Res:^(id res) {
             BaseRes *obj=res;
