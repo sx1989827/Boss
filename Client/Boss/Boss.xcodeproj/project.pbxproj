@@ -153,6 +153,7 @@
 		B5CD9DDF1C082D5500DABCAA /* EnemyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CD9DDE1C082D5500DABCAA /* EnemyCell.xib */; };
 		B5CD9DE21C08307F00DABCAA /* EnemyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD9DE11C08307F00DABCAA /* EnemyItem.m */; };
 		B5CD9DE61C0835E700DABCAA /* PeopleInfoReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD9DE51C0835E700DABCAA /* PeopleInfoReq.m */; };
+		B5F9D8521C1C118600EBF10D /* DeleteHistoryReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F9D8511C1C118600EBF10D /* DeleteHistoryReq.m */; };
 		EA1CEEFF16BD0DE8FA5C634F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C3C977378AD53916E63570 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -390,6 +391,8 @@
 		B5CD9DE11C08307F00DABCAA /* EnemyItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyItem.m; sourceTree = "<group>"; };
 		B5CD9DE41C0835E700DABCAA /* PeopleInfoReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleInfoReq.h; sourceTree = "<group>"; };
 		B5CD9DE51C0835E700DABCAA /* PeopleInfoReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleInfoReq.m; sourceTree = "<group>"; };
+		B5F9D8501C1C118600EBF10D /* DeleteHistoryReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteHistoryReq.h; sourceTree = "<group>"; };
+		B5F9D8511C1C118600EBF10D /* DeleteHistoryReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteHistoryReq.m; sourceTree = "<group>"; };
 		B9C3C977378AD53916E63570 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -914,6 +917,8 @@
 				B50B70CF1C17CBEB009F3B45 /* TypeReq.m */,
 				B55C5B301C1971CB00FB3139 /* WrongReq.h */,
 				B55C5B311C1971CB00FB3139 /* WrongReq.m */,
+				B5F9D8501C1C118600EBF10D /* DeleteHistoryReq.h */,
+				B5F9D8511C1C118600EBF10D /* DeleteHistoryReq.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1239,6 +1244,7 @@
 				B5977F751C03465900175174 /* RegisterVC.m in Sources */,
 				B570C5BB1C11C7AF008A2C3F /* LaserPower.m in Sources */,
 				B5977F8E1C035A3600175174 /* SGBaseMenu.m in Sources */,
+				B5F9D8521C1C118600EBF10D /* DeleteHistoryReq.m in Sources */,
 				B573BDA51C195C51004A8288 /* TypeView.m in Sources */,
 				B570C5C21C11C7AF008A2C3F /* ViewSence.m in Sources */,
 				B5108B341C045C80005F6CC6 /* HomeVC.m in Sources */,
