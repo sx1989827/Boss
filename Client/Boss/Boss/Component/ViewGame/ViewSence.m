@@ -63,7 +63,7 @@ static __weak ViewSence* singleObj=nil;
         {
             count+=[enemy[key][@"count"] integerValue];
         }
-        originEnemyShowInternal=(time-25)*1.0/count;
+        originEnemyShowInternal=(time-15)*1.0/(count-1);
         enemyShowInternal=originEnemyShowInternal;
         [self initTexture];
         game=object;
@@ -299,7 +299,7 @@ static __weak ViewSence* singleObj=nil;
         {
             [self nextEnemy];
             preTimeInterval=currentTime;
-            enemyShowInternal=originEnemyShowInternal+rand()%3-2;
+            enemyShowInternal=originEnemyShowInternal+rand()%3-1;
         }
     }
     for(GameEnemy *obj in arrEnemy)

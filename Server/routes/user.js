@@ -207,6 +207,14 @@ router.put("/editname",function(req,res)
 //修改密码
 router.put("/pwd",function(req,res)
 {
+    if(req.userInfo.pwd!=req.body.pwd)
+    {
+        res.json({
+            code:1,
+            msg:"原密码不正确"
+        });
+        return;
+    }
     user.update({
         username:req.body.username
     },{
