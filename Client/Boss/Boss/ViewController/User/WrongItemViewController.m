@@ -38,8 +38,6 @@
     }
     [WrongReq do:^(id req) {
         WrongReq*obj =req;
-        obj.username = USERNAME;
-        obj.pwd =PWD;
         obj.item =str;
     } Res:^(id res) {
         WrongRes*obj =res;

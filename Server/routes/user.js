@@ -340,4 +340,22 @@ router.get("/history",function(req,res)
     });
 
 });
+//删除闯关记录
+router.delete("/deletehistory",function(req,res){
+    record.remove({username:req.query.username,type:req.query.type}).exec(function(err,result)
+    {
+        if(err)
+        {
+            res.json({
+                code:1,
+                msg:err.message
+            })
+            return;
+        }
+        res.json({
+            code:0,
+            msg:"删除成功"
+        })
+    });
+})
 module.exports = router;

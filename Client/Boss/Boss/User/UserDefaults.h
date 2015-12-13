@@ -26,6 +26,7 @@
 -(void)updateScore:(NSInteger)score;
 -(void)updateLevel:(NSString*)type Level:(NSString*)level;
 -(BOOL)isFirstLoadVC:(NSString*)vc;
+-(void)synchronize;
 @end
 
 
