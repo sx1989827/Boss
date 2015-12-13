@@ -117,13 +117,78 @@ router.get("/start", function (req, res)
 
     var power=JSON.parse(req.query.power);
     async.mapSeries(power,function(obj,callback){
-        item.find({type:req.query.type,level:req.query.level,power:obj.name}).limit(parseInt(obj.count)).select("power content answer").exec(function(err,result)
+        item.find({type:req.query.type,level:req.query.level,power:obj.name}).select("power content answer").exec(function(err,result)
         {
-            var ret={
-                name:obj.name,
-                data:result
+            var count=parseInt(obj.count);
+            var arr=[];
+            for(var i=0;i<count;i++)
+            {
+                if(result.length==0)
+                {
+                    break;
+                }
+                var index=parseInt(Math.random()*result.length);
+                arr.push(result[index]);
+                result.splice(index,1);
+
             }
-            callback(err,ret);
+            if(arr.length==count)
+            {
+                var ret={
+                    name:obj.name,
+                    data:arr
+                }
+                callback(err,ret);
+            }
+            else
+            {
+                var leftCount=count-arr.length;
+                level.find({type:req.query.type}).sort({degree:1}).exec(function(err,result)
+                {
+                    if(result.length==0)
+                    {
+                        var ret={
+                            name:obj.name,
+                            data:arr
+                        }
+                        callback(err,ret);
+                    }
+                    else
+                    {
+                        var arrLevel=[];
+                        for(var i=0;i<result.length;i++)
+                        {
+                            var r=result[i];
+                            if(r.name==req.query.level)
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                arrLevel.push(r.name);
+                            }
+                        }
+                        item.find({type:req.query.type,power:obj.name,level:{$in:arrLevel}}).select("power content answer").exec(function(err,result)
+                        {
+                            for(var i=0;i<leftCount;i++)
+                            {
+                                if(result.length==0)
+                                {
+                                    break;
+                                }
+                                var index=parseInt(Math.random()*result.length);
+                                arr.push(result[index]);
+                                result.splice(index,1);
+                            }
+                            var ret={
+                                name:obj.name,
+                                data:arr
+                            }
+                            callback(err,ret);
+                        });
+                    }
+                });
+            }
         });
     },function(err,result)
     {
@@ -132,13 +197,13 @@ router.get("/start", function (req, res)
             res.json({
                 code: 1,
                 msg: err.message
-            })
+            });
             return;
         }
         res.json({
             code:0,
             data:result
-        })
+        });
 
     });
 });
