@@ -55,7 +55,6 @@
                 [UserDefaults sharedInstance].resModel.data.pwd=_recentlyPswField.text;
                 [[UserDefaults sharedInstance] synchronize];
                 [self.navigationController popViewControllerAnimated:YES];
-               
             }
             else
             {

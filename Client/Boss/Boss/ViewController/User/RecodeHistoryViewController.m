@@ -50,6 +50,7 @@
     [TypeReq do:^(id req) {
     } Res:^(id res) {
         [self removeHud];
+        self.bHud=NO;
         TypeRes *obj =res;
         NSArray *typeModelArray = obj.data;
         [typeModelArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
