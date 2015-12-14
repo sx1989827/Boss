@@ -153,6 +153,8 @@
 		B5CD9DDF1C082D5500DABCAA /* EnemyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CD9DDE1C082D5500DABCAA /* EnemyCell.xib */; };
 		B5CD9DE21C08307F00DABCAA /* EnemyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD9DE11C08307F00DABCAA /* EnemyItem.m */; };
 		B5CD9DE61C0835E700DABCAA /* PeopleInfoReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CD9DE51C0835E700DABCAA /* PeopleInfoReq.m */; };
+		B5F1F0E01C1E90E800166B53 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B5F1F0DF1C1E90E800166B53 /* icon.png */; };
+		B5F1F0E21C1E926800166B53 /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = B5F1F0E11C1E926800166B53 /* icon120.png */; };
 		B5F9D8521C1C118600EBF10D /* DeleteHistoryReq.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F9D8511C1C118600EBF10D /* DeleteHistoryReq.m */; };
 		EA1CEEFF16BD0DE8FA5C634F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C3C977378AD53916E63570 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -391,6 +393,8 @@
 		B5CD9DE11C08307F00DABCAA /* EnemyItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyItem.m; sourceTree = "<group>"; };
 		B5CD9DE41C0835E700DABCAA /* PeopleInfoReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleInfoReq.h; sourceTree = "<group>"; };
 		B5CD9DE51C0835E700DABCAA /* PeopleInfoReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleInfoReq.m; sourceTree = "<group>"; };
+		B5F1F0DF1C1E90E800166B53 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		B5F1F0E11C1E926800166B53 /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
 		B5F9D8501C1C118600EBF10D /* DeleteHistoryReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteHistoryReq.h; sourceTree = "<group>"; };
 		B5F9D8511C1C118600EBF10D /* DeleteHistoryReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteHistoryReq.m; sourceTree = "<group>"; };
 		B9C3C977378AD53916E63570 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -712,6 +716,8 @@
 		B58211F01BFEEE6500168A57 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B5F1F0E11C1E926800166B53 /* icon120.png */,
+				B5F1F0DF1C1E90E800166B53 /* icon.png */,
 				B58211F11BFEEE6500168A57 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -1114,6 +1120,7 @@
 				B5152BAF1C16CA5A00C81AB3 /* up6.png in Resources */,
 				B55C5B4C1C1A662200FB3139 /* RecodeHistoryViewController.xib in Resources */,
 				B570C5881C11C69B008A2C3F /* LevelGameVC.xib in Resources */,
+				B5F1F0E01C1E90E800166B53 /* icon.png in Resources */,
 				B53660C11C06EB4200D09686 /* LevelVC.xib in Resources */,
 				B5152BB51C16D7A800C81AB3 /* AlertInfo.png in Resources */,
 				B5977F781C034B3200175174 /* back.png in Resources */,
@@ -1149,6 +1156,7 @@
 				B5152BBD1C171DE900C81AB3 /* 敌人子弹.wav in Resources */,
 				B5108B351C045C80005F6CC6 /* HomeVC.xib in Resources */,
 				B5977F7D1C03507600175174 /* RegisterFinishVC.xib in Resources */,
+				B5F1F0E21C1E926800166B53 /* icon120.png in Resources */,
 				B5152BB71C16D7A800C81AB3 /* AlertRight.png in Resources */,
 				B54373CC1C15C1EB0002346A /* 男受伤.wav in Resources */,
 				B582120E1BFEFB1B00168A57 /* Game.xcassets in Resources */,

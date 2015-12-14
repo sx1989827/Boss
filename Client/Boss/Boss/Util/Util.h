@@ -77,5 +77,9 @@ extern NSString *msgUpdateLevel;
 
 @end
 
+@interface NSString (size)
+- (CGFloat)fontSizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size;
+@end
+
 
 

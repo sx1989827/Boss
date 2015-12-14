@@ -7,6 +7,7 @@
 //
 
 #import "ChooseView.h"
+#import "Header.h"
 @interface ChooseView()
 {
     NSArray *arr;
@@ -34,8 +35,12 @@
         [btn setTitle:arr[i] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
         btn.frame=CGRectMake(self.bounds.size.width, top, (self.bounds.size.width-80)/2, 50) ;
-        btn.titleLabel.font=[UIFont systemFontOfSize:20];
-        btn.titleLabel.numberOfLines=2;
+        //btn.titleLabel.font=[UIFont systemFontOfSize:20];
+        btn.titleLabel.numberOfLines=0;
+//        btn.titleLabel.adjustsFontSizeToFitWidth=YES;
+//        btn.titleLabel.baselineAdjustment=UIBaselineAdjustmentAlignCenters;
+        CGFloat fontSize = [btn.titleLabel.text fontSizeWithFont:[UIFont boldSystemFontOfSize:20] constrainedToSize:CGSizeMake((self.bounds.size.width-80)/2-5, 45)];
+        btn.titleLabel.font = [UIFont boldSystemFontOfSize:fontSize];
         btn.titleLabel.lineBreakMode=NSLineBreakByCharWrapping;
         [btn setBackgroundColor:[UIColor colorWithRed:0.204 green:0.678 blue:0.988 alpha:1.000]];
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -83,7 +88,6 @@
             [self removeFromSuperview];
         }];
 }
-
 @end
 
 

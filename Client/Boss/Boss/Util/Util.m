@@ -12,10 +12,10 @@
 #include <sys/types.h>
 #include <sys/sysctl.h>
 #import <CommonCrypto/CommonDigest.h>
-//NSString *serverUrl=@"http://123.57.77.6:3000";
+NSString *serverUrl=@"http://123.57.77.6:3000";
 //NSString *serverUrl=@"http://192.168.199.154:3000";
 //NSString *serverUrl=@"http://192.168.31.155:3000";
-NSString *serverUrl=@"http://localhost:3000";
+//NSString *serverUrl=@"http://localhost:3000";
 NSString *msgUpdateLevel=@"msgUpdateLevel";
 @implementation Util
 /// 获得设备号
@@ -614,6 +614,33 @@ void addRoundRectToPath(CGContextRef context, CGRect rect, float ovalWidth,
 
 @end
 
+@implementation NSString (size)
 
+- (CGFloat)fontSizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size {
+    CGFloat fontSize = [font pointSize];
+    CGFloat height =[self boundingRectWithSize:CGSizeMake(size.width, FLT_MAX) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:font,NSForegroundColorAttributeName:[UIColor whiteColor]} context:nil].size.height;
+    //CGFloat height = [self sizeWithFont:font constrainedToSize:CGSizeMake(size.width,FLT_MAX) lineBreakMode:NSLineBreakByCharWrapping].height;
+    UIFont *newFont = font;
+    
+    //Reduce font size while too large, break if no height (empty string)
+    while (height > size.height && height != 0) {
+        fontSize--;
+        newFont = [UIFont fontWithName:font.fontName size:fontSize];
+        height = [self boundingRectWithSize:CGSizeMake(size.width, FLT_MAX) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:newFont,NSForegroundColorAttributeName:[UIColor whiteColor]} context:nil].size.height;
+    };
+    
+    // Loop through words in string and resize to fit
+//    for (NSString *word in [self componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]) {
+//        CGFloat width = [word sizeWithAttributes:@{NSFontAttributeName:font,NSForegroundColorAttributeName:[UIColor whiteColor]}].width;
+//        while (width > size.width && width != 0) {
+//            fontSize--;
+//            newFont = [UIFont fontWithName:font.fontName size:fontSize];
+//            width = [word sizeWithAttributes:@{NSFontAttributeName:newFont,NSForegroundColorAttributeName:[UIColor whiteColor]}].width;
+//        }
+//    }
+    return fontSize;
+}
+
+@end
 
 
