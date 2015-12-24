@@ -19,8 +19,8 @@ exports.service=[
             username:String,
             pwd:String,
             name:String,
-            age:Number,
-            sex:String,
+            //age:Number,
+            //sex:String,
             question:String,
             answer:String,
             time:String

@@ -13,7 +13,6 @@
 #import "RegisterReq.h"
 @interface RegisterFinishVC ()
 {
-    SliderView *viewSlideAge;
     NSInteger indexSex;
 }
 @end
@@ -36,9 +35,6 @@
     lb.text=@"重复密码:";
     _texPwdRepeat.leftViewMode=UITextFieldViewModeAlways;
     _texPwdRepeat.leftView=lb;
-    viewSlideAge=[[SliderView alloc] initWithFrame:_viewAge.bounds Min:10 Max:50];
-    viewSlideAge.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    [_viewAge addSubview:viewSlideAge];
     lb=[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 70, 40)];
     lb.font=[UIFont systemFontOfSize:15];
     lb.textColor=[UIColor blackColor];
@@ -65,20 +61,6 @@
 }
 
 
-- (IBAction)onSex:(id)sender
-{
-    [SGActionView showSheetWithTitle:@"请选择您的性别" itemTitles:@[@"男",@"女"] selectedIndex:indexSex selectedHandle:^(NSInteger index) {
-        indexSex=index;
-       if(index==0)
-       {
-           _btnSex.text=@"男";
-       }
-        else
-        {
-            _btnSex.text=@"女";
-        }
-    }];
-}
 - (IBAction)onRegister:(id)sender
 {
     if(_texName.text.length==0)
@@ -111,34 +93,35 @@
         E(@"两次输入的密码不一致");
         return;
     }
-    [RegisterReq do:^(id req) {
-        RegisterReq *obj=req;
-        obj.username=_username;
-        obj.name=_texName.text;
-        obj.pwd=_texPwd.text;
-        obj.age=viewSlideAge.value;
-        obj.sex=_btnSex.text;
-        obj.question=_texQuestion.text;
-        obj.answer=_texAnswer.text;
-        obj.time=[[NSDate date] stringValue];
-    } Res:^(id res) {
-        BaseRes *obj=res;
-        if(obj.code==0)
-        {
-            S(@"注册成功");
-            for(UIViewController *vc in self.navigationController.viewControllers)
+    [TipView showWithTitle:@"提醒" Tip:@"是否确定注册，你所注册的信息将用于积分排名的展示!" YesBlock:^{
+        [RegisterReq do:^(id req) {
+            RegisterReq *obj=req;
+            obj.username=_username;
+            obj.name=_texName.text;
+            obj.pwd=_texPwd.text;
+            obj.question=_texQuestion.text;
+            obj.answer=_texAnswer.text;
+            obj.time=[[NSDate date] stringValue];
+        } Res:^(id res) {
+            BaseRes *obj=res;
+            if(obj.code==0)
             {
-                if([vc isKindOfClass:NSClassFromString(@"LoginVC")])
+                S(@"注册成功");
+                for(UIViewController *vc in self.navigationController.viewControllers)
                 {
-                    [self.navigationController popToViewController:vc animated:YES];
+                    if([vc isKindOfClass:NSClassFromString(@"LoginVC")])
+                    {
+                        [self.navigationController popToViewController:vc animated:YES];
+                    }
                 }
             }
-        }
-        else
-        {
-            E(obj.msg);
-        }
-    } ShowHud:YES];
+            else
+            {
+                E(obj.msg);
+            }
+        } ShowHud:YES];
+    } NoBlock:nil];
+    
 }
 @end
 

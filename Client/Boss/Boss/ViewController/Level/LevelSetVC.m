@@ -143,10 +143,6 @@
                                        }];
         });
     }
-    for(ChooseItemCountView *view in arrChooseView)
-    {
-        view.lbCount.text=@"5";
-    }
 }
 
 -(BOOL)ChooseItemCountAdd
