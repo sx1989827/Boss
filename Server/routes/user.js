@@ -104,6 +104,7 @@ router.get('/info', function(req, res) {
         }
         else
         {
+            req.userInfo.sex="男";
             res.json({
                code:0,
                 data:req.userInfo
