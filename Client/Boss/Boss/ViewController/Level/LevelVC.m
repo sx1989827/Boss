@@ -37,7 +37,7 @@
             arrLevel=obj.data.totleLevel;
             indexLevel=[arrLevel indexOfObject:obj.data.level];
             [[UserDefaults sharedInstance] updateLevel:_type Level:obj.data.level];
-            viewLevel=[[LevelView alloc] initWithNodes:[arrLevel subarrayWithRange:NSMakeRange(0, indexLevel+2)] UserIndex:indexLevel MaxCount:arrLevel.count];
+            viewLevel=[[LevelView alloc] initWithNodes:[arrLevel subarrayWithRange:NSMakeRange(0, indexLevel+(indexLevel==arrLevel.count-1?1:2))] UserIndex:indexLevel MaxCount:arrLevel.count];
             viewLevel.delegateNode=self;
             viewLevel.frame=CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height);
             viewLevel.autoresizingMask=UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
