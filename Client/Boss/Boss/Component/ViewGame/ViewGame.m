@@ -17,9 +17,9 @@
 @implementation ViewGame
 -(instancetype)initWithPowerCount:(NSInteger)count Money:(NSInteger)money Time:(NSInteger)usetime Enemy:(NSDictionary*)enemy LevelName:(NSString*)levelName Delegate:(id<ViewGameDelegate>)delegate
 {
-    self=(ViewGame*)[[[NSBundle mainBundle] loadNibNamed:@"ViewGame" owner:nil options:nil] lastObject];
-    if(self)
+    if(self=[super init])
     {
+        self=(ViewGame*)[[[NSBundle mainBundle] loadNibNamed:@"ViewGame" owner:nil options:nil] lastObject];
         srand((unsigned int)time(0));
         self.translatesAutoresizingMaskIntoConstraints=YES;
         self.autoresizingMask=UIViewAutoresizingFlexibleBottomMargin;
