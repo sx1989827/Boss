@@ -4,7 +4,7 @@ pod "Reachability"
 pod "SDWebImage"
 pod "pop"
 pod "IQKeyboardManager"
-pod "AFNetworking”
+pod "AFNetworking", '~> 2.0'
 pod "LazyTableView"
 pod "LazyPageScrollView"
 pod "RunTrace"

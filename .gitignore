@@ -1,6 +1,6 @@
 Pods/
 Server/.idea/workspace.xml
-
+Server/node_modules
 *.xcuserstate
 
 *.xcbkptlist
@@ -12,3 +12,4 @@ Server/.idea/workspace.xml
 *.xcuserstate
 
 *.xcuserstate
+Client/Boss/Podfile.lock
